@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//class for quadratic
 /**
  * Class for solution.
  */
