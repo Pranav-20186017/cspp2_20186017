@@ -7,7 +7,7 @@ public final class swap
 		temp = a;
 		a = b;
 		b = temp;
-		System.out.println("a = " +a+" "+"b = "+b);
+		System.out.println("a = "  + a + " " + "b = " + b);
 	}
 	public static void main(String[] args)
 	{
