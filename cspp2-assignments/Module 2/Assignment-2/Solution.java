@@ -2,11 +2,11 @@ import java.util.Scanner;
 /**
  * Class for solution.
  */
-final public class Solution {
+final class Solution {
     /**
      * Constructor.
      */
-    private Solution(){
+    private Solution() {
         //unused
     }
     /**
