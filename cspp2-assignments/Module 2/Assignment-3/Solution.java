@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//Class for expoenet
 /**
  * Class for solution.
  */
