@@ -17,7 +17,8 @@ final public class Solution {
 	 * @param      c     { Second coefficient of the quadratic  }
 	 */
 	void rootsOfQuadraticEquation(final int a, final int b, final int c) {
-		double d = (b * b) - (4 * a * c);
+		int f = 4;
+		double d = (b * b) - (f * a * c);
 		double x1 = ((-1 * b) + (Math.sqrt(d))) / (2 * a);
 		double x2 = ((-1 * b) - (Math.sqrt(d))) / (2 * a);
 		System.out.println(x1 + " " + x2);
