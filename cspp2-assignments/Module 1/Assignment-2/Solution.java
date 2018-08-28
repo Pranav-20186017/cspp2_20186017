@@ -28,8 +28,4 @@ final class Solution {
         int height = scan.nextInt();
         areaOfTriangle(base, height);
     }
-    /*
-    Need to fill the areaOfTriangle function and print the output
-    of fahrenheit.
-    */
 }
