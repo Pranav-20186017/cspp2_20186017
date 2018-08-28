@@ -9,11 +9,8 @@ public class Solution {
 		long ans=1;
 		if(exponent==0)
 			return 1;
-		for(int i=1;i<=exponent;i++)
-		{
-			ans = ans * base;
-		}
-		return ans;
+		else
+			return base*power(base, exponent-1);
 	}
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);      
