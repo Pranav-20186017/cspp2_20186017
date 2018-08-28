@@ -6,7 +6,7 @@ final class Solution {
     /**
      * Constructs the object.
      */
-    private Solution() { 
+    private Solution() {
         //unused
     }
     /**
@@ -19,12 +19,17 @@ final class Solution {
      */
     static long power(final int base, final int exponent) {
         final long ans = 1;
-        if(exponent == 0){
+        if (exponent == 0) {
             return 1;
         } else {
-            return base*power(base, exponent-1);
+            return base * power(base, exponent - 1);
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
