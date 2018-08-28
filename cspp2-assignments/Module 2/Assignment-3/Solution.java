@@ -18,18 +18,18 @@ final class Solution {
      * @return     { returns base power exponent}.
      */
     static long power(final int base, final int exponent) {
-        final long ans=1;
-        if(exponent==0){
+        final long ans = 1;
+        if(exponent == 0){
             return 1;
         } else {
             return base*power(base, exponent-1);
         }
     }
     public static void main(final String[] args) {
-        Scanner s=new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);      
         int base = s.nextInt();
         int exponent = s.nextInt();
-        long result=power(base,exponent);
+        long result = power(base,exponent);
         System.out.println(result);
     }
 }
