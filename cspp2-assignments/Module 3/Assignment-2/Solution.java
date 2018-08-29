@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//class to check seven
 /**
  * Class for solution.
  */
