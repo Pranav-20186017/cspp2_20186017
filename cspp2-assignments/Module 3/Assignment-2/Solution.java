@@ -10,7 +10,7 @@ final class Solution {
         //unused.
     }
     /**
-     * { function_description }
+     * { function_description }.
      *
      * @param      val   The value
      *
