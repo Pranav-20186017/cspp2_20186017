@@ -16,11 +16,10 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int CheckSeven(int n) {
+    public static int CheckSeven(final int val) {
         int flag = 0;
-
-        while(n != 0)
-        {
+        int n = val;
+        while(n != 0) {
             int rem = n % 10;
             if( rem == 7) {
                 flag ++;
