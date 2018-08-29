@@ -36,15 +36,14 @@ final class Solution {
      */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         int count = 0;
         int flag;
-        for(int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n; i++) {
             flag = CheckSeven(i);
             count += flag;
         }
         System.out.println(count);
-        
     }
 }
