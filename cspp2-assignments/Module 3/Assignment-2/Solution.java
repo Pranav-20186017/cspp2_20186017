@@ -16,13 +16,13 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int CheckSeven(final int val) {
+    public static int Check(final int val) {
         int flag = 0;
         int n = val;
         while(n != 0) {
             int rem = n % 10;
             if( rem == 7) {
-                flag ++;
+                flag++;
             }
             n = n / 10;
         }
@@ -40,7 +40,7 @@ final class Solution {
         int count = 0;
         int flag;
         for (int i = 1; i <= n; i++) {
-            flag = CheckSeven(i);
+            flag = Check(i);
             count += flag;
         }
         System.out.println(count);
