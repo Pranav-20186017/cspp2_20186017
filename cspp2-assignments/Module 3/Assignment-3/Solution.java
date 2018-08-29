@@ -39,5 +39,4 @@ final class Solution {
         int n2 = s.nextInt();
         System.out.println(gcd(n1, n2));
     }
-
 }
