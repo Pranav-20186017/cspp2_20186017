@@ -19,9 +19,9 @@ final class Solution {
     public static int checkSeven(final int val) {
         int flag = 0;
         int n = val;
-        while(n != 0) {
+        while (n != 0) {
             int rem = n % 10;
-            if( rem == 7) {
+            if (rem == 7) {
                 flag++;
             }
             n = n / 10;
