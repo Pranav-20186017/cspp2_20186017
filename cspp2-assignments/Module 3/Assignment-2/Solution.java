@@ -10,9 +10,9 @@ final class Solution {
         //unused.
     }
     /**
-     * { function_description }.
+     * { function_description }
      *
-     * @param      n     { parameter_description }
+     * @param      val   The value
      *
      * @return     { description_of_the_return_value }
      */
