@@ -19,12 +19,14 @@ final class Solution {
     public static int checkSeven(final int val) {
         int flag = 0;
         int n = val;
+        final int ten = 10;
+        final int seven = 7;
         while (n != 0) {
-            int rem = n % 10;
-            if (rem == 7) {
+            int rem = n % ten;
+            if (rem == seven) {
                 flag++;
             }
-            n = n / 10;
+            n = n / ten;
         }
         return flag;
     }
