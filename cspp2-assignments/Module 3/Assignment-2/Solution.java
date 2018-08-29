@@ -16,7 +16,7 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static int Check(final int val) {
+    public static int checkSeven(final int val) {
         int flag = 0;
         int n = val;
         while(n != 0) {
@@ -40,7 +40,7 @@ final class Solution {
         int count = 0;
         int flag;
         for (int i = 1; i <= n; i++) {
-            flag = Check(i);
+            flag = checkSeven(i);
             count += flag;
         }
         System.out.println(count);
