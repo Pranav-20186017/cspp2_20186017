@@ -1,4 +1,5 @@
 import java.util.Scanner;
+//class to compute gcd
 /**
  * Class for solution.
  */
