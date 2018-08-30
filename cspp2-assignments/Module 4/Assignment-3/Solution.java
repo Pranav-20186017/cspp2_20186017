@@ -11,11 +11,16 @@ public class Solution
 	public static void main(String[] args)
 	{
 		Scanner sc=new Scanner(System.in);
+		int k=1;
 		int n= sc.nextInt();
 		for(int i=0;i<=n;i++){
 			String s=sc.nextLine();
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
+			if (res.equals('0')) {
+				k+=1;
+			} else {
 			System.out.println(res);
+			}
 		}
 	}
 	public static String binaryToDecimal(final String s)
