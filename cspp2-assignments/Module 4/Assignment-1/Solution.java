@@ -16,7 +16,7 @@ final class Solution {
  */
 public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n= sc.nextInt();
+        int n = sc.nextInt();
         int val[] = new int[n];
         for(int i = 0; i < n; i++) {
             val[i] = sc.nextInt();
