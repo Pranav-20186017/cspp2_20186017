@@ -19,7 +19,9 @@ public class Solution
 	}
 	public static String binaryToDecimal(final String s)
 	{
-		return s;
+		long val = Long.parseLong(s);
+		System.out.println(val);
+		return "Hello";
 	}
 
 }
