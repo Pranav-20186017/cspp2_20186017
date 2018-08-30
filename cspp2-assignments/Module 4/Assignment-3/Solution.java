@@ -24,7 +24,7 @@ public class Solution
 			val = val + (temp * Math.pow(2,max_pow));
 			max_pow--;
 		}
-
+		System.out.println(val);
 		long final_val = Math.round(val);
 		String ans = Long.toString(final_val);
 		return ans;
