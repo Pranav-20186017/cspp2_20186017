@@ -26,11 +26,11 @@ public class Solution
 		{
 			char ch = s.charAt(i);
 			int temp = Character.getNumericValue(ch);
-			val = val + (temp*Math.pow(2,power));
+			val = val + (temp * Math.pow(2,power));
 			power++;
 		}
-		System.out.println(val);
-		return "Hello";
+		String string = Double.toString(Math.round(val));
+		return string;
 	}
 
 }
