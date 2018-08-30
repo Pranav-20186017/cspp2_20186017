@@ -10,7 +10,7 @@ final class Solution {
         //unused.
     }
 /**
- * { function_description }
+ * { function_description }.
  *
  * @param      args  The arguments
  */
@@ -22,6 +22,6 @@ public static void main(final String[] args) {
             val[i] = sc.nextInt();
         }
         Arrays.sort(val);
-        System.out.println(val[val.length-1]);
+        System.out.println(val[val.length - 1]);
     }
 }
