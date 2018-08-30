@@ -22,7 +22,7 @@ public class Solution
 	{
 		double val = 0;
 		int power = 0;
-		for(int i=s.length();i>=0;i--)
+		for(int i=s.length();i>0;i--)
 		{
 			char ch = s.charAt(i);
 			int temp = Character.getNumericValue(ch);
