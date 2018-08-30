@@ -20,17 +20,18 @@ public class Solution
 	}
 	public static String binaryToDecimal(final String s)
 	{
+		int max_pow = s.length()-1;
 		double val = 0;
-		int power = 0;
-		for(int i=s.length()-1;i>0;i--)
-		{
-			char ch = s.charAt(i);
-			int temp = Character.getNumericValue(ch);
-			val = val + (temp * Math.pow(2,power));
-			power++;
+		for(int i=0;i<s.length();i++) {
+			char k = s.charAt(i);
+			int temp = Character.getNumericValue(k);
+			val = val + (temp * Math.pow(2,max_pow));
+			max_pow--;
 		}
-		String string = Double.toString(Math.round(val));
-		return string;
+
+		long final_val = Math.round(val);
+		String ans = Long.toString(final_val);
+		return ans;
 	}
 
 }
