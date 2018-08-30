@@ -3,6 +3,7 @@
 
 
 import java.util.Scanner;
+import java.lang.Math;
 public class Solution
 {/*
 	Do not modify this main function.
@@ -19,7 +20,15 @@ public class Solution
 	}
 	public static String binaryToDecimal(final String s)
 	{
-		long val = Long.parseLong(s);
+		double val = 0;
+		int power = 0;
+		for(int i=s.length();i>=0;i--)
+		{
+			char ch = s.charAt(i);
+			int temp = Character.getNumericValue(ch);
+			val = val + (temp*Math.pow(2,power));
+			power++;
+		}
 		System.out.println(val);
 		return "Hello";
 	}
