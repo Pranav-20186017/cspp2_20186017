@@ -1,7 +1,4 @@
-/**
-    * Author : Khyathi.
-    * Date : 30/08/2018
-*/
+//sdlm;nv.smcv mcx vkscx\\\\\\\\\\\\\\\\\\\smdvn.msd v.msd v
 import java.util.Scanner;
 /**.
     * scanner function for taking inputs
