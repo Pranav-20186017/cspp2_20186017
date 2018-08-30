@@ -1,4 +1,4 @@
-//sdlm;nv.smcv mcx vkscx\\\\\\\\\\\\\\\\\\\smdvn.msd v.msd v
+//Pranav Surampdui
 import java.util.Scanner;
 /**.
     * scanner function for taking inputs
