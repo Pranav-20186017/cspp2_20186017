@@ -30,15 +30,14 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long binaryToDecimal(final String s)
-    {
-        int max_pow = s.length() - 1;
+    public static long binaryToDecimal(final String s) {
+        int maxpow = s.length() - 1;
         double val = 0;
         for (int i = 0; i < s.length(); i++) {
             char k = s.charAt(i);
             int temp = Character.getNumericValue(k);
-            val = val + (temp * Math.pow(2, max_pow));
-            max_pow--;
+            val = val + (temp * Math.pow(2, maxpow));
+            maxpow--;
         }
         // System.out.println(val);
         long finalval = Math.round(val);
