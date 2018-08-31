@@ -23,9 +23,16 @@ final class Solution {
             System.out.println(res);
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      s     { parameter_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public static long binaryToDecimal(String s)
     {
-        int max_pow = s.length()-1;
+        int max_pow = s.length() - 1;
         double val = 0;
         for(int i=0; i < s.length(); i++) {
             char k = s.charAt(i);
@@ -34,7 +41,7 @@ final class Solution {
             max_pow--;
         }
         // System.out.println(val);
-        long final_val = Math.round(val);
-        return final_val;
+        long finalval = Math.round(val);
+        return finalval;
     }
 }
