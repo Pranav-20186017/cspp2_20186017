@@ -30,7 +30,7 @@ final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    public static long binaryToDecimal(String s)
+    public static long binaryToDecimal(final String s)
     {
         int max_pow = s.length() - 1;
         double val = 0;
