@@ -39,7 +39,7 @@ public final class Solution {
     static void oddComposites(final int n) {
         final int three = 3;
         for (int i = three; i <= n; i++) {
-            if (i % 2 != 0 && isprime(i) == false) {
+            if (i % 2 != 0 && !isprime(i)) {
                 System.out.println(i);
             }
         }
