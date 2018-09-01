@@ -19,18 +19,18 @@ public final class Solution {
      *
      * @return     { description_of_the_return_value }
      */
-    static boolean isprime(int n) {
-    	int count = 0;
-    	for (int i = 1; i <= n; i++) {
-    		if(n % i == 0) {
-    			count++;
-    		}
-    	}
-    	if (count == 2) {
-    		return true;
-    	}
-    	return false;
-    	
+    static boolean isprime(final int n) {
+        int count = 0;
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0) {
+                count++;
+            }
+        }
+        if (count == 2) {
+            return true;
+        }
+        return false;
+        
     }
     /**
      * Prints the odd composite numbers between 2 and n.
@@ -38,11 +38,11 @@ public final class Solution {
      * @param      n     n value
      */
     static void oddComposites(final int n) {
-		for (int i = 3; i <= n; i++) {
-			if (i % 2 != 0 && isprime(i) == false) {
-				System.out.println(i);
-			}
-		}
+        for (int i = 3; i <= n; i++) {
+            if (i % 2 != 0 && isprime(i) == false) {
+                System.out.println(i);
+            }
+        }
     }
     /**
     * main method as driver program.
@@ -54,4 +54,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
