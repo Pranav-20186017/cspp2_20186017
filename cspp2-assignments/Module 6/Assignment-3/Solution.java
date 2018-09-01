@@ -25,10 +25,10 @@ final class Solution {
      */
     static char[] replaceAll(final char[] charArray,
         final char oldChar, final char newChar) {
-		String val = new String(charArray);
-		String ans = val.replace(oldChar,newChar);
-		char[] answer = ans.toCharArray();
-		return answer;
+        String val = new String(charArray);
+        String ans = val.replace(oldChar, newChar);
+        char[] answer = ans.toCharArray();
+        return answer;
 
     }
     /**
