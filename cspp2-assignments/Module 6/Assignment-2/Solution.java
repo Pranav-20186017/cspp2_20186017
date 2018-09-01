@@ -18,27 +18,25 @@ final class Solution {
      *
      * @param      a     Matrix of which the elements to be rounded
      * @param      rows     Number of rows
-     * @param      columns     Number of columns
+     * @param      cols     Number of columns
      *
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int cols) {
-
-        for (int i=0; i<rows; i++) {
+        final int h = 100;
+        final int f = 50;
+        for (int i=0; i < rows; i++) {
             for (int j = 0; j<cols; j++) {
-                int number = a[i][j] / 100;
-                int remainder = a[i][j] % 100;
-                if(remainder<=50) {
-                    a[i][j] = number * 100;
+                int number = a[i][j] / h;
+                int remainder = a[i][j] % h;
+                if(remainder <= f) {
+                    a[i][j] = number * h;
                 } else {
-                    a[i][j] = (number + 1) * 100;
+                    a[i][j] = (number + 1) * h;
                 }
-
             }
-
         }
         return a;
-    
     }
     /**
      * Main function.
