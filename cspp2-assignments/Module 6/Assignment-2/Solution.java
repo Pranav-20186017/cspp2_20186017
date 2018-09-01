@@ -26,11 +26,11 @@ final class Solution {
      final int rows, final int cols) {
         final int h = 100;
         final int f = 50;
-        for (int i=0; i < rows; i++) {
-            for (int j = 0; j<cols; j++) {
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
                 int number = a[i][j] / h;
                 int remainder = a[i][j] % h;
-                if(remainder <= f) {
+                if (remainder <= f) {
                     a[i][j] = number * h;
                 } else {
                     a[i][j] = (number + 1) * h;
