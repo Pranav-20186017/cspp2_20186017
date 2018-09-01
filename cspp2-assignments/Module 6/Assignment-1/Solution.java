@@ -29,7 +29,7 @@ public final class Solution {
         if (count == 2) {
             return true;
         }
-        return false;   
+        return false;
     }
     /**
      * Prints the odd composite numbers between 2 and n.
