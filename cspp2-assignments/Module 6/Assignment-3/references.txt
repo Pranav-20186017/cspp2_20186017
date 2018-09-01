@@ -1,0 +1,2 @@
+https://stackoverflow.com/questions/7655127/how-to-convert-a-char-array-back-to-a-string
+https://www.google.co.in/search?q=string+to+character+array+in+java&rlz=1C1CHBD_enIN774IN774&oq=string+to+character+array+in+java&aqs=chrome.0.0l6.8109j0j7&sourceid=chrome&ie=UTF-8
