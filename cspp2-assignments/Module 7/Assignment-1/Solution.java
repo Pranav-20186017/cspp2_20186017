@@ -4,6 +4,12 @@ import java.util.Scanner;
  */
 final class InputValidator {
     /**
+     * Constructs the object.
+     */
+    private InputValidator() {
+
+    }
+    /**
      * { var_description }.
      */
     private String input;
