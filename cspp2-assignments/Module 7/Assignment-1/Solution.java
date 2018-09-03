@@ -12,8 +12,8 @@ final class InputValidator {
      *
      * @param      input  The input
      */
-    InputValidator(final String input) {
-        this.input = input;
+    InputValidator(final String inp) {
+        this.input = inp;
     }
     /**
      * { function_description }.
