@@ -32,12 +32,12 @@ final class InputValidator {
  * Class for solution.
  */
 final class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	private Solution() {
-		//unused.
-	}
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
     /**
      * { item_description }.
      * @param args of type string
