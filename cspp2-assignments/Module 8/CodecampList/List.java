@@ -37,9 +37,9 @@ public class List {
         // Replace the code below
         String str_arr = "[";
         for (int i = 0; i < size - 1; i++) {
-            str_arr = str_arr + arr[i] +",";
+            str_arr = str_arr + arr[i] + ",";
         }
-        str_arr = str_arr + arr[size - 1] +"]";
+        str_arr = str_arr + arr[size - 1] + "]";
         return str_arr;
     }
     /*
