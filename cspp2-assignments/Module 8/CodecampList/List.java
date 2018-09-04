@@ -15,7 +15,7 @@ final class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
         size = 0;
         final int ten = 10;
         arr = new int[ten];
