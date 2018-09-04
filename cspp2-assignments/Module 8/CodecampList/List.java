@@ -1,8 +1,20 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-public class List {
+/**
+ * List of ELements.
+ */
+final class List {
+    /**
+     * { var_description }.
+     */
     private int[] arr;
+    /**
+     * { var_description }.
+     */
     private int size;
+    /**
+     * Constructs the object.
+     */
     public List() {
         size = 0;
         final int ten = 10;
