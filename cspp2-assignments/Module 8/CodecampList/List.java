@@ -5,7 +5,7 @@ public class List {
     private int size;
     public List() {
         size = 0;
-        final int ten=10;
+        final int ten = 10;
         arr = new int[ten];
     }
     public void add(final int item) {
@@ -36,8 +36,7 @@ public class List {
     public String toString() {
         // Replace the code below
         String str_arr = "[";
-        for (int i = 0; i < size - 1; i++)
-        {
+        for (int i = 0; i < size - 1; i++) {
             str_arr = str_arr + arr[i] +",";
         }
         str_arr = str_arr + arr[size - 1] +"]";
