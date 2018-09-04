@@ -1,14 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-import java.util.Arrays;
 public class List {
     private int[] arr;
     private int size;
     public List() {
         size = 0;
-        arr = new int[10];
+        final int ten=10;
+        arr = new int[ten];
     }
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size++] = item;
     }
@@ -16,7 +16,7 @@ public class List {
         // replace the code below to implement the size method
         return size;
     }
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
         if(index > size)
@@ -29,7 +29,7 @@ public class List {
         }
         size--;
     }
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         return arr[index];
     }
@@ -50,7 +50,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         for(int i = 0; i < size - 1; i++) {
             if(arr[i] == item)
@@ -63,7 +63,7 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0;i < size - 1; i++) {
             if(arr[i] == item)
@@ -71,7 +71,12 @@ public class List {
         }
         return -1;
     }
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
 
