@@ -20,14 +20,29 @@ final class List {
         final int ten = 10;
         arr = new int[ten];
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size++] = item;
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size() {
         // replace the code below to implement the size method
         return size;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -40,10 +55,22 @@ final class List {
         }
         size--;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int get(final int index) {
         // Replace the code below to write the code for get
         return arr[index];
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         // Replace the code below
         String strarr = "[";
