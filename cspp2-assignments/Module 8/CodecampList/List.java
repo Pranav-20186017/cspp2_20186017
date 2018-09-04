@@ -42,8 +42,7 @@ public class List {
         }
         str_arr += arr[size - 1] +"]";
         return str_arr;
-    } 
-    
+    }
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -52,7 +51,7 @@ public class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        for(int i = 0; i < size - 1; i++) {
+        for (int i = 0; i < size - 1; i++) {
             if (arr[i] == item) {
                 return true;
             }
