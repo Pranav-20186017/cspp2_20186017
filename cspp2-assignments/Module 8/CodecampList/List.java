@@ -24,7 +24,7 @@ public class List {
             System.out.println("Invalid Position Exception");
             return;
         }
-        for(int i = index; i < size; i++) {
+        for (int i = index; i < size; i++) {
             arr[i] = arr[i + 1];
         }
         size--;
@@ -36,11 +36,11 @@ public class List {
     public String toString() {
         // Replace the code below
         String str_arr = "[";
-        for(int i = 0; i < size - 1; i++)
+        for (int i = 0; i < size - 1; i++)
         {
-            str_arr += arr[i] +",";
+            str_arr = str_arr + arr[i] +",";
         }
-        str_arr += arr[size - 1] +"]";
+        str_arr = str_arr + arr[size - 1] +"]";
         return str_arr;
     }
     /*
