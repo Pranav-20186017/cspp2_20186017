@@ -1,6 +1,6 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
+import java.util.Arrays;
 public class List {
 	//Implement all the methods mentioned to build a ListADT
 
@@ -89,8 +89,8 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
-        arr[size] = item;
-        size++;
+        arr[size++] = item;
+       
     }
 
     /*
@@ -128,6 +128,17 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        if(index>size)
+        {
+        	System.out.println("Invalid Position Exception");
+        	return;
+        }
+        for(int i=index; i<size;i++) {
+        	arr[i] = arr[i+1];
+        }
+        size--;
+
+        // arr[size - 1] = 0;
         
     }
 
@@ -144,7 +155,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        return arr[index-1];
+        return arr[index];
     }
 
     /*
@@ -169,7 +180,13 @@ public class List {
      */
     public String toString() {
         // Replace the code below
-        return "print the list";
+        String str_arr = "[";
+        for(int i=0;i<size-1;i++)
+        {
+        	str_arr += arr[i] +",";
+        }
+        str_arr += arr[size-1] +"]";
+        return str_arr;
     } 
     
     /*
@@ -180,7 +197,12 @@ public class List {
      */
     public boolean contains(int item) {
         // Replace the code below
-        return true;
+        for(int i=0;i<size-1;i++) {
+        	if(arr[i]==item)
+        		return true;
+
+        }
+        return false;
     }
 
     /*
@@ -190,6 +212,10 @@ public class List {
      */
     public int indexOf(int item) {
         // Replace the code below
+        for (int i=0;i<size-1;i++) {
+        	if(arr[i]==item)
+        		return i;
+        }
         return -1;
     }
 
