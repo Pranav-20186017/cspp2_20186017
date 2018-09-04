@@ -58,6 +58,8 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    private int[] arr;
+   	private int size;
     public List() {
 
         // what are the two variables to be initialized here?
@@ -70,7 +72,8 @@ public class List {
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
-
+        size=0;
+       	arr = new int[10];
     }
     
     /*
@@ -86,6 +89,8 @@ public class List {
      */
     public void add(int item) {
         //Inserts the specified element at the end of the list.
+        arr[size] = item;
+        size++;
     }
 
     /*
@@ -97,7 +102,7 @@ public class List {
      */
     public int size() {
         // replace the code below to implement the size method
-        return -1;
+        return size;
     }
 
     /*
@@ -123,6 +128,7 @@ public class List {
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
+        
     }
 
     /*
@@ -138,7 +144,7 @@ public class List {
      */
     public int get(int index) {
         // Replace the code below to write the code for get
-        return -1;
+        return arr[index-1];
     }
 
     /*
