@@ -53,16 +53,12 @@ public class List {
     public boolean contains(final int item) {
         // Replace the code below
         for(int i = 0; i < size - 1; i++) {
-            if(arr[i] == item)
+            if (arr[i] == item) {
                 return true;
+            }
         }
         return false;
     }
-    /*
-     * Returns the index of the first occurrence 
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
-     */
     public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size - 1; i++) {
