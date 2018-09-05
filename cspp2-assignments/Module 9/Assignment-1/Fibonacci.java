@@ -2,7 +2,7 @@ import java.util.Scanner;
 /**
  * Class for fibonacci.
  */
-public class Fibonacci {
+final class Fibonacci {
     /**
      * Constructs the object.
      */
