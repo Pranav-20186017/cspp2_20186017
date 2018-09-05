@@ -32,10 +32,10 @@ final class Fibonacci {
         l.add(a);
         l.add(b);
         for (int i = 2; i < n; i++) {
-        	c = a + b;
+            c = a + b;
             l.add(c);
-        	a = b;
-        	b = c;
+            a = b;
+            b = c;
         }
         return l;
     }
@@ -44,7 +44,7 @@ final class Fibonacci {
      *
      * @param      args  The arguments
      */
-	public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
