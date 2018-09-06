@@ -1,19 +1,21 @@
 //An interface for ListADT of strings
 import java.util.Arrays;
+/**
+ * Interface for string list interface.
+ */
 interface StringListInterface
 {
-	 public void add(String item);
-	 public void addAll(String items[]);
-	 public String get(int index);
-	 public int size();
-	 public void remove(int index);
-	 public boolean contains(String item);
-	 public int indexOf(String item);
+     public void add(String item);
+     public void addAll(String items[]);
+     public String get(int index);
+     public int size();
+     public void remove(int index);
+     public boolean contains(String item);
+     public int indexOf(String item);
 }
 //Write a StringList class which implements StringListInterface 
-
 public class StringList implements StringListInterface{
-	//Implement all the methods mentioned to build a ListADT
+    //Implement all the methods mentioned to build a ListADT
 
     /*
      * The goal for the list is to store items.
@@ -41,7 +43,6 @@ public class StringList implements StringListInterface{
     // don't create the array yet using new
     // that's the job of the List constructor
     private String[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -61,32 +62,27 @@ public class StringList implements StringListInterface{
      * to be accessed by the methods that are outside of the List class.
      * 
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
     private int size;
-
     /*
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
     public StringList() {
-
         // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
         list = new String[10];
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
         // That is the initial value to use for size.
         size = 0;
     }
-
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -101,10 +97,7 @@ public class StringList implements StringListInterface{
      * constructor.
      * 
      */
-
-    // todo - add an overloaded constructor here
-
-    
+    // todo - add an overloaded constructor here1
     /*
      * The add method does what the name suggests.
      * Add an String item to the list.
@@ -130,7 +123,6 @@ public class StringList implements StringListInterface{
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
-   
     public void addAll(String[] items) {
         for (int i = 0; i < items.length; i++) {
             try {
@@ -140,7 +132,7 @@ public class StringList implements StringListInterface{
                 list[size-1] = items[i];
             }
         }
-	}
+    }
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -151,7 +143,6 @@ public class StringList implements StringListInterface{
     public int size() {
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes a String item, specified by the index argument, from the list
@@ -172,7 +163,6 @@ public class StringList implements StringListInterface{
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -185,7 +175,6 @@ public class StringList implements StringListInterface{
             System.out.println("Invalid Position Exception");
         }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -204,7 +193,6 @@ public class StringList implements StringListInterface{
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -243,10 +231,8 @@ public class StringList implements StringListInterface{
      * the item exists and otherwise false
      */
     public boolean contains(String item) {
-        return indexOf(item) == -1;
-        
+        return indexOf(item) == -1;   
     }
-
     /*
      * Returns the index of the first occurrence 
      * of the specified element in this list,
