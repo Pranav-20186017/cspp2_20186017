@@ -8,8 +8,13 @@ class Student {
      * { var_description }.
      */
     private String name;
-    Student(final String name) {
-        this.name = name;
+    /**
+     * Constructs the object.
+     *
+     * @param      name  The name
+     */
+    Student(final String name1) {
+        this.name = name1;
     }
     public String getName() {
         return this.name;
