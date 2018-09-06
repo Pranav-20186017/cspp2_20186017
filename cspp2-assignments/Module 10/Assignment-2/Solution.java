@@ -1,10 +1,21 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-
-public class Solution {
-	
-
-	public static void main(String[] args) {
+/**
+ * Class for solution.
+ */
+final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+	public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         StringList sl = new StringList();
         StringListInterface l=(StringListInterface)sl;//Typecasting is done for StringListInterface
