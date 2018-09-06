@@ -277,7 +277,8 @@ public class Solution {
                         listDouble.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listDouble.indexOf(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                        listDouble.indexOf(Double.parseDouble(tokens[1])));
                         break;
                         case "get":
                         System.out.println(
