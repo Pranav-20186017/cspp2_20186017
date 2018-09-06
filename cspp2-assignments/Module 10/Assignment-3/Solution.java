@@ -296,7 +296,6 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listStudent.add(new Student(tokens[1]));
@@ -339,6 +338,7 @@ public class Solution {
                         System.out.println(listStudent.contains(
                         new Student(tokens[1])));
                         break;
+                        default:
                     }
                 }
                 break;
