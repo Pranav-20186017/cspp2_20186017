@@ -25,7 +25,7 @@ class Student {
         return this.name;
     }
     @Override
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
