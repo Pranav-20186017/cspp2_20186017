@@ -49,17 +49,9 @@ public class List<E> {
     public void addAll(E[] items) {
         //System.out.println(Arrays.toString(items) + " list");
         for (int i = 0; i < items.length; i++) {
-            try {
-
-                list[size] = items[i];
-                size++;
-
-                //System.out.println(Arrays.toString(list) + " list");
-            } catch (Exception e) {
-                resize();
-            }
-        }
+            add(items[i]);
     }
+}	
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
