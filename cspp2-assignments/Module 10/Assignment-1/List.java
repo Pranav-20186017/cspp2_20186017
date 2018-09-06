@@ -56,7 +56,6 @@ public class List {
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-    
     /**
      * { var_description }.
      */
@@ -66,6 +65,9 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
+    /**
+     * Constructs the object.
+     */
     public List() {
 
         // what are the two variables to be initialized here?
@@ -73,7 +75,8 @@ public class List {
         // What should be the default values?
         // In the case of the list, it should be empty but
         // it should be initialized with an array size like 10
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
 
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
@@ -95,6 +98,11 @@ public class List {
      * constructor.
      *
      */
+    /**
+     * Constructs the object.
+     *
+     * @param      capacity  The capacity
+     */
     public List(int capacity) {
         size = 0;
         list = new int[capacity];
@@ -109,6 +117,11 @@ public class List {
      * to the list.
      *
      * The method returns void (nothing)
+     */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
      */
     public void add(int item) {
         //Inserts the specified element at the end of the zelist.
@@ -148,7 +161,9 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-    // todo create resize method
+    /**
+     * { function_description }.
+     */
     public void resize() {
         //int newlen = 2 * list.length;
         list = Arrays.copyOf(list, 2 * size);
@@ -159,6 +174,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * { function_description }.
+     *
+     * @return     { description_of_the_return_value }
      */
     public int size() {
         return size;
@@ -183,6 +203,11 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     */
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -206,7 +231,14 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int get(final int index) {
         if (index < 0 || index >= size) {
             return -1;
         } else {
@@ -233,6 +265,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0)
             return "[]";
@@ -250,7 +287,14 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public boolean contains(final int item) {
         return indexOf(item) == -1;
     }
     /*
@@ -258,16 +302,24 @@ public class List {
      * of the specified element in this list,
      * or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (item == list[i])
                 return i;
         }
         return -1;
     }
-    /*Inserts all the elements of specified int
-     array to the end of list*/
-    public void addAll(int items[]) {
+    /**
+     * { item_description }.
+     */
+    public void addAll(final int items[]) {
         // write the logic
 
         for (int i = 0; i < items.length; i++) {
@@ -278,12 +330,13 @@ public class List {
             }
         }
     }
-    /*
-       Inserts the specified element at the specified index
-    by moving all the elements to the right.
-           The method returns void (nothing)
-        */
-    public void add(int index, int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      index  The index
+     * @param      item   The item
+     */
+    public void add(final int index, final int item) {
         // write the logic
         if (index < 0 ) {
             System.out.println("Negative Index Exception");
@@ -310,8 +363,14 @@ public class List {
         size++;
         //System.out.println(Arrays.toString(list) + " add index");
     }
-    /* Returns the count of occurances of a given item in the list*/
-    public int count(int item) {
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
+    public int count(final int item) {
         // write the logic
         int c = 0;
         for (int i = 0; i < size; i++) {
@@ -321,10 +380,14 @@ public class List {
         }
         return c;
     }
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -382,6 +445,7 @@ public class List {
             case "contains":
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
+            default:
             }
         }
     }
