@@ -360,8 +360,8 @@ public class List {
                 }
                 ind++;
             }
-        } catch (Exception e) { 
-        	resize();
+        } catch (Exception e) {
+            resize();
         }
         size++;
         //System.out.println(Arrays.toString(list) + " add index");
