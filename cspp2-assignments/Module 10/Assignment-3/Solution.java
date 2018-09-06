@@ -76,7 +76,8 @@ public class Solution {
                         System.out.println(listString.indexOf(tokens[1]));
                         break;
                         case "get":
-                        System.out.println(listString.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        listString.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
                         System.out.println(listString.contains(tokens[1]));
@@ -84,7 +85,6 @@ public class Solution {
                     }
                 }
             break;
-
             case "I"://This case will be executed for Integer type list
                 List<Integer> listInteger = new List();
                 while (stdin.hasNext()) {
@@ -92,7 +92,6 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listInteger.add(Integer.parseInt(tokens[1]));
