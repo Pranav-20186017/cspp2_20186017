@@ -4,8 +4,11 @@ import java.util.Scanner;
  * Class for student.
  */
 class Student {
+    /**
+     * { var_description }.
+     */
     private String name;
-    Student(final String name) {//A constructor used to initialize the instance variables
+    Student(final String name) {
         this.name = name;
     }
     public String getName() {
