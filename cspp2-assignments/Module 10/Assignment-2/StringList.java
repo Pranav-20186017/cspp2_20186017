@@ -141,7 +141,6 @@ public class StringList implements StringListInterface{
                 System.out.println(Arrays.toString(list));
             } catch (Exception e) {
                 resize();
-                list[size++] = items[items.length-1];
             }
         }
 	}
