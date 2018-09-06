@@ -2,11 +2,10 @@ import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
- * List of .
+ * List of elements.
  */
 public class List {
     //Implement all the methods mentioned to build a ListADT
-
     /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
@@ -28,16 +27,13 @@ public class List {
      * This is a hard concept to understand. Discuss with your mentor.
      *
     */
-
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
-    
     /**
      * { var_description }.
      */
     private int[] list;
-
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -57,7 +53,6 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
@@ -71,9 +66,6 @@ public class List {
      * The purpose of the constructor is to initialize the
      * class variables with some default values.
      */
-
-
-
     public List() {
 
         // what are the two variables to be initialized here?
@@ -89,7 +81,6 @@ public class List {
         // That is the initial value to use for size.
         size = 0;
     }
-
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -108,7 +99,6 @@ public class List {
         size = 0;
         list = new int[capacity];
     }
-
     /*
      * The add method does what the name suggests.
      * Add an int item to the list.
@@ -128,7 +118,6 @@ public class List {
             resize();
         }
     }
-
     /*
      *
      * Resize the list
@@ -159,13 +148,11 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
-
     // todo create resize method
     public void resize() {
         //int newlen = 2 * list.length;
         list = Arrays.copyOf(list, 2 * size);
     }
-
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -176,7 +163,6 @@ public class List {
     public int size() {
         return size;
     }
-
     /*
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
@@ -197,7 +183,6 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-
     public void remove(int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
@@ -210,7 +195,6 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
     /*
      * Get method has to return the items that is
      * at the index position passed as an argument to the method.
@@ -229,7 +213,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -261,7 +244,6 @@ public class List {
         str = str + list[i] + "]";
         return str;
     }
-
     /*
      * Contains return true if the list has
      * the item passed as an argument to the method
@@ -271,7 +253,6 @@ public class List {
     public boolean contains(int item) {
         return indexOf(item) == -1;
     }
-
     /*
      * Returns the index of the first occurrence
      * of the specified element in this list,
@@ -296,10 +277,7 @@ public class List {
                 resize();
             }
         }
-
-        //System.out.println(Arrays.toString(list) + " add all");
     }
-
     /*
        Inserts the specified element at the specified index
     by moving all the elements to the right.
@@ -332,7 +310,6 @@ public class List {
         size++;
         //System.out.println(Arrays.toString(list) + " add index");
     }
-
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item) {
         // write the logic
@@ -344,8 +321,6 @@ public class List {
         }
         return c;
     }
-
-
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -411,4 +386,3 @@ public class List {
         }
     }
 }
-
