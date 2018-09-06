@@ -283,13 +283,14 @@ public class Solution {
                         System.out.println(listDouble.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listDouble.contains(Double.parseDouble(tokens[1])));
+                        System.out.println(
+                        listDouble.contains(Double.parseDouble(tokens[1])));
                         break;
                     }
                 }
             break;
 
-            case "O"://This case will be executed for Student type list i.e to store List of Student Objects
+            case "O":
                 List<Student> listStudent = new List();
                 while (stdin.hasNext()) {
                     // read the line
