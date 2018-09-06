@@ -35,10 +35,14 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
-    public void add(E item) {
+   public void add(E item) {
         //Inserts the specified element at the end of the list.
-        //You can modify the code in this method.
-        list[(size++)] = item;
+        try {
+            list[size++] = item;
+        } catch (Exception e) {
+            resize();
+        }
+       
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
@@ -155,7 +159,7 @@ public class List<E> {
      */
     public boolean contains(E item) {
         //Write logic for contains method
-        return indexOf(item) == -1;
+        return indexOf(item) != -1;
     }
     /*
      * Returns the index of the first occurrence 
@@ -165,7 +169,7 @@ public class List<E> {
     public int indexOf(E item) {
        //Write logic for indexOf method
         for (int i = 0; i < size; i++) {
-            if (item == list[i])
+            if (item.equals(list[i]))
                 return i;
         }
         return -1;
