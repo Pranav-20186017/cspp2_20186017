@@ -251,10 +251,10 @@ public class Solution {
                             listDouble.add(Double.parseDouble(tokens[1]));
                         break;
                         case "addAll":
-                        if(tokens.length==2){
+                        if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Double[] temp = new Double[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++ ) {
                             temp[i] = Double.parseDouble(t1[i]);
                         }
                         listDouble.addAll(temp);
@@ -267,7 +267,6 @@ public class Solution {
                         System.out.println(listDouble.size());
                         break;
                         case "print":
-                        // print the list (implement toString in StringList class
                         //for this to work)
                         // expected format is [item-1,item-2,...,item-n]
                         // review the output testcase file
