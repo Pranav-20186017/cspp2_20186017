@@ -12,7 +12,7 @@ class Student {
         return this.name;
     }
     @Override
-    public boolean equals(Object other) { //This method is to check if two students names are equal or not
+    public boolean equals(Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
