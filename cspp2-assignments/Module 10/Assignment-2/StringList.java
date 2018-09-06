@@ -140,7 +140,7 @@ public class StringList implements StringListInterface{
                 list[size++] = items[i];
             } catch (Exception e) {
                 resize();
-                list[size++] = items[items.length-1];
+                list[size-1] = items[i];
             }
         }
 	}
