@@ -320,7 +320,7 @@ public class List {
      * { item_description }.
      * @param items of type array
      */
-    public void addAll(final int items[]) {
+    public void addAll(final int[] items) {
         // write the logic
 
         for (int i = 0; i < items.length; i++) {
