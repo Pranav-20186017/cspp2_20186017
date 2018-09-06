@@ -19,6 +19,11 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
@@ -27,6 +32,12 @@ class Student {
  * Class for solution.
  */
 public class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
     /**
      * { function_description }.
      *
@@ -45,7 +56,6 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listString.add(tokens[1]);
