@@ -339,7 +339,7 @@ public class List {
      */
     public void add(final int index, final int item) {
         // write the logic
-        if (index < 0 ) {
+        if (index < 0) {
             System.out.println("Negative Index Exception");
             return;
         }
