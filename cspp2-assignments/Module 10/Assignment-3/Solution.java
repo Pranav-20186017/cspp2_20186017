@@ -1,6 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
+/**
+ * Class for student.
+ */
 class Student {
     private String name;
     Student(final String name) {//A constructor used to initialize the instance variables
