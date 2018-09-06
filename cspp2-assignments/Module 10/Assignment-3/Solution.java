@@ -332,11 +332,11 @@ public class Solution {
                         break;
                         case "get":
                         System.out.println(listStudent.get
-                            (Integer.parseInt(tokens[1])));
+                            ( Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
                         System.out.println(listStudent.contains
-                            (new Student(tokens[1])));
+                            ( new Student(tokens[1])));
                         break;
                     }
                 }
