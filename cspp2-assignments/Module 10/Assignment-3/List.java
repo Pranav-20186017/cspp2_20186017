@@ -97,9 +97,9 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(int idex) {
         //Write logic for remove method
-        if (index >= size || index < 0) {
+        if (idex >= size || idex < 0) {
             System.out.println("Invalid Position Exception");
             return;
         }
@@ -109,7 +109,7 @@ public class List<E> {
         }
         int ind = 0;
         for (int i = 0; i < arrayCopy.length; i++) {
-            if (i != index) {
+            if (i != idex) {
                 list[ind] = arrayCopy[i];
                 ind++;
                 //System.out.println(list[ind] + "ind array");
