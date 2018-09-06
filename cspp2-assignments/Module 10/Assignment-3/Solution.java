@@ -305,7 +305,7 @@ public class Solution {
                         if(tokens.length==2){
                         String[] t1 = tokens[1].split(",");
                         Student[] temp = new Student[t1.length];
-                        for (int i = 0; i < t1.length ;i++ ) {
+                        for (int i = 0; i < t1.length; i++ ) {
                             temp[i] = new Student(t1[i]);
                         }
                         listStudent.addAll(temp);
