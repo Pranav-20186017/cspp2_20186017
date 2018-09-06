@@ -103,7 +103,7 @@ public class List {
      *
      * @param      capacity  The capacity
      */
-    public List(int capacity) {
+    public List(final int capacity) {
         size = 0;
         list = new int[capacity];
     }
@@ -123,7 +123,7 @@ public class List {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the zelist.
         try {
             list[size++] = item;
@@ -150,7 +150,6 @@ public class List {
      * with the contents of the original array.
      *
      * TODO
-     * Create a method called resize(). Resize should create an new array that is
      * double the size of the old array.
      * Then copy the contents of the old array to the new one.
      *
