@@ -35,23 +35,38 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
-   public void add(E item) {
+    public void resize() {
+        //int newlen = 2 * list.length;
+        list = Arrays.copyOf(list, 2 * size);
+    }
+
+    public void add(E item) {
         //Inserts the specified element at the end of the list.
+        //You can modify the code in this method.
         try {
             list[size++] = item;
+            //System.out.println(Arrays.toString(list) + " list");
         } catch (Exception e) {
             resize();
         }
-       
     }
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
-        //System.out.println(Arrays.toString(items) + " list");
+        //Write logic for addAll method
         for (int i = 0; i < items.length; i++) {
-            add(items[i]);
+            try {
+
+                list[size] = items[i];
+                size++;
+
+                //System.out.println(Arrays.toString(list) + " list");
+            } catch (Exception e) {
+                resize();
+                list[size++] = items[i];
+            }
+        }
     }
-}	
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -59,9 +74,6 @@ public class List<E> {
      * 
      * The method returns an int. Empty list should return 0.
      */
-    public void resize() {
-        list = Arrays.copyOf(list, 2 * size);
-    }
     public int size() {
         return size;
     }
@@ -85,16 +97,27 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove(int idex) {
         //Write logic for remove method
-         if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
-            size--;
-        } else {
+        if (idex >= size || idex < 0) {
             System.out.println("Invalid Position Exception");
+            return;
         }
+        E[] arrayCopy = ((E[])new Object[list.length]);
+        for (int i = 0; i < list.length; i++) {
+            arrayCopy[i] = list[i];
+        }
+        int ind = 0;
+        for (int i = 0; i < arrayCopy.length; i++) {
+            if (i != idex) {
+                list[ind] = arrayCopy[i];
+                ind++;
+                //System.out.println(list[ind] + "ind array");
+            }
+
+        }
+
+        size--;
     }
     /*
      * Get method has to return the items that is
@@ -132,16 +155,15 @@ public class List<E> {
      *
      */
     public String toString() {
+       
        if (size == 0) {
-        return "[]";
-       }
-       String str = "[";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+            return "[]";
         }
-        str = str + list[i] + "]";
-        return str;
+        E[] printArray = ((E[])new Object[size]);
+        for (int i = 0; i < size; i++) {
+            printArray[i] = list[i];
+        }
+        return Arrays.toString(printArray).replaceAll(" ", "");
     }
     /*
      * Contains return true if the list has
@@ -150,8 +172,13 @@ public class List<E> {
      * the item exists and otherwise false
      */
     public boolean contains(E item) {
-        //Write logic for contains method
-        return indexOf(item) != -1;
+		//Write logic for contains method
+        for(int i =0;i<size;i++) {
+            if (item.equals(list[i])) {
+                return true;
+            }
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence 
@@ -160,10 +187,7 @@ public class List<E> {
      */
     public int indexOf(E item) {
        //Write logic for indexOf method
-        for (int i = 0; i < size; i++) {
-            if (item.equals(list[i]))
-                return i;
-        }
         return -1;
     }
 }
+
