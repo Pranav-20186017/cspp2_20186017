@@ -16,6 +16,11 @@ class Student {
     Student(final String name1) {
         this.name = name1;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.name;
     }
