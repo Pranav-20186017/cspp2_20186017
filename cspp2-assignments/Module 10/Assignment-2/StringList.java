@@ -135,10 +135,13 @@ public class StringList implements StringListInterface{
     array to the end of list*/
    
     public void addAll(String[] items) {
+        if(size<items.length)
+        {
+            resize();
+        }
         for (int i = 0; i < items.length; i++) {
             try {
                 list[size++] = items[i];
-                System.out.println(Arrays.toString(list));
             } catch (Exception e) {
                 resize();
             }
