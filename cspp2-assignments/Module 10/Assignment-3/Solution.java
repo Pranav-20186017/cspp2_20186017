@@ -226,13 +226,16 @@ public class Solution {
                         listCharacter.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listCharacter.indexOf(tokens[1].charAt(0)));
+                        System.out.println(
+                        listCharacter.indexOf(tokens[1].charAt(0)));
                         break;
                         case "get":
-                        System.out.println(listCharacter.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        listCharacter.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listCharacter.contains(tokens[1].charAt(0)));
+                        System.out.println(
+                        listCharacter.contains(tokens[1].charAt(0)));
                         break;
                     }
                 }
@@ -245,7 +248,6 @@ public class Solution {
                     String line = stdin.nextLine();
                     // split the line using space
                     String[] tokens = line.split(" ");
-                    // based on the list operation invoke the corresponding method
                     switch (tokens[0]) {
                         case "add":
                             listDouble.add(Double.parseDouble(tokens[1]));
