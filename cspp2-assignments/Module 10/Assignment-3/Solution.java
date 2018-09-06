@@ -175,13 +175,16 @@ public class Solution {
                         listFloat.remove(Integer.parseInt(tokens[1]));
                         break;
                         case "indexOf":
-                        System.out.println(listFloat.indexOf(Float.parseFloat(tokens[1])));
+                        System.out.println(
+                        listFloat.indexOf(Float.parseFloat(tokens[1])));
                         break;
                         case "get":
-                        System.out.println(listFloat.get(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        listFloat.get(Integer.parseInt(tokens[1])));
                         break;
                         case "contains":
-                        System.out.println(listFloat.contains(Float.parseFloat(tokens[1])));
+                        System.out.println(
+                        listFloat.contains(Float.parseFloat(tokens[1])));
                         break;
                     }
                 }
