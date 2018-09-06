@@ -43,10 +43,14 @@ public class List<E> {
     /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(E[] items) {
-        //Write logic for addAll method
+        //System.out.println(Arrays.toString(items) + " list");
         for (int i = 0; i < items.length; i++) {
             try {
-                list[size++] = items[i];
+
+                list[size] = items[i];
+                size++;
+
+                //System.out.println(Arrays.toString(list) + " list");
             } catch (Exception e) {
                 resize();
             }

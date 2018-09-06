@@ -1,0 +1,301 @@
+########## Testcase 0: Failed ##########
+Expected Output: 
+[a1,b2,c3,d4,e5,f6,g7,h9]
+6
+[b2,d4,e5,f6,g7,h9,a1,b2,c3,d4,e5,f6,g7,h9]
+12
+[d4,f6,g7,h9,a1,b2,c3,d4,e5,f6,g7,h9]
+12
+[d4,f6,g7,a1,c3,e5,g7,h9]
+8
+Invalid Position Exception
+[d4,f6,g7,c3,g7]
+
+Your Output: 
+[a1,b2,c3,d4,e5,f6,g7,h9]
+6
+[b2,d4,e5,f6,g7,h9,a1,b2,c3,d4,null,f6,g7,h9]
+12
+[d4,f6,g7,h9,a1,b2,c3,d4,null,f6,g7,h9]
+12
+[d4,f6,g7,a1,c3,null,g7,h9]
+8
+Invalid Position Exception
+[d4,f6,g7,c3,g7]
+
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+2
+[r,e,t,c]
+4
+[r,e,t,c]
+7
+[r,e,t,c,.,",:]
+[r,e,t,c,.,",:,t,c]
+9
+[r,e,t,c,.,",:,t,c]
+
+Your Output: 
+2
+[r,e,t,c]
+4
+[r,e,t,c]
+7
+[r,e,t,c,.,",:]
+[r,e,t,c,.,",:,t,c]
+9
+[r,e,t,c,.,",:,t,c]
+
+----------------------------------------
+########## Testcase 2: Failed ##########
+Expected Output: 
+0
+Invalid Position Exception
+[]
+[]
+Invalid Position Exception
+[]
+[1,2,3,4,5,6,7,8,9,10,11]
+[1]
+[]
+[1,2,3,4,5,6,7,8,9,10,11]
+[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,9,10,11]
+
+Your Output: 
+0
+Invalid Position Exception
+[]
+[]
+Invalid Position Exception
+[]
+[1,2,3,4,5,6,7,8,9,10,null]
+[1]
+[]
+[1,2,3,4,5,6,7,8,9,10,11]
+[1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8,9,10,11]
+
+----------------------------------------
+########## Testcase 3: Passed ##########
+Expected Output: 
+0
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2]
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2,9.01,1212.2]
+Invalid Position Exception
+[9.01,1212.2,9.01,1212.2]
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2,9.01,9.01,1212.2]
+[9.01,9.01,1212.2]
+[9.01,1212.2]
+2
+
+Your Output: 
+0
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2]
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2,9.01,1212.2]
+Invalid Position Exception
+[9.01,1212.2,9.01,1212.2]
+Invalid Position Exception
+Invalid Position Exception
+[9.01,1212.2,9.01,9.01,1212.2]
+[9.01,9.01,1212.2]
+[9.01,1212.2]
+2
+
+----------------------------------------
+########## Testcase 4: Failed ##########
+Expected Output: 
+0
+Invalid Position Exception
+[]
+[]
+Invalid Position Exception
+[]
+[1.2,2.3,3.4,4.5,5.6,6.7,7.8]
+[1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[1.2,4.5,5.6,6.7,7.8,9.01,1212.2]
+[4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8]
+[4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[4.5,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8]
+[7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[7.8,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[1.2,2.3,3.4,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+15
+
+Your Output: 
+0
+Invalid Position Exception
+[]
+[]
+Invalid Position Exception
+[]
+[1.2,2.3,3.4,4.5,5.6,6.7,7.8]
+[1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[1.2,4.5,5.6,6.7,7.8,9.01,1212.2]
+[4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,null,6.7,7.8]
+[4.5,5.6,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,null,6.7,7.8,9.01,1212.2]
+[4.5,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,null,6.7,7.8,9.01,1212.2]
+[7.8,9.01,1212.2,1.2,2.3,3.4,4.5,null,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8]
+[7.8,9.01,1212.2,1.2,2.3,3.4,4.5,null,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[7.8,1.2,2.3,3.4,4.5,null,6.7,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+[1.2,2.3,3.4,7.8,9.01,1212.2,1.2,2.3,3.4,4.5,5.6,6.7,7.8,9.01,1212.2]
+15
+
+----------------------------------------
+########## Testcase 5: Failed ##########
+Expected Output: 
+0
+Invalid Position Exception
+3
+[Manjunath,Praveen,Arun]
+[Manjunath,Praveen,Arun,Rehana,Rajesh,Deepak,Murthy,Manasa]
+8
+true
+false
+false
+[Manjunath,Praveen,Arun,Rehana,Rajesh,Deepak]
+
+Your Output: 
+0
+Invalid Position Exception
+3
+[Manjunath,Praveen,Arun]
+[Manjunath,Praveen,Arun,Rehana,Rajesh,Deepak,Murthy,Manasa]
+8
+true
+true
+true
+[Manjunath,Praveen,Arun,Rehana,Rajesh,Deepak]
+
+----------------------------------------
+Result: 2/6 testcases passed.
+Starting audit...
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:4: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:5:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:6: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7: Line is longer than 80 characters (found 94). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7:24: Parameter name should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7:31: 'name' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:7:38: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:11: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:11:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:11:34: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:15:9: Definition of 'equals()' without corresponding definition of 'hashCode()'. [EqualsHashCode]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:16: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:16:31: Parameter other should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:25:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:30: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:30:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:31: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:33:9: Method length is 311 lines (max allowed is 150). [MethodLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:33:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:33:33: Parameter args should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:38:15: 'switch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:46: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:47: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:52:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:52:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:52:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:52:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:64: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:74: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:77: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:80: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:93: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:94: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:96: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:99:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:99:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:99:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:99:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:102:48: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:102:68: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:115: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:125: Line is longer than 80 characters (found 103). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:128: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:131: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:144: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:145: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:147: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:150:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:150:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:150:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:150:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:152:43: Array brackets at illegal position. [ArrayTypeStyle]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:153:62: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:153:64: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:153:67: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:166: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:176: Line is longer than 80 characters (found 99). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:179: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:182: Line is longer than 80 characters (found 100). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:195: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:196: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:201:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:201:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:201:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:201:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:204:62: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:204:64: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:204:67: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:217: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:224: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:227: Line is longer than 80 characters (found 95). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:230: Line is longer than 80 characters (found 99). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:233: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:246: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:247: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:249: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:252:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:252:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:252:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:252:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:255:62: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:255:64: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:255:67: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:268: Line is longer than 80 characters (found 89). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:278: Line is longer than 80 characters (found 102). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:281: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:284: Line is longer than 80 characters (found 103). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:290: Line is longer than 80 characters (found 112). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:297: Line is longer than 80 characters (found 90). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:298: switch without "default" clause. [MissingSwitchDefault]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:303:35: 'if' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:303:49: '==' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:303:51: '==' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:303:53: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:306:62: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:306:64: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:306:67: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:319: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:329: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:332: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 10\Assignment-3\Solution.java:335: Line is longer than 80 characters (found 97). [LineLength]
+Audit done.
+Checkstyle ends with 105 errors.
+
+
+[master 1ca28ef] "check_style_score -> 2 of 6 passed. style score: 0/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cspp2-assignments/Module 10/Assignment-3/test.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
