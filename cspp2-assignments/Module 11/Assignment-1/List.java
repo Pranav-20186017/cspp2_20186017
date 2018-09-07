@@ -70,6 +70,9 @@ final class List {
      * Size of LIST ADT.
      */
     private int size;
+    /**
+     * Constructs the object.
+     */
     public List() {
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
@@ -216,6 +219,13 @@ final class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
@@ -223,6 +233,13 @@ final class List {
     /*
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
+     */
+    /**
+     * Searches for the first match.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
      */
     public int indexOf(final int item) {
         // Replace the code below
