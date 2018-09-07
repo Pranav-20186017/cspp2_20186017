@@ -1,0 +1,296 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+
+Your Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+2
+[1,-1]
+Index Out of Bounds Exception
+true
+6
+[1,-1,0,0,0,-1]
+0
+
+Your Output: 
+2
+[1,-1]
+Index Out of Bounds Exception
+true
+6
+[1,-1,0,0,0,-1]
+0
+
+----------------------------------------
+########## Testcase 2: Passed ##########
+Expected Output: 
+2
+[D,c,-,+]
+[c,-]
+[-,+]
+Index Out of Bounds Exception
+false
+false
+4
+[D,c,-,+]
+
+Your Output: 
+2
+[D,c,-,+]
+[c,-]
+[-,+]
+Index Out of Bounds Exception
+false
+false
+4
+[D,c,-,+]
+
+----------------------------------------
+########## Testcase 3: Failed ##########
+Expected Output: 
+2
+[1a,2b]
+Index Out of Bounds Exception
+false
+6
+[1a,2b,0c,0d,0e,2f]
+0
+
+Your Output: 
+2
+[1a,2b]
+Index Out of Bounds Exception
+false
+6
+[1a,2b,0c,0d,0e,2f]
+2
+
+----------------------------------------
+########## Testcase 4: Passed ##########
+Expected Output: 
+2
+[5.1212,-1.3223,1.0E-11,99.0101]
+[-1.3223,1.0E-11]
+[1.0E-11,99.0101]
+Index Out of Bounds Exception
+false
+4
+[5.1212,-1.3223,1.0E-11,99.0101]
+
+Your Output: 
+2
+[5.1212,-1.3223,1.0E-11,99.0101]
+[-1.3223,1.0E-11]
+[1.0E-11,99.0101]
+Index Out of Bounds Exception
+false
+4
+[5.1212,-1.3223,1.0E-11,99.0101]
+
+----------------------------------------
+########## Testcase 5: Failed ##########
+Expected Output: 
+2
+[1.0,-1.0]
+Index Out of Bounds Exception
+true
+6
+[1.0,-1.0,0.0,0.0,0.0,-1.0]
+0
+
+Your Output: 
+2
+[1.0,-1.0]
+Index Out of Bounds Exception
+true
+6
+[1.0,-1.0,0.0,0.0,0.0,-1.0]
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+Invalid Position Exception
+1
+
+----------------------------------------
+########## Testcase 6: Passed ##########
+Expected Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+
+Your Output: 
+2
+[5,-1,0,99]
+[-1,0]
+[0,99]
+Index Out of Bounds Exception
+false
+true
+4
+[5,-1,0,99]
+
+----------------------------------------
+########## Testcase 7: Failed ##########
+Expected Output: 
+0
+Invalid Position Exception
+4
+[Manjunath,Praveen,Arun,SivaSankar]
+[Manjunath,Praveen,Arun,SivaSankar]
+[Manjunath,Praveen,Arun,SivaSankar,Rehana,Rajesh,Deepak,Murthy,Manasa]
+9
+true
+false
+false
+[Manjunath,Praveen,Arun,SivaSankar,Rehana,Rajesh,Manasa]
+
+Your Output: 
+0
+Invalid Position Exception
+4
+[Manjunath,Praveen,Arun,SivaSankar]
+[Manjunath,Praveen,Arun,SivaSankar]
+[Manjunath,Praveen,Arun,SivaSankar,Rehana,Rajesh,Deepak,Murthy,Manasa]
+9
+false
+false
+false
+[Manjunath,Praveen,Arun,SivaSankar,Rehana,Rajesh,Manasa]
+
+----------------------------------------
+Result: 5/8 testcases passed.
+Starting audit...
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:4: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:5:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7: Line is longer than 80 characters (found 94). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7:9: Redundant 'public' modifier. [RedundantModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7:24: Parameter name should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7:31: 'name' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:7:38: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:11: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:11:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:11:34: '{' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:15:9: Definition of 'equals()' without corresponding definition of 'hashCode()'. [EqualsHashCode]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:16: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:16:31: Parameter other should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:25:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:30: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:30:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:32:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:32:47: Parameter stdin should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:42:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:62: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:72: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:79:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:80:36: '=' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:80:37: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:89: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:89:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:94:33: Avoid nested blocks. [AvoidNestedBlocks]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:95: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:97: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:98: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:98: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:106:59: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:118: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:120:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:120:46: Parameter stdin should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:130:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:150: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:160: Line is longer than 80 characters (found 86). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:167:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:177: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:177:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:182:33: Avoid nested blocks. [AvoidNestedBlocks]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:183: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:185: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:186: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:186: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:194:59: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:208:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:208:41: Parameter stdin should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:218:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:238: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:248: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:255:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:265: 'for' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:265:28: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:270:33: Avoid nested blocks. [AvoidNestedBlocks]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:271: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:273: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:274: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:274: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:282:59: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:294: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:297:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:297:42: Parameter stdin should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:307:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:352:33: Avoid nested blocks. [AvoidNestedBlocks]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:353: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:355: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:356: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:356: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:364:59: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:376: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:379:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:379:47: Parameter stdin should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:389:44: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:426:54: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:426:56: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:427: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:435: Line is longer than 80 characters (found 92). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:436: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:436:78: ';' is preceded with whitespace. [NoWhitespaceBefore]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:436:80: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:437: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:437: Line is longer than 80 characters (found 96). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:442:33: Avoid nested blocks. [AvoidNestedBlocks]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:443: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:445: Line is longer than 80 characters (found 110). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:446: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:446: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:454:59: ')' is preceded with whitespace. [ParenPad]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:466: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:469:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:469:33: Parameter args should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:474:15: 'switch' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 11\Assignment-2\Solution.java:495: Line is longer than 80 characters (found 112). [LineLength]
+Audit done.
+Checkstyle ends with 98 errors.
+
+
+[master 53cb317] "check_style_score -> 5 of 8 passed. style score: 0/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cspp2-assignments/Module 11/Assignment-2/test.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+

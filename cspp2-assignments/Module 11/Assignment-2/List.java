@@ -31,36 +31,42 @@ public class List<E> {
      * Think about how you can use the size variable to add item
      * to the list.
      */
+    public void resize() {
+        //int newlen = 2 * list.length;
+        list = Arrays.copyOf(list, 2 * size);
+    }
+
     public void add(E item) {
         //Inserts the specified element at the end of the list.
         //You can modify the code in this method.
         try {
-            list[size] = item;
-            size++;
+            list[size++] = item;
+            //System.out.println(Arrays.toString(list) + " list");
         } catch (Exception e) {
             resize();
         }
     }
     /*Inserts all the elements of specified int
     array to the end of list*/
-    public void addAll(E[] newArray) {
+    public void addAll(E[] items) {
         //Write logic for addAll method
-        for (int i = 0; i < newArray.length; i++) {
+        for (int i = 0; i < items.length; i++) {
             try {
-                list[size] = newArray[i];
+
+                list[size] = items[i];
                 size++;
+
+                //System.out.println(Arrays.toString(list) + " list");
             } catch (Exception e) {
                 resize();
+                list[size++] = items[i];
             }
         }
     }
     /**
      * { function_description }
      */
-    private void resize(){
-        list = Arrays.copyOf(list, size * 2);
-    }
-
+    
     /*
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
@@ -91,15 +97,27 @@ public class List<E> {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size - 1; i++) {
-                list[i] = list[i + 1];
-            }
-            size--;
-        } else {
+    public void remove(int idex) {
+        //Write logic for remove method
+        if (idex >= size || idex < 0) {
             System.out.println("Invalid Position Exception");
+            return;
         }
+        E[] arrayCopy = ((E[])new Object[list.length]);
+        for (int i = 0; i < list.length; i++) {
+            arrayCopy[i] = list[i];
+        }
+        int ind = 0;
+        for (int i = 0; i < arrayCopy.length; i++) {
+            if (i != idex) {
+                list[ind] = arrayCopy[i];
+                ind++;
+                //System.out.println(list[ind] + "ind array");
+            }
+
+        }
+
+        size--;
     }
     /*
      * Get method has to return the items that is
@@ -113,13 +131,8 @@ public class List<E> {
      * number of items in the list? Would size variable be useful?
      */
     public E get(int index) {
-         //Write logic for get method
-        // return list[index];
-        if (index < 0 || index >= size) {
-            return null;
-        } else {
-            return list[index];
-        }
+        //Write logic for get method
+        return list[index];
     }
     /*
      * What happens when you print an object using println?
@@ -142,16 +155,15 @@ public class List<E> {
      *
      */
     public String toString() {
+
         if (size == 0) {
             return "[]";
         }
-        String str = "[";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + list[i] + ",";
+        E[] printArray = ((E[])new Object[size]);
+        for (int i = 0; i < size; i++) {
+            printArray[i] = list[i];
         }
-        str = str + list[i] + "]";
-        return str;
+        return Arrays.toString(printArray).replaceAll(" ", "");
     }
     /*
      * Contains return true if the list has
@@ -162,7 +174,7 @@ public class List<E> {
     public boolean contains(E item) {
         //Write logic for contains method
         for (int i = 0; i < size; i++) {
-            if (item == list[i]) {
+            if (item.equals(list[i])) {
                 return true;
             }
         }
@@ -175,8 +187,7 @@ public class List<E> {
      */
 
     public int indexOf(E item) {
-       //Write logic for indexOf method
-        for (int i = 0; i < size; i++) {
+       for (int i = 0; i < size; i++) {
             if (item == list[i]) {
                 return i;
             }
@@ -187,60 +198,66 @@ public class List<E> {
     /* Removes all of its elements that
      * are contained in the specified int array.
      */
-    public void removeAll(E[] newArray)
-    {
-        // write the logic
-        for (int i = 0; i < newArray.length; i++) {
-            int c = count(newArray[i]);
-            for (int j = 0; j < c; j++) {
-                remove(indexOf(newArray[i]));
-            }
-        }
-    }
     public int count(final E item) {
+        // write the logic
         int c = 0;
         for (int i = 0; i < size; i++) {
-            if (list[i].equals(item)) {
+            if (item == list[i]) {
                 c++;
             }
         }
         return c;
     }
+    public void removeAll(E[] items)
+    {
+        // // write the logic
+        // System.out.println("list : "+items);
+        // for(int i =0;i<items.length;i++){
+        //     int c = count(items[i]);
+        //     for(int j =0;j<c;j++){
+        //         remove(indexOf(items[i]));
+        //         //System.out.println("removing : " + newArray[i]);
+        //         //System.out.println("list : "+ toString());
+                
+        //     }
+        // }
+    }
+
     /*Returns a list containing elements, including
      startIndex and excluding endIndex. The first parameter
      indicates the startIndex and the second parameter
      indicates the endIndex.
      */
-    public List subList(final int start, final int end) {
-        List l = new List();
-        if (start < 0 || end < 0 || start > end || start == end || size == 0) {
+    public List subList(int start, int end) {
+
+        if(start < 0 || end > size+1 || !(start < end)) {
             System.out.println("Index Out of Bounds Exception");
             return null;
-        } else {
-            for (int i = start; i < end; i++) {
-                l.add(list[i]);
-            }
         }
-        return l;
+        List sublist = new List(end-start);
+        for(int i = start; i < end;i++) {
+            sublist.add(list[i]);
+        }
+    return sublist;
     }
     /*Returns a boolean indicating whether the parameter
       i.e a List object is exactly matching with the given list or not.
      */
-    public boolean equals(List<E> listdata)
+    public boolean equals(List<E> li)
     {
-        if (size() != listdata.size()) {
-            return false;
-        }
-        for (int i = 0; i < size; i++) {
-            if (!list[i].equals(listdata.list[i])) {
-                return false;
-            }
-        }
+        
+                 
+    if(Arrays.equals(list, li.list)){
         return true;
+    }
+    return false;
+        
     }
     /*Removes all the elements from list*/
     public void clear()
     {
-        removeAll(list);
+        // write the logic for clear.
+        list = ((E[])new Object[10]);
+        size = 0;
     }
 }
