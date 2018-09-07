@@ -73,7 +73,7 @@ final class List {
     /**
      * Constructs the object.
      */
-    public List() {
+    List() {
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
