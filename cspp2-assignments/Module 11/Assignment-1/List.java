@@ -279,7 +279,7 @@ final class List {
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             remove(indexOf(newArray[i]));
-        } 
+        }
      }
     /*
     Returns a list object containing elements, including startIndex and
