@@ -13,12 +13,24 @@ class Student {
      *
      * @param      names  The name
      */
-    Student(String names) {
+    Student(final String names) {
         this.name = names;
     }
-    public String getName() {//Getter method which returns the value of instance variable
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
+    public String getName() {
         return this.name;
     }
+    /**
+     * { function_description }.
+     *
+     * @param      other  The other
+     *
+     * @return     { description_of_the_return_value }
+     */
     @Override
     public boolean equals(Object other) {
         if (!(other instanceof Student)) {
@@ -28,7 +40,11 @@ class Student {
         Student that = (Student) other;
         return this.getName().equals(that.getName());
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return this.name;
     }
