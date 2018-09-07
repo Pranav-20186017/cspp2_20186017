@@ -545,7 +545,7 @@ final class Solution {
                 default:
                 break;
             }
-        }   
+        }
     }
     /**
      * { function_description }.
@@ -585,4 +585,3 @@ final class Solution {
         }
     }
 }
-
