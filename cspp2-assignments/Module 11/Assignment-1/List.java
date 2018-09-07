@@ -1,10 +1,19 @@
+/**
+ * BufferedInput Stream.
+ */
 import java.io.BufferedInputStream;
+/**
+ * Scanner Class.
+ */
 import java.util.Scanner;
+/**
+ * Arrays.
+ */
 import java.util.Arrays;
 /**
  * List of elements.
  */
-public class List {
+final class List {
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -25,8 +34,6 @@ public class List {
      * This is not desirable and so having private access specifer
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
-     *
-    */
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
@@ -58,7 +65,13 @@ public class List {
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
      */
+    /**
+     * list ADT.
+     */
     private int[] list;
+    /**
+     * Size of LIST ADT.
+     */
     private int size;
     public List() {
 
@@ -92,7 +105,6 @@ public class List {
             resize();
         }
     }
-
     /*
      * The size method returns the value of the size. The purpose of the method
      * is to announce the size of the list to the objects outside the list
@@ -105,9 +117,8 @@ public class List {
         return size;
     }
     public void resize() {
-    	list = Arrays.copyOf(list, 2 * size);
+        list = Arrays.copyOf(list, 2 * size);
     }
-
     /*
      * The remove method does what the name suggests. Removes an int item,
      * specified by the index argument, from the list It also does an additional
@@ -122,7 +133,7 @@ public class List {
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    public void remove(int index) {
+    public void remove(final int index) {
         // write the logic for remove here. Think about what to do to the size
         // variable.
         if (index >= 0 && index < size) {
@@ -134,7 +145,6 @@ public class List {
             System.out.println("Invalid Position Exception");
         }
     }
-
     /*
      * Get method has to return the items that is at the index position passed
      * as an argument to the method. If the item doesn't exist then return a -1
@@ -144,7 +154,7 @@ public class List {
      * exist. How do we check if the position is greater than the number of
      * items in the list? Would size variable be useful?
      */
-    public int get(int index) {
+    public int get(final int index) {
         // Replace the code below to write the code for get
         if (index < 0 || index >= size) {
             return -1;
@@ -152,7 +162,6 @@ public class List {
             return list[index];
         }
     }
-
     /*
      * What happens when you print an object using println? Java provides a
      * method named toString that is internally invoked when an object variable
@@ -184,7 +193,7 @@ public class List {
      * the method So, iterate through the list and return true if the item
      * exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains(final int item) {
         // Replace the code below
         return indexOf(item) == -1;
     }
@@ -192,7 +201,7 @@ public class List {
      * Returns the index of the first occurrence of the specified element in
      * this list, or -1 if this list does not contain the element.
      */
-    public int indexOf(int item) {
+    public int indexOf(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
@@ -204,7 +213,7 @@ public class List {
     /*
     Inserts all the elements of specified int array to the end of list    
     */
-    public void addAll(int[] newArray)
+    public void addAll(final int[] newArray)
     {
         for (int i = 0; i < newArray.length; i++) {
             try {
@@ -218,10 +227,10 @@ public class List {
      Removes all of its elements that are contained in the specified int 
      array.    
     */
-     public void removeAll(int[] newArray)
+     public void removeAll(final int[] newArray)
      {
         for (int i =0; i < newArray.length; i++) {
-        	remove(indexOf(newArray[i]));
+            remove(indexOf(newArray[i]));
         } 
 
      }
@@ -232,41 +241,41 @@ public class List {
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
-    public List subList(int start, int end) 
+    public List subList(final int start, final int end) 
     {
     // write the logic for subList
-    	List l = new List();
-    	if(start<0 || end<0 || start>end) {
-    		System.out.println("Index Out of Bounds Exception");
-    		return null;
-    	}
-    	else
-    	{
-    		for(int i = start;i<end;i++) {
-    			l.add(list[i]);
-    		}
-    		
-    	}
-    	return l;
-    	
+        List l = new List();
+        if(start<0 || end<0 || start>end) {
+            System.out.println("Index Out of Bounds Exception");
+            return null;
+        }
+        else
+        {
+            for(int i = start;i<end;i++) {
+                l.add(list[i]);
+            }
+            
+        }
+        return l;
+        
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
     exactly matching with the given list or not.
     */
-    public boolean equals(List list) 
+    public boolean equals(final List list) 
     {
     // Replace the code below
-    	if(size() != list.size()) {
-    		return false;
-    	}
-    	for(int i=0;i<size;i++)
-    	{
-    		if(list.contains(this.list[i])) {
-    			return false;
-    		}
-    	}
-    	return true;	
+        if(size() != list.size()) {
+            return false;
+        }
+        for(int i=0;i<size;i++)
+        {
+            if(list.contains(this.list[i])) {
+                return false;
+            }
+        }
+        return true;    
     }
     /*
     * Removes all the elements from list
@@ -276,15 +285,17 @@ public class List {
     public void clear()
     {
     // write the logic for clear.
-    	list = new int[10];
-    	size = 0;
-
+        list = new int[10];
+        size = 0;
     }
-
-    public static void main(String[] args) {
+    /**
+     * { function_description }.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
-
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
