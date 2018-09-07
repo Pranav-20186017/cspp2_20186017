@@ -32,7 +32,7 @@ class Student {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(Object other) {
+    public boolean equals(final Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
@@ -52,7 +52,9 @@ class Student {
         return this.name;
     }
 }
-
+/**
+ * Class for solution.
+ */
 final class Solution {
     /**
      * Constructs the object.
