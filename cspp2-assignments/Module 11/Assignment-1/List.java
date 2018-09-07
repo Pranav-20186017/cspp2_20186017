@@ -102,7 +102,8 @@ final class List {
      */
     public void add(final int item) {
         try {
-            list[size++] = item;
+            list[size] = item;
+            size++;
         } catch (Exception e) {
             resize();
         }
@@ -267,7 +268,8 @@ final class List {
     public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             try {
-                list[size++] = newArray[i];
+                list[size] = newArray[i];
+                size++;
             } catch (Exception e) {
                 resize();
             }
