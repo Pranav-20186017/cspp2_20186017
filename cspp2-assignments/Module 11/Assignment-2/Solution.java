@@ -62,7 +62,12 @@ final class Solution {
     private Solution() {
         //unused.
     }
-    public static void executeListInteger(Scanner stdin) {
+    /**
+     * { function_description }.
+     *
+     * @param      stdin  The stdin
+     */
+    public static void executeListInteger(final Scanner stdin) {
         List<Integer> l = new List();
         while (stdin.hasNext()) {
             // read the line
@@ -72,7 +77,7 @@ final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Integer.parseInt(tokens[1]));
@@ -92,7 +97,8 @@ final class Solution {
                 break;
                 case "indexOf":
                     if (tokens.length == 2) {
-                        System.out.println(l.indexOf(Integer.parseInt(tokens[1])));
+                        System.out.println(l.indexOf(
+                        Integer.parseInt(tokens[1])));
                     }
                 break;
                 case "get":
