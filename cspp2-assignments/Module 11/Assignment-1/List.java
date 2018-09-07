@@ -309,10 +309,8 @@ final class List {
             for(int i = start; i < end; i++) {
                 l.add(list[i]);
             }
-            
         }
         return l;
-        
     }
     /*
     Returns a boolean indicating whether the parameter i.e a List object is
