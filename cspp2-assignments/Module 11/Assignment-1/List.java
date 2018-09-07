@@ -229,7 +229,12 @@ final class List {
      */
     public boolean contains(final int item) {
         // Replace the code below
-        return indexOf(item) == -1;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                return true;
+            }
+        }
+        return false;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
@@ -250,15 +255,6 @@ final class List {
             }
         }
         return -1;
-    }
-    public int count(int[] newArray, int var) {
-        int val = 0;
-        for(int i = 0; i < newArray.length; i++) {
-            if(var == newArray[i]) {
-                val++;
-            }
-        }
-        return val;
     }
     /*
     Inserts all the elements of specified int array to the end of list
@@ -287,10 +283,11 @@ final class List {
       * @param      newArray  The new array
       */
      public void removeAll(final int[] newArray) {
-        for (int i = 0; i < newArray.length; i++) {
-            int c =  count(newArray, newArray[i]);
-            for(int j = 0; j < c; j++) {
-                remove(indexOf(newArray[i]));
+        for (int each : newArray) {
+            for (int i = 0; i < newArray.length; i++) {
+                if(contains(newArray[i])) {
+                    remove(indexOf(newArray[i]));
+                }
             }
         }
      }
