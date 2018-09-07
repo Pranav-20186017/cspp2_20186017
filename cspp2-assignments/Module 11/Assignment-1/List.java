@@ -304,8 +304,7 @@ final class List {
             System.out.println("Index Out of Bounds Exception");
             return null;
         }
-        else
-        {
+        else {
             for (int i = start; i < end; i++) {
                 l.add(list[i]);
             }
