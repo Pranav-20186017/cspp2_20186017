@@ -281,7 +281,7 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public int count(int item) {
+    public int count(final int item) {
         int c = 0;
         for (int i = 0; i < size; i++) {
             if (item == list[i]) {
