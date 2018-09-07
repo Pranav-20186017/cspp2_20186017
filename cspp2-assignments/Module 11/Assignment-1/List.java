@@ -321,17 +321,17 @@ final class List {
     /**
      * { function_description }.
      *
-     * @param      list  The list
+     * @param      nlist  The list
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) {
+    public boolean equals(final List nlist) {
     // Replace the code below
-        if (size() != list.size()) {
+        if (size() != nlist.size()) {
             return false;
         }
-        for(int i = 0; i < size; i++) {
-            if (list.contains(this.list[i])) {
+        for (int i = 0; i < size; i++) {
+            if (nlist.contains(this.list[i])) {
                 return false;
             }
         }
