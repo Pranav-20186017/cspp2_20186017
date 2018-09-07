@@ -13,8 +13,8 @@ class Student {
      *
      * @param      name  The name
      */
-    Student(final String name) {
-        this.name = name;
+    Student(String names) {
+        this.name = names;
     }
     public String getName() {//Getter method which returns the value of instance variable
         return this.name;
