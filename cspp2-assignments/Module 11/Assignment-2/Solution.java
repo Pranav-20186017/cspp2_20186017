@@ -11,7 +11,7 @@ class Student {
     /**
      * Constructs the object.
      *
-     * @param      name  The name
+     * @param      names  The name
      */
     Student(String names) {
         this.name = names;
