@@ -24,21 +24,24 @@ class Student {
     public String getName() {
         return this.name;
     }
-    /**
+    @Override
+       /**
      * { function_description }.
      *
      * @param      other  The other
      *
      * @return     { description_of_the_return_value }
      */
-    @Override
     public boolean equals(Object other) {
         if (!(other instanceof Student)) {
             return false;
         }
-
         Student that = (Student) other;
         return this.getName().equals(that.getName());
+    }
+    @Override
+    public int hashCode() {
+        return 0;
     }
     /**
      * Returns a string representation of the object.
