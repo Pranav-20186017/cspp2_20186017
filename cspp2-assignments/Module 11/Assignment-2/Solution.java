@@ -225,21 +225,22 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Double[] a = new Double[t2.length];
-                        for(int i = 0; i < t2.length; i++) {
+                        for (int i = 0; i < t2.length; i++) {
                             a[i] = Double.parseDouble(t2[i]);
                         }
                         l.removeAll(a);
                     }
                 break;
-                case "subList": 
+                case "subList":
                     if (tokens.length != 2) {
                         break;
                     }
                     String[] arrstring3 = tokens[1].split(",");
                     List object = l.subList(Integer.parseInt(
                     arrstring3[0]), Integer.parseInt(arrstring3[1]));
-                    if (object != null) 
+                    if (object != null) {
                         System.out.println(object);
+                    }
                     break;
                 case "equals":
                     if (tokens.length == 2) {
@@ -259,6 +260,11 @@ final class Solution {
             }
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      stdin  The stdin
+     */
     public static void executeListFloat(Scanner stdin) {
         List<Float> l = new List();
         while (stdin.hasNext()) {
@@ -269,7 +275,7 @@ final class Solution {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                    if (tokens.length == 2){
+                    if (tokens.length == 2) {
                         String[] t = tokens[1].split(",");
                         if (t.length == 1) {
                             l.add(Float.parseFloat(tokens[1]));
