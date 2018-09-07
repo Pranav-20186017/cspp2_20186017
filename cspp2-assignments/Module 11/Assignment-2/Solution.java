@@ -108,14 +108,15 @@ final class Solution {
                 break;
                 case "contains":
                     if (tokens.length == 2) {
-                        System.out.println(l.contains(Integer.parseInt(tokens[1])));
+                        System.out.println(
+                        l.contains(Integer.parseInt(tokens[1])));
                     }
                 break;
                 case "addAll":
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         Integer[] temp = new Integer[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i]=Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
@@ -125,8 +126,9 @@ final class Solution {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         Integer[] a = new Integer[t2.length];
-                        for(int i = 0; i < t2.length; i++)
+                        for(int i = 0; i < t2.length; i++) {
                             a[i] = Integer.parseInt(t2[i]);
+                        }
                         l.removeAll(a);
                     }
                 break;
