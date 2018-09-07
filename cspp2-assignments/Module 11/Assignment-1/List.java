@@ -213,7 +213,7 @@ final class List {
         }
         str = str + list[i] + "]";
         return str;
-    } 
+    }
     /*
      * Contains return true if the list has the item passed as an argument to
      * the method So, iterate through the list and return true if the item
@@ -251,15 +251,14 @@ final class List {
         return -1;
     }
     /*
-    Inserts all the elements of specified int array to the end of list    
+    Inserts all the elements of specified int array to the end of list
     */
     /**
      * Adds all.
      *
      * @param      newArray  The new array
      */
-    public void addAll(final int[] newArray)
-    {
+    public void addAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             try {
                 list[size++] = newArray[i];
@@ -269,20 +268,18 @@ final class List {
         }
     }
     /*
-     Removes all of its elements that are contained in the specified int 
-     array.    
+     Removes all of its elements that are contained in the specified int
+     array.
     */
      /**
       * Removes all.
       *
       * @param      newArray  The new array
       */
-     public void removeAll(final int[] newArray)
-     {
-        for (int i =0; i < newArray.length; i++) {
+     public void removeAll(final int[] newArray) {
+        for (int i = 0; i < newArray.length; i++) {
             remove(indexOf(newArray[i]));
         } 
-
      }
     /*
     Returns a list object containing elements, including startIndex and
