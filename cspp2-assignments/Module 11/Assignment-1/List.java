@@ -326,7 +326,7 @@ final class List {
             return false;
         }
         for (int i = 0; i < size; i++) {
-            if (nlist.contains(this.list[i])) {
+            if (list[i] != nlist.list[i]) {
                 return false;
             }
         }
