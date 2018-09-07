@@ -273,6 +273,15 @@ final class List {
             }
         }
     }
+    public int count(int item) {
+        int c = 0;
+        for (int i = 0; i < size; i++) {
+            if (item == list[i]) {
+                c++;
+            }
+        }
+        return c;
+    }
     /*
      Removes all of its elements that are contained in the specified int
      array.
@@ -283,11 +292,10 @@ final class List {
       * @param      newArray  The new array
       */
      public void removeAll(final int[] newArray) {
-        for (int each : newArray) {
-            for (int i = 0; i < newArray.length; i++) {
-                if(contains(newArray[i])) {
-                    remove(indexOf(newArray[i]));
-                }
+        for(int i =0;i<newArray.length;i++){
+            int c = count(newArray[i]);
+            for(int j =0;j<c;j++){
+                remove(indexOf(newArray[i]));
             }
         }
      }
