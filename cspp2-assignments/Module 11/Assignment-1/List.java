@@ -284,7 +284,7 @@ final class List {
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
-    second parameter indicates the endIndex. Returns null and print 
+    second parameter indicates the endIndex. Returns null and print
     "Index Out of Bounds Exception" if any of values start and end are negative
     and also if start is greater than end.
     */
@@ -296,8 +296,7 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public List subList(final int start, final int end) 
-    {
+    public List subList(final int start, final int end) {
     // write the logic for subList
         List l = new List();
         if (start < 0 || end < 0 || start > end) {
