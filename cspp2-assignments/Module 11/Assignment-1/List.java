@@ -13,6 +13,7 @@ import java.util.Arrays;
 /**
  * List of elements.
  */
+import java.util.Collections;
 final class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -250,6 +251,15 @@ final class List {
         }
         return -1;
     }
+    public int count(int[] newArray, int var) {
+        int val = 0;
+        for(int i = 0; i < newArray.length; i++) {
+            if(var == newArray[i]) {
+                val++;
+            }
+        }
+        return val;
+    }
     /*
     Inserts all the elements of specified int array to the end of list
     */
@@ -278,7 +288,10 @@ final class List {
       */
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
-            remove(indexOf(newArray[i]));
+            int c =  count(newArray, newArray[i]);
+            for(int j = 0; j < c; j++) {
+                remove(indexOf(newArray[i]));
+            }
         }
      }
     /*
@@ -342,9 +355,7 @@ final class List {
      */
     public void clear() {
     // write the logic for clear.
-        final int ten = 10;
-        list = new int[ten];
-        size = 0;
+        removeAll(list);
     }
     /**
      * { function_description }.
