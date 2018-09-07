@@ -333,7 +333,7 @@ final class List {
         }
         for(int i = 0; i < size; i++)
         {
-            if(list.contains(this.list[i])) {
+            if (list.contains(this.list[i])) {
                 return false;
             }
         }
@@ -347,8 +347,7 @@ final class List {
     /**
      * { function_description }.
      */
-    public void clear()
-    {
+    public void clear() {
     // write the logic for clear.
         final int ten = 10;
         list = new int[ten];
