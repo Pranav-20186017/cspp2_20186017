@@ -13,7 +13,6 @@ import java.util.Arrays;
 /**
  * List of elements.
  */
-import java.util.Collections;
 final class List {
     //Implement all the methods mentioned to build a ListADT
     /*
@@ -275,6 +274,13 @@ final class List {
             }
         }
     }
+    /**
+     * { function_description }.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int count(int item) {
         int c = 0;
         for (int i = 0; i < size; i++) {
