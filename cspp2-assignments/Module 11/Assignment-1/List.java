@@ -328,11 +328,10 @@ final class List {
     public boolean equals(final List list) 
     {
     // Replace the code below
-        if(size() != list.size()) {
+        if (size() != list.size()) {
             return false;
         }
-        for(int i = 0; i < size; i++)
-        {
+        for(int i = 0; i < size; i++) {
             if (list.contains(this.list[i])) {
                 return false;
             }
