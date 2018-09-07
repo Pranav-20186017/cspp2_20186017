@@ -53,14 +53,11 @@ final class List {
      * currently it has 3 items.
      * So, to keep track of the size we need a variable called size
      * Again, we use private as we don't want that size variable
-     * to be accessed by the methods that are outside of the List class.
-     * 
+     * to be accessed by the methods that are outside of the List class
      */
-
     // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
-
     /*
      * The purpose of the constructor is to initialize the class variables with
      * some default values.
@@ -74,12 +71,10 @@ final class List {
      */
     private int size;
     public List() {
-
         // what are the two variables to be initialized here? think about the
         // private variables described above. What should be the default values?
         // In the case of the list, it should be empty but it should be
         // initialized with an array size like 10
-
         // Think about the initial value for size.
         // How many items do we have in the list when you create it?
         // An empty list has how many items?
@@ -87,9 +82,7 @@ final class List {
          final int ten = 10;
         list = new int[ten];
         size = 0;
-
     }
-    
     /*
      * The add method does what the name suggests. Add an int item to the list.
      * The assumption is to store the item at the end of the list What is the
