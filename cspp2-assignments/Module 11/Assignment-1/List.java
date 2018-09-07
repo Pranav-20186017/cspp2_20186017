@@ -350,7 +350,8 @@ final class List {
     public void clear()
     {
     // write the logic for clear.
-        list = new int[10];
+        final int ten = 10;
+        list = new int[ten];
         size = 0;
     }
     /**
@@ -412,7 +413,7 @@ final class List {
                     if (tokens.length == 2) {
                         String[] t1 = tokens[1].split(",");
                         int[] temp = new int[t1.length];
-                        for(int i = 0; i < temp.length; i++) {
+                        for (int i = 0; i < temp.length; i++) {
                             temp[i] = Integer.parseInt(t1[i]);
                         }
                         l.addAll(temp);
