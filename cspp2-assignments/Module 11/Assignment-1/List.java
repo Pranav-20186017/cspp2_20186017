@@ -302,7 +302,7 @@ final class List {
      public void removeAll(final int[] newArray) {
         for (int i = 0; i < newArray.length; i++) {
             int c = count(newArray[i]);
-            for(int j = 0; j < c; j++) {
+            for (int j = 0; j < c; j++) {
                 remove(indexOf(newArray[i]));
             }
         }
