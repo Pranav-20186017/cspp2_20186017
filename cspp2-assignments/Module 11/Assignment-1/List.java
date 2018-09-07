@@ -325,8 +325,7 @@ final class List {
      *
      * @return     { description_of_the_return_value }
      */
-    public boolean equals(final List list) 
-    {
+    public boolean equals(final List list) {
     // Replace the code below
         if (size() != list.size()) {
             return false;
