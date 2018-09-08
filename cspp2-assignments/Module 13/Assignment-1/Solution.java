@@ -74,8 +74,15 @@ class Set {
         }
         return s1;
     }
-    // public Set intersection(Set t) {
-    //     return set;
+    public Set intersection(Set items) {
+        Set s2 = new Set();
+        for(int i =0;i<size;i++) {
+            if(items.contains(set[i])) {
+                s2.add(set[i]);
+            }
+        }
+        return s2;
+        }
         
     // }
     // public int[][] cartesianProduct(Set z) {
@@ -148,15 +155,15 @@ public final class Solution {
                     s.add(intArray);
                 }
                 break;
-                // case "intersection":
-                // s = new Set();
-                // Set t = new Set();
-                // intArray = intArray(tokens[1]);
-                // s.add(intArray);
-                // intArray = intArray(tokens[2]);
-                // t.add(intArray);
-                // System.out.println(s.intersection(t));
-                // break;
+                case "intersection":
+                s = new Set();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
                 case "retainAll":
                 s = new Set();
                 intArray = intArray(tokens[1]);
