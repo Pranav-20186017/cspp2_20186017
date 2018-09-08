@@ -3,15 +3,15 @@ import java.util.Scanner;
 import java.util.Arrays;
 /**
  * Class for set.
- * @author : 
+ * @author : Pranav Surampudi
  */
 class Set {
     /**
-     * sie of the ADT set
+     * size of the ADT set.
      */
     private int size;
     /**
-     * array to act as a Set ADT
+     * array to act as a Set ADT.
      */
     private int[] set;
     /**
@@ -41,7 +41,7 @@ class Set {
      *
      * @param      item  The item
      */
-    public void add(int item) {
+    public void add(final int item) {
         if(size==set.length) {
             resize();
         }
@@ -55,7 +55,7 @@ class Set {
      *
      * @param      items  The items
      */
-    public void add(int[] items) {
+    public void add(final int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
         }
@@ -101,7 +101,7 @@ class Set {
          *
          * @return     { returns a set }
          */
-    public Set retainAll(int[] items) {
+    public Set retainAll(final int[] items) {
         Set s1 = new Set();
         for (int i = 0; i < size; i++) {
             for(int j = 0; j < items.length; j++) {
