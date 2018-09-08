@@ -42,10 +42,10 @@ class Set {
      * @param      item  The item
      */
     public void add(final int item) {
-        if(size==set.length) {
+        if (size == set.length) {
             resize();
         }
-        if(!(contains(item))) {
+        if (!(contains(item))) {
             set[size] = item;
             size++;
         }
@@ -104,8 +104,8 @@ class Set {
     public Set retainAll(final int[] items) {
         Set s1 = new Set();
         for (int i = 0; i < size; i++) {
-            for(int j = 0; j < items.length; j++) {
-                if(set[i] == items[j]) {
+            for (int j = 0; j < items.length; j++) {
+                if (set[i] == items[j]) {
                     s1.add(set[i]);
                 }
             }
@@ -119,9 +119,9 @@ class Set {
          *
          * @return     {Returns a set containing common elements from 2 sets}.
          */
-    public Set intersection(Set items) {
+    public Set intersection(final Set items) {
         Set s2 = new Set();
-        for(int i = 0; i < size; i++) {
+        for (int i = 0; i < size; i++) {
             if (items.contains(set[i])) {
                 s2.add(set[i]);
             }
@@ -129,7 +129,7 @@ class Set {
         return s2;
         }
         /**
-         * {cartesian Product}
+         * {cartesian Product}.
          *
          * @param      item  The item of type set
          *
@@ -138,11 +138,11 @@ class Set {
     public int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
-        }           
-        int[][] c = new int[size*item.size][2];
-        int k =0;
-        for(int i =0;i<size;i++) {
-            for(int j=0; j<item.size; j++) {
+        }
+        int[][] c = new int[size * item.size()][2];
+        int k = 0;
+        for(int i = 0; i < size; i++) {
+            for(int j = 0; j < item.size; j++) {
                 c[k][0] = set[i];
                 c[k][1] = item.set[j];
                 k++;
