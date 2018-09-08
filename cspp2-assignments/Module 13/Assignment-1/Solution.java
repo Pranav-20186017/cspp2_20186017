@@ -21,24 +21,19 @@ class Set {
         set = Arrays.copyOf(set, 2 * size);
     }
     public void add(int item) {
-        try {
-            if(!contains(item))
-            set[size++] = item;
-        } catch(Exception e) {
+        if(size==set.length) {
             resize();
+        }
+        if(!(contains(item))) {
+            set[size] = item;
+            size++;
         }
 
     }
     public void add(int[] items) {
         for (int i = 0; i < items.length; i++) {
-            try {
-                if(!contains(items[i]))
-                set[size] = items[i];
-                size++;
-            } catch (Exception e) {
-                resize();
+            add(items[i]);
             }
-        }
 
     }
     public boolean contains(final int item) {
@@ -65,8 +60,8 @@ class Set {
     }
     public Set retainAll(int[] items) {
         Set s1 = new Set();
-        for (int i = 0;i<size;i++) {
-            for(int j=0;j<items.length;j++) {
+        for (int i = 0; i < size; i++) {
+            for(int j = 0; j < items.length; j++) {
                 if(set[i] == items[j]) {
                     s1.add(set[i]);
                 }
@@ -76,8 +71,8 @@ class Set {
     }
     public Set intersection(Set items) {
         Set s2 = new Set();
-        for(int i =0;i<size;i++) {
-            if(items.contains(set[i])) {
+        for(int i = 0; i < size; i++) {
+            if (items.contains(set[i])) {
                 s2.add(set[i]);
             }
         }
