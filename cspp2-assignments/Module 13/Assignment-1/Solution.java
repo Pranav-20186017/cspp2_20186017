@@ -21,12 +21,11 @@ class Set {
         set = Arrays.copyOf(set, 2 * size);
     }
     public void add(int item) {
-        if(size==set.length) {
-            resize();
-        }
-        if(!(contains(item))) {
+        try {
             set[size] = item;
             size++;
+        } catch (Exception e) {
+            resize();
         }
     }
     public void add(int[] items) {
