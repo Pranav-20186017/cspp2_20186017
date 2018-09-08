@@ -4,10 +4,10 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author : Pranav Surampudi 
+ * @author : 
  */
 class Set {
-    private int size;
+        private int size;
     private int[] set;
     Set() {
         size = 0;
@@ -58,7 +58,7 @@ class Set {
         String str = "{";
         int i = 0;
         for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ",";
+            str = str + set[i] + ", ";
         }
         str = str + set[i] + "}";
         return str;
@@ -82,7 +82,7 @@ class Set {
 
     // }
 }
-    /**
+/**
  * Solution class for code-eval.
  */
 public final class Solution {
@@ -107,7 +107,7 @@ public final class Solution {
         if (s.contains("[")) {
             input = s.substring(1, s.length() - 1);
         }
-        return Arrays.stream(input.split(", "))
+        return Arrays.stream(input.split(","))
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
