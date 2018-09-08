@@ -81,10 +81,12 @@ class Set {
             return null;
         }           
         int[][] c = new int[size*item.size][2];
-        for(int i =0,k=0;i<size;i++) {
-            for(int j=0; j<item.size; j++, k++) {
+        int k =0;
+        for(int i =0;i<size;i++) {
+            for(int j=0; j<item.size; j++) {
                 c[k][0] = set[i];
                 c[k][1] = item.set[j];
+                k++;
             }
         }
         return c;
