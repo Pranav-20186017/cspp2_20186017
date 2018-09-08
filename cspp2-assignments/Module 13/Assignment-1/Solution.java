@@ -136,7 +136,7 @@ class Set {
          * @return     {array of the ordered paris of the product}
          */
     public int[][] cartesianProduct(final Set item) {
-        if (size == 0 || item.size == 0) {
+        if (size == 0 || item.size() == 0) {
             return null;
         }
         int[][] c = new int[size * item.size()][2];
