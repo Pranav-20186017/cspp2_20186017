@@ -107,7 +107,7 @@ public final class Solution {
         if (s.contains("[")) {
             input = s.substring(1, s.length() - 1);
         }
-        return Arrays.stream(input.split(","))
+        return Arrays.stream(input.split(", "))
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
