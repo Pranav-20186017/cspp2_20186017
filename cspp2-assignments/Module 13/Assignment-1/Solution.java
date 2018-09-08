@@ -1,25 +1,46 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
  * Class for set.
  * @author : 
  */
 class Set {
-        private int size;
+    /**
+     * sie of the ADT set
+     */
+    private int size;
+    /**
+     * array to act as a Set ADT
+     */
     private int[] set;
+    /**
+     * Constructs the object.
+     */
     Set() {
         size = 0;
         final int ten = 10;
         set = new int[ten];
     }
+    /**
+     * { function_description }.
+     *
+     * @return     { returns the size of the array}
+     */
     public int size() {
         return size;
     }
+    /**
+     * {increase the size of the Set ADT}.
+     */
     public void resize() {
         set = Arrays.copyOf(set, 2 * size);
     }
+    /**
+     * {Adds an element to the set}.
+     *
+     * @param      item  The item
+     */
     public void add(int item) {
         if(size==set.length) {
             resize();
@@ -29,11 +50,23 @@ class Set {
             size++;
         }
     }
+    /**
+     * {Adds an array of values to the set}.
+     *
+     * @param      items  The items
+     */
     public void add(int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
-            }
+        }
     }
+    /**
+     * {Checks whether a given element is present in the set or not}.
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(final int item) {
         // Replace the code below
         for (int i = 0; i < size; i++) {
@@ -43,6 +76,11 @@ class Set {
         }
         return false;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
      public String toString() {
         // Replace the code below
         if (size == 0) {
@@ -56,6 +94,13 @@ class Set {
         str = str + set[i] + "}";
         return str;
     }
+        /**
+         * { function_description }.
+         *
+         * @param      items  The items
+         *
+         * @return     { returns a set }
+         */
     public Set retainAll(int[] items) {
         Set s1 = new Set();
         for (int i = 0; i < size; i++) {
@@ -67,6 +112,13 @@ class Set {
         }
         return s1;
     }
+        /**
+         * {Intersection}.
+         *
+         * @param      items  The items
+         *
+         * @return     {Returns a set containing common elements from 2 sets}.
+         */
     public Set intersection(Set items) {
         Set s2 = new Set();
         for(int i = 0; i < size; i++) {
@@ -76,6 +128,13 @@ class Set {
         }
         return s2;
         }
+        /**
+         * {cartesian Product}
+         *
+         * @param      item  The item of type set
+         *
+         * @return     {array of the ordered paris of the product}
+         */
     public int[][] cartesianProduct(final Set item) {
         if (size == 0 || item.size == 0) {
             return null;
@@ -100,7 +159,6 @@ public final class Solution {
      * Constructs the object.
      */
     private Solution() {
-
     }
     /**
      * helper function to convert string input to int array.
