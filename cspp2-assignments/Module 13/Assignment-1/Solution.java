@@ -141,8 +141,8 @@ class Set {
         }
         int[][] c = new int[size * item.size()][2];
         int k = 0;
-        for(int i = 0; i < size; i++) {
-            for(int j = 0; j < item.size; j++) {
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < item.size(); j++) {
                 c[k][0] = set[i];
                 c[k][1] = item.set[j];
                 k++;
