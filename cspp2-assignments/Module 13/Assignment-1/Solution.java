@@ -76,15 +76,15 @@ class Set {
         }
         return s2;
         }
-    public int[][] cartesianProduct(final Set other) {
-        if (size == 0 || other.size == 0) {
+    public int[][] cartesianProduct(final Set item) {
+        if (size == 0 || item.size == 0) {
             return null;
         }           
-        int[][] c = new int[size*other.size][2];
+        int[][] c = new int[size*item.size][2];
         for(int i =0,k=0;i<size;i++) {
-            for(int j=0; j<other.size; j++, k++) {
+            for(int j=0; j<item.size; j++, k++) {
                 c[k][0] = set[i];
-                c[k][1] = other.set[i];
+                c[k][1] = item.set[j];
             }
         }
         return c;
