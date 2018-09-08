@@ -28,13 +28,11 @@ class Set {
             set[size] = item;
             size++;
         }
-
     }
     public void add(int[] items) {
         for (int i = 0; i < items.length; i++) {
             add(items[i]);
             }
-
     }
     public boolean contains(final int item) {
         // Replace the code below
