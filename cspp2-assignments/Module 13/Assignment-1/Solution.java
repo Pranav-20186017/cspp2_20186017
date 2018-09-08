@@ -65,9 +65,11 @@ class Set {
     }
     public Set retainAll(int[] items) {
         Set s1 = new Set();
-        for (int i = 0;i<items.length; i++) {
-            if(contains(items[i])) {
-                s1.add(items[i]);
+        for (int i = 0;i<size;i++) {
+            for(int j=0;j<items.length;j++) {
+                if(set[i] == items[j]) {
+                    s1.add(set[i]);
+                }
             }
         }
         return s1;
