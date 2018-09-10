@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for set.
  * @author : Pranav Surampudi
- * Date: 08 Aug 2018
+ * Date: 09 Aug 2018
  */
 class Set {
     //your code goes here...
@@ -38,7 +38,7 @@ class Set {
     /**
      * Sets the set.
      *
-     * @param      set   The set
+     * @param      sets   The set
      */
     void setSet(final int[] sets){
         this.set = sets;
