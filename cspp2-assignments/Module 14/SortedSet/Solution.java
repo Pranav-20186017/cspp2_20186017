@@ -40,7 +40,7 @@ class Set {
      *
      * @param      sets   The set
      */
-    void setSet(final int[] sets){
+    void setSet(final int[] sets) {
         this.set = sets;
     }
     /**
