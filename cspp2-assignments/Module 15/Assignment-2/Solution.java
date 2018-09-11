@@ -371,7 +371,9 @@ public final class Solution {
                 }
                 break;
             case "last":
+                if (s.last() != -1) {
                 System.out.println(s.last());
+                }
                 break;
             // case "intersection":
             //     s = new Set();
