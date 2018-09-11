@@ -256,7 +256,7 @@ class SortedSet extends Set {
             }
         }
         try {
-            if(sub.size() <= 0) {
+            if (sub.size() <= 0) {
                 throw new Exception();
             }
         } catch (Exception e) {
@@ -392,8 +392,8 @@ public final class Solution {
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 t.addAll(intArray);
-                System.out.println(Arrays.deepToString
-                (s.cartesianProduct(t)));
+                System.out.println(Arrays.deepToString(
+                s.cartesianProduct(t)));
                 break;
             default:
                 break;
