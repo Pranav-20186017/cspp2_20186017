@@ -115,7 +115,6 @@ class Set {
             }
         }
         printString += "}";
-
         return printString;
     }
 
@@ -248,17 +247,18 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     Set headSet(final int to) {
-    	if (size() <= 0) {
-    		System.out.println("Set Empty Exception");
-    		return null;
-    	}
         Set sub = new Set();
         for (int i = 0; i < size(); i++) {
             if (getSet()[i] < to) {
                 sub.add(getSet()[i]);
             }
         }
-        return sub;
+        if (sub.size() <= 0) {
+        	System.out.println("Set Empty Exception");
+        	return null;
+        } else {
+        	return sub;
+        }
     }
     /**
      * { function_description }.
