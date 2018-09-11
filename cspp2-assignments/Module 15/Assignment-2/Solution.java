@@ -369,8 +369,8 @@ public final class Solution {
                 }
                 break;
             case "intersection":
-                s = (SortedSet) new Set();
-                Set t = (SortedSet) new Set();
+                s = new SortedSet();
+                Set t = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
@@ -378,15 +378,15 @@ public final class Solution {
                 System.out.println(s.intersection(t));
                 break;
             case "retainAll":
-                s = (SortedSet) new Set();
+                s = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
                 System.out.println(s.retainAll(intArray));
                 break;
             case "cartesianProduct":
-                s = (SortedSet) new Set();
-                t = (SortedSet) new Set();
+                s = new SortedSet();
+                t = new SortedSet();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
