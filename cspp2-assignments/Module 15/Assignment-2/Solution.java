@@ -267,6 +267,7 @@ class SortedSet extends Set {
             }
         } catch (Exception e) {
             System.out.println("Set Empty Exception");
+            return null;
         }
         return sub;
     }
