@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for set.
  * @author : Pranav Surampudi
- * Date: 09 Aug 2018
+ * Date: 11 Aug 2018
  */
 class Set {
     //your code goes here...
@@ -262,13 +262,8 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     int last() {
-        try{
-            if (size() <= 0) {
-            throw new Exception();   
-         }
-
-        } catch(Exception e) {
-             System.out.println("Set Empty Exception");
+        if (size() <= 0) {
+            System.out.println("Set Empty Exception");
             return -1;
         }
         Arrays.sort(getSet(), 0, size());
