@@ -472,6 +472,10 @@ final class List {
                 case "clear":
                     l.clear();
                 break;
+                case "count":
+                    int val = Integer.parseInt(tokens[1]);
+                    System.out.println(l.count(val));
+
                 default:
                 break;
             }
