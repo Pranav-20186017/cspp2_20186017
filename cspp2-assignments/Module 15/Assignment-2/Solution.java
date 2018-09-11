@@ -115,6 +115,7 @@ class Set {
             }
         }
         printString += "}";
+
         return printString;
     }
 
@@ -253,12 +254,7 @@ class SortedSet extends Set {
                 sub.add(getSet()[i]);
             }
         }
-        if (sub.size() <= 0) {
-        	System.out.println("Set Empty Exception");
-        	return null;
-        } else {
-        	return sub;
-        }
+        return sub;
     }
     /**
      * { function_description }.
@@ -266,8 +262,13 @@ class SortedSet extends Set {
      * @return     { description_of_the_return_value }
      */
     int last() {
-        if (size() <= 0) {
-            System.out.println("Set Empty Exception");
+        try{
+            if (size() <= 0) {
+            throw new Exception();   
+         }
+
+        } catch(Exception e) {
+             System.out.println("Set Empty Exception");
             return -1;
         }
         Arrays.sort(getSet(), 0, size());
