@@ -126,8 +126,13 @@ class Show {
     void setSeatNA(final int index) {
         seats[index] = "N/A";
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
-        return movie + "," +showTime;
+        return movie + "," + showTime;
     }
 }
 /**
@@ -148,7 +153,7 @@ class Patron {
      * @param      name    The name
      * @param      mobile  The mobile
      */
-    Patron(String name, String mobile) {
+    Patron(final String name, final String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
