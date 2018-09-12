@@ -73,15 +73,15 @@ class Show {
     /**
      * name of the movie.
      */
-    String movie;
+    private String movie;
     /**
      * show timing.
      */
-    String showTime;
+    private String showTime;
     /**
      * array of seats.
      */
-    String[] seats;
+    private String[] seats;
     /**
      * Constructs the object.
      *
@@ -189,11 +189,11 @@ class BookYourShow {
     /**
      * list of shows.
      */
-    ArrayList<Show> showList;
+    private ArrayList<Show> showList;
     /**
      * list of tickets.
      */
-    ArrayList<String> ticketList;
+    private ArrayList<String> ticketList;
     /**
      * Constructs the object.
      */
