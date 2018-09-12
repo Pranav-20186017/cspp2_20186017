@@ -70,157 +70,158 @@ public final class Solution {
  * Class for show.
  */
 class Show {
-	String movie;
-	String showTime;
-	String[] seats;
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      movie     The movie
-	 * @param      showTime  The show time
-	 * @param      seats     The seats
-	 */
-	Show(String movie, String showTime, String[] seats) {
-		this.movie = movie;
-		this.showTime = showTime;
-		this.seats = seats;
-	}
-	String getMovie() {
-		return movie;
-	}
-	String getShowTime() {
-		return showTime;
-	}
-	String[] getSeats() {
-		return seats;
-	}
-	void setSeatNA(int index) {
-		seats[index] = "N/A";
-	}
-	public String toString() {
-		return movie + "," +showTime;
-	}
+    String movie;
+    String showTime;
+    String[] seats;
+    /**
+     * Constructs the object.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     * @param      seats     The seats
+     */
+    Show(String movie, String showTime, String[] seats) {
+        this.movie = movie;
+        this.showTime = showTime;
+        this.seats = seats;
+    }
+    String getMovie() {
+        return movie;
+    }
+    String getShowTime() {
+        return showTime;
+    }
+    String[] getSeats() {
+        return seats;
+    }
+    void setSeatNA(int index) {
+        seats[index] = "N/A";
+    }
+    public String toString() {
+        return movie + "," +showTime;
+    }
 }
 /**
  * Class for patron.
  */
 class Patron {
-	/**
-	 * name of the patron.
-	 */
-	private String name;
-	/**
-	 * mobile number of the patron.
-	 */
-	private String mobile;
-	/**
-	 * Constructs the object.
-	 *
-	 * @param      name    The name
-	 * @param      mobile  The mobile
-	 */
-	Patron(String name, String mobile) {
-		this.name = name;
-		this.mobile = mobile;
-	}
-	String getName() {
-		return name;
-	}
-	String getMobile() {
-		return mobile;
-	}
-	public String toString() {
-		return name + " " + mobile;
-	}
+    /**
+     * name of the patron.
+     */
+    private String name;
+    /**
+     * mobile number of the patron.
+     */
+    private String mobile;
+    /**
+     * Constructs the object.
+     *
+     * @param      name    The name
+     * @param      mobile  The mobile
+     */
+    Patron(String name, String mobile) {
+        this.name = name;
+        this.mobile = mobile;
+    }
+    String getName() {
+        return name;
+    }
+    String getMobile() {
+        return mobile;
+    }
+    public String toString() {
+        return name + " " + mobile;
+    }
 }
 /**
  * Class for book your show.
  */
 class BookYourShow {
-	ArrayList<Show> showList;
-	ArrayList<String> ticketList;
-	/**
-	 * Constructs the object.
-	 */
-	BookYourShow() {
-		showList = new ArrayList<>();
-		ticketList = new ArrayList<>();
-	}
-	/**
-	 * Adds a show.
-	 *
-	 * @param      show  The show
-	 */
-	void addAShow(Show show) {
-		showList.add(show);
-	}
-	/**
-	 * Gets a show.
-	 *
-	 * @param      movie     The movie
-	 * @param      showTime  The show time
-	 *
-	 * @return     A show.
-	 */
-	Show getAShow(final String movie, final String showTime) {
-		for (Show show: showList) {
-			if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime)) {
-				return show;
-			}
-		}
-		return null;
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      movie     The movie
-	 * @param      showTime  The show time
-	 * @param      patron    The patron
-	 * @param      seats     The seats
-	 */
-	void bookAShow(final String movie, final String showTime, final Patron patron, final String[] seats) {
-		Show show = getAShow(movie, showTime);
-		if (show == null) {
-			System.out.println("No show");
-			return;
-		}
-		boolean flag = false;
-		String[] sseats = show.getSeats();
-		for (String seat: seats) {
-			for (int i = 0; i < sseats.length; i++) {
-				if (seat.equals(sseats[i])) {
-				show.setSeatNA(i);
-				flag = true;
-				}
-			}
-		}
-		if (flag) {
-			ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
-		}
-	}
-	/**
-	 * { function_description }.
-	 *
-	 * @param      movie     The movie
-	 * @param      showTime  The show time
-	 * @param      mobile    The mobile
-	 */
-	void printTicket(final String movie, final String showTime,
-	final String mobile) {
-		String t = mobile + " " + movie + " " + showTime;
-		if (ticketList.contains(t)) {
-			System.out.println(t);
-		} else {
-			System.out.println("Invalid");
-		}
-	}
-	/**
-	 * Shows all.
-	 */
-	void showAll() {
-		for (Show show: showList) {
-			System.out.println(show.toString() + ","
-			+ Arrays.toString(show.getSeats()).replace(" ", ""));
-		}
-	}
+    ArrayList<Show> showList;
+    ArrayList<String> ticketList;
+    /**
+     * Constructs the object.
+     */
+    BookYourShow() {
+        showList = new ArrayList<>();
+        ticketList = new ArrayList<>();
+    }
+    /**
+     * Adds a show.
+     *
+     * @param      show  The show
+     */
+    void addAShow(Show show) {
+        showList.add(show);
+    }
+    /**
+     * Gets a show.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     *
+     * @return     A show.
+     */
+    Show getAShow(final String movie, final String showTime) {
+        for (Show show: showList) {
+            if (show.getMovie().equals(movie) && show.getShowTime().equals(showTime)) {
+                return show;
+            }
+        }
+        return null;
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     * @param      patron    The patron
+     * @param      seats     The seats
+     */
+    void bookAShow(final String movie, final String showTime, final Patron patron, final String[] seats) {
+        Show show = getAShow(movie, showTime);
+        if (show == null) {
+            System.out.println("No show");
+            return;
+        }
+        boolean flag = false;
+        String[] sseats = show.getSeats();
+        for (String seat: seats) {
+            for (int i = 0; i < sseats.length; i++) {
+                if (seat.equals(sseats[i])) {
+                show.setSeatNA(i);
+                flag = true;
+                }
+            }
+        }
+        if (flag) {
+            ticketList.add(patron.getMobile()
+                + " " + movie + " " + showTime);
+        }
+    }
+    /**
+     * { function_description }.
+     *
+     * @param      movie     The movie
+     * @param      showTime  The show time
+     * @param      mobile    The mobile
+     */
+    void printTicket(final String movie, final String showTime,
+    final String mobile) {
+        String t = mobile + " " + movie + " " + showTime;
+        if (ticketList.contains(t)) {
+            System.out.println(t);
+        } else {
+            System.out.println("Invalid");
+        }
+    }
+    /**
+     * Shows all.
+     */
+    void showAll() {
+        for (Show show: showList) {
+            System.out.println(show.toString() + ","
+            + Arrays.toString(show.getSeats()).replace(" ", ""));
+        }
+    }
 }
