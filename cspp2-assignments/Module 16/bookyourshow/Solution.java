@@ -154,8 +154,8 @@ class Patron {
      * @param      mobil  The mobile
      */
     Patron(final String nam, final String mobil) {
-        this.name = name;
-        this.mobile = mobile;
+        this.name = nam;
+        this.mobile = mobil;
     }
     /**
      * Gets the name.
