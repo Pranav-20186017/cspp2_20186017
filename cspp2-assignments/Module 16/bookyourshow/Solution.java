@@ -186,7 +186,13 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * list of shows.
+     */
     ArrayList<Show> showList;
+    /**
+     * list of tickets.
+     */
     ArrayList<String> ticketList;
     /**
      * Constructs the object.
