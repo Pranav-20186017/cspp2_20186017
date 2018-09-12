@@ -87,7 +87,7 @@ class Show {
 		seats[index] = "N/A";
 	}
 	public String toString() {
-		return movie + "," +showTime;
+		return movie + showTime;
 	}
 }
 class Patron {
