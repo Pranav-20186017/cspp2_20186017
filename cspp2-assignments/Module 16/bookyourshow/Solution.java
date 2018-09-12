@@ -89,21 +89,41 @@ class Show {
      * @param      showTime  The show time
      * @param      seats     The seats
      */
-    Show(String movie, String showTime, String[] seats) {
+    Show(final String movie, final String showTime, final String[] seats) {
         this.movie = movie;
         this.showTime = showTime;
         this.seats = seats;
     }
+    /**
+     * Gets the movie.
+     *
+     * @return     The movie.
+     */
     String getMovie() {
         return movie;
     }
+    /**
+     * Gets the show time.
+     *
+     * @return     The show time.
+     */
     String getShowTime() {
         return showTime;
     }
+    /**
+     * Gets the seats.
+     *
+     * @return     The seats.
+     */
     String[] getSeats() {
         return seats;
     }
-    void setSeatNA(int index) {
+    /**
+     * Sets the seat na.
+     *
+     * @param      index  The index
+     */
+    void setSeatNA(final int index) {
         seats[index] = "N/A";
     }
     public String toString() {
