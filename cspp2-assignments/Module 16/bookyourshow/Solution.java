@@ -87,7 +87,7 @@ class Show {
 		seats[index] = "N/A";
 	}
 	public String toString() {
-		return movie + showTime;
+		return movie + "," +showTime;
 	}
 }
 class Patron {
@@ -145,7 +145,7 @@ class BookYourShow {
 			ticketList.add(patron.getMobile() + " " + movie + " " + showTime);
 		}
 	}
-	void printTicket(String mobile, String movie, String showTime) {
+	void printTicket(String movie, String showTime, String mobile) {
 		String t = mobile + " " + movie + " " +showTime;
 		if (ticketList.contains(t)) {
 			System.out.println(t);
@@ -155,7 +155,7 @@ class BookYourShow {
 	}
 	void showAll() {
 		for (Show show: showList) {
-			System.out.println(show);
+			System.out.println(show.toString() + "," + Arrays.toString(show.getSeats()).replace(" ", ","));
 		}
 	}
 }
