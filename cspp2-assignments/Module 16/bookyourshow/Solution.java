@@ -128,7 +128,7 @@ class BookYourShow {
 	void bookAShow(String movie, String showTime, Patron patron, String[] seats) {
 		Show show = getAShow(movie, showTime);
 		if (show == null) {
-			System.out.println("No Show");
+			System.out.println("No show");
 			return;
 		}
 		boolean flag = false;
