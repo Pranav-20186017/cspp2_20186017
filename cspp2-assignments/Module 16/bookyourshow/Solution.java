@@ -89,10 +89,10 @@ class Show {
      * @param      showTime  The show time
      * @param      seats     The seats
      */
-    Show(final String movie, final String showTime, final String[] seats) {
-        this.movie = movie;
-        this.showTime = showTime;
-        this.seats = seats;
+    Show(final String movi, final String showTim, final String[] seat) {
+        this.movie = movi;
+        this.showTime = showTim;
+        this.seats = seat;
     }
     /**
      * Gets the movie.
