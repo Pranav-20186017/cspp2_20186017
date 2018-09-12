@@ -70,8 +70,17 @@ public final class Solution {
  * Class for show.
  */
 class Show {
+    /**
+     * name of the movie.
+     */
     String movie;
+    /**
+     * show timing.
+     */
     String showTime;
+    /**
+     * array of seats.
+     */
     String[] seats;
     /**
      * Constructs the object.
