@@ -150,10 +150,10 @@ class Patron {
     /**
      * Constructs the object.
      *
-     * @param      name    The name
-     * @param      mobile  The mobile
+     * @param      nam    The name
+     * @param      mobil  The mobile
      */
-    Patron(final String name, final String mobile) {
+    Patron(final String nam, final String mobil) {
         this.name = name;
         this.mobile = mobile;
     }
