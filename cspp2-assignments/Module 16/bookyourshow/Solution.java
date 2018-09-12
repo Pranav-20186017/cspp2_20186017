@@ -123,12 +123,27 @@ class Patron {
         this.name = name;
         this.mobile = mobile;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     String getName() {
         return name;
     }
+    /**
+     * Gets the mobile.
+     *
+     * @return     The mobile.
+     */
     String getMobile() {
         return mobile;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         return name + " " + mobile;
     }
@@ -151,7 +166,7 @@ class BookYourShow {
      *
      * @param      show  The show
      */
-    void addAShow(Show show) {
+    void addAShow(final Show show) {
         showList.add(show);
     }
     /**
