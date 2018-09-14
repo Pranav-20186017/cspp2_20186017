@@ -242,7 +242,7 @@ class ShoppingCart {
      * @param      couponCode  The coupon code
      */
     public void applyCoupon(final String couponCode) {
-        if (couponCodes.contains(couponCode)){
+        if (couponCodes.contains(couponCode)) {
             if (!cflag) {
                 coupon = Integer.parseInt(couponCode.substring(3));
                 cflag = true;
