@@ -44,39 +44,66 @@ class Item {
         this.name = name;
         this.quantity = quantity;
     }
-
-
+    /**
+     *
+     * @return     The name.
+     */
     public String getName() {
         return name;
     }
-
+    /**
+     * Sets the name.
+     *
+     * @param      name  The name
+     */
     public void setName(String name) {
         this.name = name;
     }
-
+    /**
+     * Gets the quantity.
+     *
+     * @return     The quantity.
+     */
     public int getQuantity() {
         return quantity;
     }
-
+    /**
+     * Sets the quantity.
+     *
+     * @param      quantity  The quantity
+     */
     public void setQuantity(int quantity) {
         this.quantity = quantity;
     }
-
+    /**
+     * Gets the price.
+     *
+     * @return     The price.
+     */
     public float getPrice() {
         return price;
     }
-
+    /**
+     * Sets the price.
+     *
+     * @param      price  The price
+     */
     public void setPrice(float price) {
         this.price = price;
     }
-
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (inCatlog) return name + " " + quantity +" "+ price;
         return name + " " + quantity;
     }
 }
-
-
+/**
+ * Class for shopping cart.
+ */
 class ShoppingCart {
     private ArrayList<Item> catlog;
     private ArrayList<Item> cart;
@@ -84,16 +111,26 @@ class ShoppingCart {
     private ArrayList<String> couponCodes = new ArrayList<>(Arrays.asList(arr));
     private float coupon = 0.0f;
     private boolean cflag = false;
-
+    /**
+     * Constructs the object.
+     */
     ShoppingCart () {
         cart = new ArrayList<>();
         catlog = new ArrayList<>();
     }
-
+    /**
+     * Adds to catlog.
+     *
+     * @param      item  The item
+     */
     public void addToCatlog(Item item) {
         catlog.add(item);
     }
-
+    /**
+     * Adds to cart.
+     *
+     * @param      item  The item
+     */
     public void addToCart(Item item) {
         for (Item e : catlog) {
             if (e.getName().equals(item.getName())) {
@@ -108,7 +145,11 @@ class ShoppingCart {
             }
         }
     }
-
+    /**
+     * Removes  from cart.
+     *
+     * @param      item  The item
+     */
     public void removeFromCart(Item item) {
         for (Item f : cart) {
             if (f.getName().equals(item.getName())) {
@@ -121,17 +162,27 @@ class ShoppingCart {
             }
         }
     }
-
+    /**
+     * Shows the cart.
+     */
     public void showCart() {
         for (Item e: cart)
             System.out.println(e);
     }
-
+    /**
+     * Shows the catlog.
+     */
     public void showCatlog() {
         for (Item e: catlog)
             System.out.println(e);
     }
-
+    /**
+     * Gets the price.
+     *
+     * @param      name  The name
+     *
+     * @return     The price.
+     */
     public float getPrice(String name) {
         for (Item e : catlog) {
             if (e.getName().equals(name)) {
@@ -140,23 +191,32 @@ class ShoppingCart {
         }
         return 0.0f;
     }
-
+    /**
+     * Gets the total amount.
+     *
+     * @return     The total amount.
+     */
     public float getTotalAmount() {
         float amt = 0.0f;
         for (Item e: cart)
             amt += e.getQuantity() * getPrice(e.getName());
         return amt;
     }
-
-
+    /**
+     * Gets the payable amount.
+     *
+     * @return     The payable amount.
+     */
     public float getPayableAmount() {
 
         float dscnt = 0.01f * coupon;
         return (getTotalAmount() * (1f-dscnt)) * 1.15f;
-
-
     }
-
+    /**
+     * apply the cupon.
+     *
+     * @param      couponCode  The coupon code
+     */
     public void applyCoupon(String couponCode) {
         if (couponCodes.contains(couponCode)){
             if (!cflag) {
@@ -167,33 +227,39 @@ class ShoppingCart {
         }
         System.out.println("Invalid coupon");
     }
-
+    /**
+     * print the invoice.
+     */
     public void printInvoice() {
         System.out.println("Name   quantity   Price");
         for (Item item : cart)
-            System.out.println(item.getName()+" "+item.getQuantity()+" "+getPrice(item.getName()));
+            System.out.println(item.getName() + " " + item.getQuantity() + " " + getPrice(item.getName()));
         float total = getTotalAmount();
         System.out.println("Total:" + total);
         System.out.println("Disc%:" + 0.01 * coupon * total);
-        System.out.println("Tax:" + ((int) ( (total * (1f- (0.01f * coupon)) * 0.15f) * 10))/ 10.0);
-        System.out.println("Payable amount: " + ((int) ( getPayableAmount() * 10))/ 10.0 );
-
-
+        System.out.println("Tax:" + ((int) ( (total * (1f- (0.01f * coupon)) * 0.15f) * 10)) / 10.0);
+        System.out.println("Payable amount: " + ((int) ( getPayableAmount() * 10)) / 10.0 );
     }
 }
-
-
+/**
+ * Class for solution.
+ */
 public class Solution {
+    /**
+     * main function
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         ShoppingCart shoppingCart = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for (int i = 0; i < n+1; i++) {
+        for (int i = 0; i < n + 1; i++) {
             String[] tokens = sc.nextLine().split(" ");
             // System.out.println(Arrays.toString(tokens));
             switch (tokens[0]) {
                 case "Item" :
-                if(tokens.length > 1) {
+                if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
                     shoppingCart.addToCatlog(new Item(details[0], Integer.parseInt(details[1]), Integer.parseInt(details[2])));
                     break;
@@ -203,7 +269,7 @@ public class Solution {
                 shoppingCart.showCatlog();
                 break;
                 case "add":
-                if(tokens.length > 1) {
+                if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
                     shoppingCart.addToCart(new Item(details[0], Integer.parseInt(details[1])));
                     break;
@@ -216,10 +282,10 @@ public class Solution {
                 System.out.println("totalAmount: " + shoppingCart.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " + ((int) ( shoppingCart.getPayableAmount() * 10))/ 10.0);
+                System.out.println("Payable amount: " + ((int) ( shoppingCart.getPayableAmount() * 10)) / 10.0);
                 break;
                 case "remove":
-                if(tokens.length > 1) {
+                if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
                     shoppingCart.removeFromCart(new Item(details[0], Integer.parseInt(details[1])));
                     break;
@@ -227,7 +293,7 @@ public class Solution {
                 break;
                 case "coupon":
                 // System.out.println("called");
-                if(tokens.length > 1) {
+                if (tokens.length > 1) {
                     String coupon = tokens[1];
                     shoppingCart.applyCoupon(coupon);
                     break;
@@ -236,6 +302,7 @@ public class Solution {
                 // System.out.println("called");
                 shoppingCart.printInvoice();
                 break;
+                default:
             }
         }
     }
