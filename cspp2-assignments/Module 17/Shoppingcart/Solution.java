@@ -273,7 +273,7 @@ class ShoppingCart {
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -322,7 +322,7 @@ public class Solution {
                 break;
                 case "payableAmount":
                 System.out.println("Payable amount: "
-                + ((int) ( shoppingCart.getPayableAmount() * 10)) / 10.0);
+                + ((int) (shoppingCart.getPayableAmount() * 10)) / 10.0);
                 break;
                 case "remove":
                 if (tokens.length > 1) {
