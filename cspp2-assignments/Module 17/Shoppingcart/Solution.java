@@ -263,8 +263,10 @@ class ShoppingCart {
         float total = getTotalAmount();
         System.out.println("Total:" + total);
         System.out.println("Disc%:" + 0.01 * coupon * total);
-        System.out.println("Tax:" + ((int) ( (total * (1f- (0.01f * coupon)) * 0.15f) * 10)) / 10.0);
-        System.out.println("Payable amount: " + ((int) ( getPayableAmount() * 10)) / 10.0 );
+        System.out.println("Tax:"
+        + ((int) ( (total * (1f- (0.01f * coupon)) * 0.15f) * 10)) / 10.0);
+        System.out.println("Payable amount: "
+        + ((int) ( getPayableAmount() * 10)) / 10.0 );
     }
 }
 /**
@@ -307,7 +309,8 @@ public class Solution {
                 shoppingCart.showCart();
                 break;
                 case "totalAmount":
-                System.out.println("totalAmount: " + shoppingCart.getTotalAmount());
+                System.out.println("totalAmount: "
+                + shoppingCart.getTotalAmount());
                 break;
                 case "payableAmount":
                 System.out.println("Payable amount: "
