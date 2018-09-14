@@ -70,7 +70,7 @@ class Item {
     /**
      * Sets the quantity.
      *
-     * @param      quantity  The quantity
+     * @param      quant  The quantity
      */
     public void setQuantity(final int quant) {
         this.quantity = quant;
@@ -86,7 +86,7 @@ class Item {
     /**
      * Sets the price.
      *
-     * @param      price  The price
+     * @param      pric  The price
      */
     public void setPrice(final float pric) {
         this.price = pric;
