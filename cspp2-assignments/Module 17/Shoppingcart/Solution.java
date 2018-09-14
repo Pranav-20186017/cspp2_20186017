@@ -107,11 +107,29 @@ class Item {
  * Class for shopping cart.
  */
 class ShoppingCart {
+    /**
+     * list for catalog.
+     */
     private ArrayList<Item> catlog;
+    /**
+     * list for cart.
+     */
     private ArrayList<Item> cart;
+    /**
+     * cupons array.
+     */
     String[] arr = {"IND10", "IND20", "IND30", "IND50"};
+    /**
+     * list of cupons.
+     */
     private ArrayList<String> couponCodes = new ArrayList<>(Arrays.asList(arr));
+    /**
+     * discount amount.
+     */
     private float coupon = 0.0f;
+    /**
+     * flag var for cupon.
+     */
     private boolean cflag = false;
     /**
      * Constructs the object.
