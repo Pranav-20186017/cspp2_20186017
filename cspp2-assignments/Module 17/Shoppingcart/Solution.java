@@ -54,10 +54,10 @@ class Item {
     /**
      * Sets the name.
      *
-     * @param      name  The name
+     * @param      nam  The name
      */
-    public void setName(final String name) {
-        this.name = name;
+    public void setName(final String nam) {
+        this.name = nam;
     }
     /**
      * Gets the quantity.
