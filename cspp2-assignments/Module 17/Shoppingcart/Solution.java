@@ -302,7 +302,8 @@ public class Solution {
                 case "add":
                 if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
-                    shoppingCart.addToCart(new Item(details[0], Integer.parseInt(details[1])));
+                    shoppingCart.addToCart(
+                    new Item(details[0], Integer.parseInt(details[1])));
                     break;
                 }
                 break;
