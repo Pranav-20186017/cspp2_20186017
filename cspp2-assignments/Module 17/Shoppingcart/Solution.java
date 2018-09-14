@@ -261,9 +261,8 @@ class ShoppingCart {
             System.out.println(item.getName() + " " + item.getQuantity() + " " + getPrice(item.getName()));
         }
         float total = getTotalAmount();
-        final float point = 0.01f;
         System.out.println("Total:" + total);
-        System.out.println("Disc%:" + point * coupon * total);
+        System.out.println("Disc%:" + 0.01 * coupon * total);
         System.out.println("Tax:" + ((int) ( (total * (1f- (0.01f * coupon)) * 0.15f) * 10)) / 10.0);
         System.out.println("Payable amount: " + ((int) ( getPayableAmount() * 10)) / 10.0 );
     }
