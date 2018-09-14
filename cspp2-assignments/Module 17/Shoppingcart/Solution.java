@@ -231,8 +231,8 @@ class ShoppingCart {
      * @return     The payable amount.
      */
     public float getPayableAmount() {
-        float point = 0.01f;
-        float pfive = 1.15f;
+        final float point = 0.01f;
+        final float pfive = 1.15f;
         float dscnt = point * coupon;
         return (getTotalAmount() * (1f - dscnt)) * pfive;
     }
@@ -242,7 +242,7 @@ class ShoppingCart {
      * @param      couponCode  The coupon code
      */
     public void applyCoupon(final String couponCode) {
-        int three = 3;
+        final int three = 3;
         if (couponCodes.contains(couponCode)) {
             if (!cflag) {
                 coupon = Integer.parseInt(couponCode.substring(three));
