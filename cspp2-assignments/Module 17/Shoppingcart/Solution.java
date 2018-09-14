@@ -28,7 +28,7 @@ class Item {
      * @param      quantity  The quantity
      * @param      price     The price
      */
-    Item(String name, int quantity, float price) {
+    Item(final String name, final int quantity, final float price) {
         this.name = name;
         this.quantity = quantity;
         this.price = price;
@@ -40,7 +40,7 @@ class Item {
      * @param      name      The name
      * @param      quantity  The quantity
      */
-    Item(String name, int quantity) {
+    Item(final String name, final int quantity) {
         this.name = name;
         this.quantity = quantity;
     }
@@ -56,7 +56,7 @@ class Item {
      *
      * @param      name  The name
      */
-    public void setName(String name) {
+    public void setName(final String name) {
         this.name = name;
     }
     /**
@@ -72,7 +72,7 @@ class Item {
      *
      * @param      quantity  The quantity
      */
-    public void setQuantity(int quantity) {
+    public void setQuantity(final int quantity) {
         this.quantity = quantity;
     }
     /**
@@ -88,7 +88,7 @@ class Item {
      *
      * @param      price  The price
      */
-    public void setPrice(float price) {
+    public void setPrice(final float price) {
         this.price = price;
     }
     /**
@@ -123,7 +123,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    public void addToCatlog(Item item) {
+    public void addToCatlog(final Item item) {
         catlog.add(item);
     }
     /**
@@ -131,7 +131,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    public void addToCart(Item item) {
+    public void addToCart(final Item item) {
         for (Item e : catlog) {
             if (e.getName().equals(item.getName())) {
                 for (Item f : cart) {
@@ -150,7 +150,7 @@ class ShoppingCart {
      *
      * @param      item  The item
      */
-    public void removeFromCart(Item item) {
+    public void removeFromCart(final Item item) {
         for (Item f : cart) {
             if (f.getName().equals(item.getName())) {
                 if (f.getQuantity() == item.getQuantity()) {
@@ -183,7 +183,7 @@ class ShoppingCart {
      *
      * @return     The price.
      */
-    public float getPrice(String name) {
+    public float getPrice(final String name) {
         for (Item e : catlog) {
             if (e.getName().equals(name)) {
                 return e.getPrice();
@@ -217,7 +217,7 @@ class ShoppingCart {
      *
      * @param      couponCode  The coupon code
      */
-    public void applyCoupon(String couponCode) {
+    public void applyCoupon(final String couponCode) {
         if (couponCodes.contains(couponCode)){
             if (!cflag) {
                 coupon = Integer.parseInt(couponCode.substring(3));
@@ -250,7 +250,7 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         ShoppingCart shoppingCart = new ShoppingCart();
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
