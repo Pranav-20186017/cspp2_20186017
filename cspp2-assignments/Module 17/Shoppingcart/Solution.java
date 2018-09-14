@@ -72,8 +72,8 @@ class Item {
      *
      * @param      quantity  The quantity
      */
-    public void setQuantity(final int quantity) {
-        this.quantity = quantity;
+    public void setQuantity(final int quant) {
+        this.quantity = quant;
     }
     /**
      * Gets the price.
@@ -88,8 +88,8 @@ class Item {
      *
      * @param      price  The price
      */
-    public void setPrice(final float price) {
-        this.price = price;
+    public void setPrice(final float pric) {
+        this.price = pric;
     }
     /**
      * Returns a string representation of the object.
@@ -97,7 +97,9 @@ class Item {
      * @return     String representation of the object.
      */
     public String toString() {
-        if (inCatlog) return name + " " + quantity +" "+ price;
+        if (inCatlog) {
+            return name + " " + quantity + " " + price;
+        }
         return name + " " + quantity;
     }
 }
