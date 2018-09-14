@@ -287,7 +287,8 @@ public class Solution {
                 case "Item" :
                 if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
-                    shoppingCart.addToCatlog(new Item(details[0], Integer.parseInt(details[1]), Integer.parseInt(details[2])));
+                    shoppingCart.addToCatlog(
+                    new Item(details[0], Integer.parseInt(details[1]), Integer.parseInt(details[2])));
                     break;
                 }
                 break;
