@@ -308,12 +308,14 @@ public class Solution {
                 System.out.println("totalAmount: " + shoppingCart.getTotalAmount());
                 break;
                 case "payableAmount":
-                System.out.println("Payable amount: " + ((int) ( shoppingCart.getPayableAmount() * 10)) / 10.0);
+                System.out.println("Payable amount: "
+                + ((int) ( shoppingCart.getPayableAmount() * 10)) / 10.0);
                 break;
                 case "remove":
                 if (tokens.length > 1) {
                     String[] details = tokens[1].split(",");
-                    shoppingCart.removeFromCart(new Item(details[0], Integer.parseInt(details[1])));
+                    shoppingCart.removeFromCart(
+                    new Item(details[0], Integer.parseInt(details[1])));
                     break;
                 }
                 break;
