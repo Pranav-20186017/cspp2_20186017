@@ -281,7 +281,7 @@ final class Solution {
         //unused.
     }
     /**
-     * main function
+     * main function.
      *
      * @param      args  The arguments
      */
