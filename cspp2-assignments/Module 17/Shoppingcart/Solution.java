@@ -242,9 +242,10 @@ class ShoppingCart {
      * @param      couponCode  The coupon code
      */
     public void applyCoupon(final String couponCode) {
+        int three = 3;
         if (couponCodes.contains(couponCode)) {
             if (!cflag) {
-                coupon = Integer.parseInt(couponCode.substring(3));
+                coupon = Integer.parseInt(couponCode.substring(three));
                 cflag = true;
             }
             return;
