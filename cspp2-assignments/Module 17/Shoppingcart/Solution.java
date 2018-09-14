@@ -275,6 +275,12 @@ class ShoppingCart {
  */
 public class Solution {
     /**
+     * Constructs the object.
+     */
+    private Solution() {
+        //unused.
+    }
+    /**
      * main function
      *
      * @param      args  The arguments
