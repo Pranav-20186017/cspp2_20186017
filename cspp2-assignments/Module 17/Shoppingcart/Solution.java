@@ -291,6 +291,8 @@ final class Solution {
      */
     public static void main(final String[] args) {
         ShoppingCart shoppingCart = new ShoppingCart();
+        final int ten = 10;
+        final double t = 10.0;
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         for (int i = 0; i < n + 1; i++) {
@@ -326,7 +328,7 @@ final class Solution {
                 break;
                 case "payableAmount":
                 System.out.println("Payable amount: "
-                + ((int) (shoppingCart.getPayableAmount() * 10)) / 10.0);
+                + ((int) (shoppingCart.getPayableAmount() * ten)) / t);
                 break;
                 case "remove":
                 if (tokens.length > 1) {
