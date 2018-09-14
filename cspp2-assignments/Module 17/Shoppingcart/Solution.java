@@ -24,14 +24,14 @@ class Item {
     /**
      * Constructs the object.
      *
-     * @param      name      The name
-     * @param      quantity  The quantity
-     * @param      price     The price
+     * @param      nam      The name
+     * @param      quant  The quantity
+     * @param      pric     The price
      */
-    Item(final String name, final int quantity, final float price) {
-        this.name = name;
-        this.quantity = quantity;
-        this.price = price;
+    Item(final String nam, final int quant, final float pric) {
+        this.name = nam;
+        this.quantity = quant;
+        this.price = pric;
         this.inCatlog = true;
     }
     /**
