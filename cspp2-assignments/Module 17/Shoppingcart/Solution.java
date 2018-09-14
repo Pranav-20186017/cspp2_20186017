@@ -260,6 +260,7 @@ class ShoppingCart {
         final int t = 10;
         final double ten = 10.0;
         final double pzo = 0.01;
+        final float f = 0.01f;
         System.out.println("Name   quantity   Price");
         for (Item item : cart) {
             System.out.println(item.getName() + " "
@@ -269,7 +270,7 @@ class ShoppingCart {
         System.out.println("Total:" + total);
         System.out.println("Disc%:" + pzo * coupon * total);
         System.out.println("Tax:"
-        + ((int) ((total * (1f - (0.01f * coupon)) * pof) * t)) / ten);
+        + ((int) ((total * (1f - (f * coupon)) * pof) * t)) / ten);
         System.out.println("Payable amount: "
         + ((int) (getPayableAmount() * t)) / ten);
     }
