@@ -257,6 +257,8 @@ class ShoppingCart {
      */
     public void printInvoice() {
         final float pof = 0.15f;
+        final int t = 10;
+        final double ten = 10.0;
         System.out.println("Name   quantity   Price");
         for (Item item : cart) {
             System.out.println(item.getName() + " "
@@ -266,9 +268,9 @@ class ShoppingCart {
         System.out.println("Total:" + total);
         System.out.println("Disc%:" + 0.01 * coupon * total);
         System.out.println("Tax:"
-        + ((int) ((total * (1f - (0.01f * coupon)) * pof) * 10)) / 10.0);
+        + ((int) ((total * (1f - (0.01f * coupon)) * pof) * t)) / ten);
         System.out.println("Payable amount: "
-        + ((int) (getPayableAmount() * 10)) / 10.0);
+        + ((int) (getPayableAmount() * t)) / ten);
     }
 }
 /**
