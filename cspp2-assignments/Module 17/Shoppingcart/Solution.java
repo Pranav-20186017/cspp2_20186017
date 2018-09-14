@@ -118,7 +118,7 @@ class ShoppingCart {
     /**
      * cupons array.
      */
-    String[] arr = {"IND10", "IND20", "IND30", "IND50"};
+    private String[] arr = {"IND10", "IND20", "IND30", "IND50"};
     /**
      * list of cupons.
      */
@@ -134,7 +134,7 @@ class ShoppingCart {
     /**
      * Constructs the object.
      */
-    ShoppingCart () {
+    ShoppingCart() {
         cart = new ArrayList<>();
         catlog = new ArrayList<>();
     }
@@ -186,15 +186,17 @@ class ShoppingCart {
      * Shows the cart.
      */
     public void showCart() {
-        for (Item e: cart)
+        for (Item e: cart) {
             System.out.println(e);
+        }
     }
     /**
      * Shows the catlog.
      */
     public void showCatlog() {
-        for (Item e: catlog)
+        for (Item e: catlog) {
             System.out.println(e);
+        }
     }
     /**
      * Gets the price.
@@ -218,8 +220,9 @@ class ShoppingCart {
      */
     public float getTotalAmount() {
         float amt = 0.0f;
-        for (Item e: cart)
+        for (Item e: cart) {
             amt += e.getQuantity() * getPrice(e.getName());
+        }
         return amt;
     }
     /**
@@ -228,9 +231,10 @@ class ShoppingCart {
      * @return     The payable amount.
      */
     public float getPayableAmount() {
-
-        float dscnt = 0.01f * coupon;
-        return (getTotalAmount() * (1f-dscnt)) * 1.15f;
+        float point = 0.01f;
+        float pfive = 1.15f;
+        float dscnt = point * coupon;
+        return (getTotalAmount() * (1f - dscnt)) * pfive;
     }
     /**
      * apply the cupon.
