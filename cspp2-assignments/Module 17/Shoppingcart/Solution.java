@@ -37,12 +37,12 @@ class Item {
     /**
      * Constructs the object.
      *
-     * @param      name      The name
-     * @param      quantity  The quantity
+     * @param      nam      The name
+     * @param      quant  The quantity
      */
-    Item(final String name, final int quantity) {
-        this.name = name;
-        this.quantity = quantity;
+    Item(final String nam, final int quant) {
+        this.name = nam;
+        this.quantity = quant;
     }
     /**
      *
