@@ -1,13 +1,19 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-class Quiz{
+/**
+ * Class for quiz.
+ */
+class Quiz {
     String question;
     String[] choices;
     String correct;
     String maxMarks;
     String penality;
+    /**
+     * Constructs the object.
+     */
     Quiz() {
-
+        //unused.
     }
     Quiz(String question, String[] choices, String correct, String maxMarks, String penality) {
         this.question = question;
@@ -15,9 +21,7 @@ class Quiz{
         this.correct = correct;
         this.maxMarks = maxMarks;
         this.penality = penality;
-        //System.out.println(question);
     }   
-    
 }
 /**
  * Solution class for code-eval.
