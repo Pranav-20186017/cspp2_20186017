@@ -128,7 +128,8 @@ final class Solution {
             for (int j = 0; j < quizes.get(i).choices.length - 1; j++) {
                 System.out.print(quizes.get(i).choices[j] + "\t");
             }
-            System.out.print(quizes.get(i).choices[quizes.get(i).choices.length - 1]);
+            System.out.print(quizes.get(i).
+            choices[quizes.get(i).choices.length - 1]);
             System.out.println();
             System.out.println();
         }
