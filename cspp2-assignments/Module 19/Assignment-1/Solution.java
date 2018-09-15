@@ -80,10 +80,12 @@ public final class Solution {
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
         }
+        for(int i = 0;i<questionCount;i++) {
         while(s.hasNext()) {
             string = s.nextLine();
             System.out.println(string);
         }
+    }
         System.out.println(questionCount + " are added to the quiz");
     }
     /**
