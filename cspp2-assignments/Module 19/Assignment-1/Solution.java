@@ -79,6 +79,7 @@ public final class Solution {
         // add the question objects to the quiz class
         String string;
         String[] tokens;
+        int err;
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
             return;
@@ -90,9 +91,8 @@ public final class Solution {
                 return;
             }
             tokens = string.split(":");
-            for(String itr : tokens) {
-                System.out.println(itr);
-            }
+            err = Integer.parseInt(tokens[4]);
+            System.out.println(err);
         }
         System.out.println(questionCount + " are added to the quiz");
     }
