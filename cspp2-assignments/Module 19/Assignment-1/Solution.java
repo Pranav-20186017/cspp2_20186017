@@ -189,6 +189,8 @@ public final class Solution {
                     
                 }      
     }
+    if(quizes.size() != 0){
         System.out.println("Total Score: "+finalScore );
+    }
 }
 }
