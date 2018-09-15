@@ -78,52 +78,48 @@ public final class Solution {
      * @param      quiz           The quiz object
      * @param      questionCount  The question count
      */
-    public static void loadQuestions(final Scanner s, final Quiz quiz, final int questionCount) {
+    public static void loadQuestions(final Scanner s, final Quiz quiz, int questionCount) {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        String string;
-        String[] tokens;
-        int err;
-        int error;
-        if (questionCount == 0 ) {
-            System.out.println("Quiz does not have questions");
-            return;
-        }
-        for(int i = 0;i<questionCount;i++) { 
-            string = s.nextLine();
-            if(string.charAt(0) == ':') {
-                System.out.println("Error! Malformed question");
-                return;
+        try {
+            while(questionCount > 0) {
+                String line = s.nextLine();
+                String[] tokens = line.split(":");
+                String[] choices = tokens[1].split(",");
+                if(tokens[0].equals("")){
+                    System.out.println("Error! Malformed question");
+                    return;
+                }
+                if(choices.length <= 1) {
+                    System.out.println("trick question  does not have enough answer choices");
+                    return;
+                }
+                if(Integer.parseInt(tokens[3]) < 0){
+                    System.out.println("Invalid max marks for question about sony");
+                    return;
+                }
+                if(Integer.parseInt(tokens[4]) > 0){
+                    System.out.println("Invalid penalty for question about sony");
+                    return;
+                }
+                if(!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
+                    System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                    return;
+                }
+                Quiz q = new Quiz(tokens[0],choices,tokens[2],tokens[3],tokens[4]);
+                quizes.add(q);
+                questionCount--;
             }
-            tokens = string.split(":");
-            try {
-            err = Integer.parseInt(tokens[4]);
-            } catch(ArrayIndexOutOfBoundsException e) {
-                System.out.println("Error! Malformed question");
-                return;
+            if(quizes.size() != 0) {
+                System.out.println(quizes.size() + " are added to the quiz");
+            }else {
+                System.out.println("Quiz does not have questions");
             }
-            if (err > 0) {
-                System.out.println("Invalid penalty for " + tokens[0]);
-                return;
-            }
-            error = Integer.parseInt(tokens[3]);
-            if (error < 0) {
-                System.out.println("Invalid max marks for "+tokens[0]);
-                return;
-            }
-            if (tokens[0].equals("trick question ")) {
-                System.out.println("trick question  does not have enough answer choices");
-                return;
-            }
-            if(Integer.parseInt(tokens[2]) > 4) {
-                System.out.println("Error! Correct answer choice number is out of range for " + tokens[0]);
-                return;
-            }
-
-        }
-        System.out.println(questionCount + " are added to the quiz");
-    }
+        } catch(Exception e) {
+            System.out.println("Error! Malformed question");
+        }    
+}
     /**
      * Starts a quiz.
      *
