@@ -91,7 +91,12 @@ public final class Solution {
                 return;
             }
             tokens = string.split(":");
+            try {
             err = Integer.parseInt(tokens[4]);
+            } catch(ArrayIndexOutOfBoundsException e) {
+                System.out.println("Error! Malformed question");
+                return;
+            }
             System.out.println(err);
         }
         System.out.println(questionCount + " are added to the quiz");
