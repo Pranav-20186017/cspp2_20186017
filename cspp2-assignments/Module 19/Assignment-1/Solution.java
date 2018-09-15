@@ -4,10 +4,25 @@ import java.util.ArrayList;
  * Class for quiz.
  */
 class Quiz {
+    /**
+     * question string.
+     */
     String question;
+    /**
+     * array of choices.
+     */
     String[] choices;
+    /**
+     * correct answer.
+     */
     String correct;
+    /**
+     * max marks for the question.
+     */
     String maxMarks;
+    /**
+     * penality for wrong answer.
+     */
     String penality;
     /**
      * Constructs the object.
@@ -121,7 +136,7 @@ public final class Solution {
                     flag = true;
                     return;
                 }
-                Quiz q = new Quiz(tokens[0],choices,tokens[2],tokens[3],tokens[4]);
+                Quiz q = new Quiz(tokens[0], choices, tokens[2], tokens[3], tokens[4]);
                 quizes.add(q);
                 questionCount--;
             }
@@ -135,10 +150,7 @@ public final class Solution {
             System.out.println("Error! Malformed question");
             flag = true;
         }
-        
-
     }
-
     /**
      * Starts a quiz.
      *
@@ -150,9 +162,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        for(int i=0;i<quizes.size();i++){
-            System.out.println(quizes.get(i).question+"("+quizes.get(i).maxMarks+")");
-            for(int j =0 ; j<quizes.get(i).choices.length; j++) {
+        for(int i = 0; i < quizes.size(); i++){
+            System.out.println(quizes.get(i).question + "(" + quizes.get(i).maxMarks + ")");
+            for(int j =0 ; j < quizes.get(i).choices.length; j++) {
                 System.out.print(quizes.get(i).choices[j] + "   ");
             }
             System.out.println();
@@ -185,11 +197,11 @@ public final class Solution {
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
         int finalScore = 0;
-        for(int i=0;i<quizes.size();i++) {
+        for(int i = 0; i < quizes.size(); i++) {
             System.out.println(quizes.get(i).question);
                 if(answers.get(i).equals(quizes.get(i).correct)){
-                    
-                    System.out.println(" Correct Answer! - Marks Awarded: "+quizes.get(i).maxMarks);
+                    System.out.println(" Correct Answer! - Marks Awarded: "
+                    + quizes.get(i).maxMarks);
                     finalScore += Integer.parseInt(quizes.get(i).maxMarks);
                     
                 } else {
