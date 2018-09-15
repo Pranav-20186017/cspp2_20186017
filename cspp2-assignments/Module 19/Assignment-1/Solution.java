@@ -80,6 +80,7 @@ public final class Solution {
         String string;
         String[] tokens;
         int err;
+        int error;
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
             return;
@@ -101,6 +102,11 @@ public final class Solution {
                 System.out.println("Invalid penalty for question about sony");
                 return;
             }
+            error = Integer.parseInt(tokens[3]);
+            if (error < 0) {
+                System.out.println("Invalid max marks for question about sony");
+            }
+
         }
         System.out.println(questionCount + " are added to the quiz");
     }
