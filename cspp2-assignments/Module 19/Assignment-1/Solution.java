@@ -79,6 +79,7 @@ public final class Solution {
         String string;
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
+            return;
         }
         for(int i = 0;i<questionCount;i++) {
         while(s.hasNext()) {
