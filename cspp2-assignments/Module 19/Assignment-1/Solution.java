@@ -147,7 +147,25 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+        int finalScore = 0;
+        for(int i=0;i<quizes.size();i++) {
+            System.out.println(quizes.get(i).question);
+            //System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
+                //String[] an = quizes.get(i).choices[i].split(" ");
+                if(answers.get(i).equals(quizes.get(i).correct)){
+                    
+                    System.out.println(" Correct Answer! - Marks Awarded: "+quizes.get(i).maxMarks);
+                    finalScore += Integer.parseInt(quizes.get(i).maxMarks);
+                    
+                } else {
 
-
+                    System.out.println(" Wrong Answer! - Penalty: "+quizes.get(i).penality);
+                    finalScore += Integer.parseInt(quizes.get(i).penality);
+                    
+                }      
+    }
+    if(quizes.size() != 0){
+        System.out.println("Total Score: "+finalScore );
+    }
     }
 }
