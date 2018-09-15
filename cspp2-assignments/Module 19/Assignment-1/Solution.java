@@ -1,7 +1,14 @@
 import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 class Quiz {
     public Quiz() {
         //unused.
+    }
+    ArrayList<String> Questions = new ArrayList<>();
+
+    public String toString() {
+        return "";
     }
 
 }
@@ -67,6 +74,10 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        System.out.println(s);
+        if (questionCount == 0 ) {
+            System.out.println("Quiz does not have questions");
+        }
         System.out.println(questionCount + " are added to the quiz");
     }
     /**
