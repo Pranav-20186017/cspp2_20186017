@@ -30,7 +30,8 @@ class Quiz {
     Quiz() {
         //unused.
     }
-    Quiz(String question, String[] choices, String correct, String maxMarks, String penality) {
+    Quiz(final String question, final String[] choices,
+        final String correct, final String maxMarks, final String penality) {
         this.question = question;
         this.choices = choices;
         this.correct = correct;
@@ -206,15 +207,19 @@ public final class Solution {
                     
                 } else {
 
-                    System.out.println(" Wrong Answer! - Penalty: "+quizes.get(i).penality);
+                    System.out.println(" Wrong Answer! - Penalty: " + quizes.get(i).penality);
                     finalScore += Integer.parseInt(quizes.get(i).penality);
-                    
                 }      
     }
     if(flag == false) {
         printFinalScore(finalScore);
     }
 }
+/**
+ * prints the final score
+ *
+ * @param      finalScore  The final score
+ */
 public static void printFinalScore(final int finalScore) {
     System.out.println("Total Score: " + finalScore);
 }
