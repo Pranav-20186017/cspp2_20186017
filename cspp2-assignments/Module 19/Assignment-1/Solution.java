@@ -10,7 +10,9 @@ class Quiz {
     public String toString() {
         return "";
     }
-
+    public void add(String s) {
+        Questions.add(s);
+    }
 }
 /**
  * Solution class for code-eval.
@@ -74,9 +76,13 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        System.out.println((s.getClass().getName()));
+        String string;
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
+        }
+        while(s.hasNext()) {
+            string = s.nextLine();
+            System.out.println(string);
         }
         System.out.println(questionCount + " are added to the quiz");
     }
@@ -91,6 +97,9 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
+        while(s.hasNext()) {
+
+        }
     }
     /**
      * Displays the score report
@@ -99,5 +108,6 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+
     }
 }
