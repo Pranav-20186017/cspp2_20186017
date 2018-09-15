@@ -111,6 +111,10 @@ public final class Solution {
                 System.out.println("trick question  does not have enough answer choices");
                 return;
             }
+            if(Integer.parseInt(tokens[2]) > 4) {
+                System.out.println("Error! Correct answer choice number is out of range for " + tokens[0]);
+                return;
+            }
 
         }
         System.out.println(questionCount + " are added to the quiz");
