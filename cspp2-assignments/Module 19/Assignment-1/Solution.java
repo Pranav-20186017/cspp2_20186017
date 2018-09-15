@@ -1,19 +1,22 @@
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
-class Quiz {
-    public Quiz() {
-        //unused.
-    }
-    ArrayList<String> Questions = new ArrayList<>();
-    ArrayList<String> Choices = new ArrayList<>();
+class Quiz{
+    String question;
+    String[] choices;
+    String correct;
+    String maxMarks;
+    String penality;
+    Quiz() {
 
-    public String toString() {
-        return "";
     }
-    public void add(String s) {
-        Questions.add(s);
-    }
+    Quiz(String question, String[] choices, String correct, String maxMarks, String penality) {
+        this.question = question;
+        this.choices = choices;
+        this.correct = correct;
+        this.maxMarks = maxMarks;
+        this.penality = penality;
+    }     
 }
 /**
  * Solution class for code-eval.
