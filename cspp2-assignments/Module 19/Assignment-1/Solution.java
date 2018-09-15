@@ -6,6 +6,7 @@ class Quiz {
         //unused.
     }
     ArrayList<String> Questions = new ArrayList<>();
+    ArrayList<String> Choices = new ArrayList<>();
 
     public String toString() {
         return "";
@@ -77,20 +78,22 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         String string;
+        String[] tokens;
         if (questionCount == 0 ) {
             System.out.println("Quiz does not have questions");
             return;
         }
-        for(int i = 0;i<questionCount;i++) {
-        while(s.hasNext()) {
+        for(int i = 0;i<questionCount;i++) { 
             string = s.nextLine();
             if(string.charAt(0) == ':') {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            System.out.println(string);
+            tokens = string.split(":");
+            for(String itr : tokens) {
+                System.out.println(itr);
+            }
         }
-    }
         System.out.println(questionCount + " are added to the quiz");
     }
     /**
@@ -104,9 +107,6 @@ public final class Solution {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
-        while(s.hasNext()) {
-
-        }
     }
     /**
      * Displays the score report
@@ -115,6 +115,7 @@ public final class Solution {
      */
     public static void displayScore(final Quiz quiz) {
         // write your code here to display the score report
+
 
     }
 }
