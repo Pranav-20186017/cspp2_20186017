@@ -83,6 +83,10 @@ public final class Solution {
         for(int i = 0;i<questionCount;i++) {
         while(s.hasNext()) {
             string = s.nextLine();
+            if(string.charAt(0) == ':') {
+                System.out.println("Error! Malformed question");
+                return;
+            }
             System.out.println(string);
         }
     }
