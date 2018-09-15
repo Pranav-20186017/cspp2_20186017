@@ -92,7 +92,6 @@ public final class Solution {
                 return;
             }
             tokens = string.split(":");
-            System.out.println(tokens[0]);
             try {
             err = Integer.parseInt(tokens[4]);
             } catch(ArrayIndexOutOfBoundsException e) {
