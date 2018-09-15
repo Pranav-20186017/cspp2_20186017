@@ -3,7 +3,7 @@ import java.util.ArrayList;
 /**
  * Solution class for code-eval.
  */
-public final class Solution {
+final class Solution {
     /**
      * { var_description }.
      */
@@ -61,7 +61,6 @@ public final class Solution {
             }
         }
     }
-
     /**
      * Loads questions.
      *
@@ -111,10 +110,7 @@ public final class Solution {
         } catch (Exception e) {
             System.out.println("Error! Malformed question");
         }
-
-
     }
-
     /**
      * Starts a quiz.
      *
@@ -130,8 +126,6 @@ public final class Solution {
             System.out.println(quizes.get(i).question + "(" + quizes.get(i).maxMarks + ")");
             for (int j = 0 ; j < quizes.get(i).choices.length - 1; j++) {
                 System.out.print(quizes.get(i).choices[j] + "\t");
-                //System.out.print("  ");
-
             }
             System.out.print(quizes.get(i).choices[quizes.get(i).choices.length - 1]);
             System.out.println();
@@ -165,8 +159,6 @@ public final class Solution {
         int finalScore = 0;
         for (int i = 0; i < quizes.size(); i++) {
             System.out.println(quizes.get(i).question);
-            //System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
-            //String[] an = quizes.get(i).choices[i].split(" ");
             if (answers.get(i).equals(quizes.get(i).correct)) {
 
                 System.out.println(" Correct Answer! - Marks Awarded: " + quizes.get(i).maxMarks);
@@ -180,7 +172,5 @@ public final class Solution {
         if (quizes.size() != 0) {
             System.out.println("Total Score: " + finalScore );
         }
-
     }
-
 }
