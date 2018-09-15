@@ -22,6 +22,8 @@ class Quiz{
  * Solution class for code-eval.
  */
 public final class Solution {
+    static ArrayList<Quiz> quizes = new ArrayList<Quiz>();
+    static ArrayList<String> answers = new ArrayList<String>();
      /**
      * Constructs the object.
      */
