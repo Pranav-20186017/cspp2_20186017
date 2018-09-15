@@ -92,6 +92,7 @@ public final class Solution {
                 return;
             }
             tokens = string.split(":");
+            System.out.println(tokens[0]);
             try {
             err = Integer.parseInt(tokens[4]);
             } catch(ArrayIndexOutOfBoundsException e) {
@@ -99,12 +100,12 @@ public final class Solution {
                 return;
             }
             if (err > 0) {
-                System.out.println("Invalid penalty for question about sony");
+                System.out.println("Invalid penalty for " + tokens[0]);
                 return;
             }
             error = Integer.parseInt(tokens[3]);
             if (error < 0) {
-                System.out.println("Invalid max marks for question about sony");
+                System.out.println("Invalid max marks for "+tokens[0]);
                 return;
             }
 
