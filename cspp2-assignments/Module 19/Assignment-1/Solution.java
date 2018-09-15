@@ -25,7 +25,7 @@ class Quiz{
 public final class Solution {
     static ArrayList<Quiz> quizes = new ArrayList<Quiz>();
     static ArrayList<String> answers = new ArrayList<String>();
-    public static boolean flag = false;
+    static boolean flag = false;
      /**
      * Constructs the object.
      */
@@ -201,6 +201,5 @@ public final class Solution {
 }
 public static void printFinalScore(final int finalScore) {
     System.out.println("Total Score: " + finalScore);
-
 }
 }
