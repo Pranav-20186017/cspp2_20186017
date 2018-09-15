@@ -107,6 +107,9 @@ public final class Solution {
                 System.out.println("Invalid max marks for "+tokens[0]);
                 return;
             }
+            if (tokens[0].equals("trick question ")) {
+                System.out.println("trick question  does not have enough answer choices");
+            }
 
         }
         System.out.println(questionCount + " are added to the quiz");
