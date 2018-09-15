@@ -150,7 +150,7 @@ final class Solution {
         }
     }
     /**
-     * Displays the score report
+     * Displays the score report.
      *
      * @param      quiz     The quiz object
      */
@@ -165,12 +165,13 @@ final class Solution {
                 finalScore += Integer.parseInt(quizes.get(i).maxMarks);
 
             } else {
-                System.out.println(" Wrong Answer! - Penalty: " + quizes.get(i).penality);
+                System.out.println(" Wrong Answer! - Penalty: " +
+                quizes.get(i).penality);
                 finalScore += Integer.parseInt(quizes.get(i).penality);
             }
         }
         if (quizes.size() != 0) {
-            System.out.println("Total Score: " + finalScore );
+            System.out.println("Total Score: " + finalScore);
         }
     }
 }
