@@ -25,6 +25,7 @@ class Quiz{
 public final class Solution {
     static ArrayList<Quiz> quizes = new ArrayList<Quiz>();
     static ArrayList<String> answers = new ArrayList<String>();
+    public static boolean flag = false;
      /**
      * Constructs the object.
      */
@@ -93,22 +94,27 @@ public final class Solution {
                 String[] choices = tokens[1].split(",");
                 if(tokens[0].equals("")){
                     System.out.println("Error! Malformed question");
+                    flag = true;
                     return;
                 }
                 if(choices.length <= 1) {
                     System.out.println("trick question  does not have enough answer choices");
+                    flag = true;
                     return;
                 }
                 if(Integer.parseInt(tokens[3]) < 0){
                     System.out.println("Invalid max marks for question about sony");
+                    flag = true;
                     return;
                 }
                 if(Integer.parseInt(tokens[4]) > 0){
                     System.out.println("Invalid penalty for question about sony");
+                    flag = true;
                     return;
                 }
                 if(!tokens[2].equals("1") && !tokens[2].equals("2") && !tokens[2].equals("3") && !tokens[2].equals("4")) {
                     System.out.println("Error! Correct answer choice number is out of range for question text 1");
+                    flag = true;
                     return;
                 }
                 Quiz q = new Quiz(tokens[0],choices,tokens[2],tokens[3],tokens[4]);
@@ -119,9 +125,11 @@ public final class Solution {
                 System.out.println(quizes.size() + " are added to the quiz");
             }else {
                 System.out.println("Quiz does not have questions");
+                flag = true;
             }
         } catch(Exception e) {
             System.out.println("Error! Malformed question");
+            flag = true;
         }
         
 
@@ -187,8 +195,12 @@ public final class Solution {
                     
                 }      
     }
-    if(quizes.size() > 0){
-        System.out.println("Total Score: "+finalScore );
+    if(flag == false) {
+        printFinalScore(finalScore);
     }
+}
+public static void printFinalScore(final int finalScore) {
+    System.out.println("Total Score: " + finalScore);
+
 }
 }
