@@ -123,7 +123,8 @@ final class Solution {
         // read the user responses from the console
         // store the user respones in the quiz object
         for (int i = 0; i < quizes.size(); i++) {
-            System.out.println(quizes.get(i).question + "(" + quizes.get(i).maxMarks + ")");
+            System.out.println(quizes.get(i).question
+            + "(" + quizes.get(i).maxMarks + ")");
             for (int j = 0; j < quizes.get(i).choices.length - 1; j++) {
                 System.out.print(quizes.get(i).choices[j] + "\t");
             }
@@ -132,13 +133,11 @@ final class Solution {
             System.out.println();
         }
         while (answerCount > 0) {
-            //System.out.println(answerCount + " counttt");
             String line = s.nextLine();
             String[] tok = line.split(" ");
-            //System.out.println(line + " lineeeee");
             if (tok[1].equals("a")) {
                 tok[1] = "1";
-            } else if (tok[1].equals("b") ) {
+            } else if (tok[1].equals("b")) {
                 tok[1] = "2";
             } else if (tok[1].equals("c")) {
                 tok[1] = "3";
