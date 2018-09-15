@@ -105,6 +105,7 @@ public final class Solution {
             error = Integer.parseInt(tokens[3]);
             if (error < 0) {
                 System.out.println("Invalid max marks for question about sony");
+                return;
             }
 
         }
