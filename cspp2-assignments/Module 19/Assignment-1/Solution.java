@@ -15,7 +15,6 @@ class Quiz {
         this.correct = correct;
         this.maxMarks = maxMarks;
         this.penality = penality;
-        //System.out.println(question);
     }
 
 }
@@ -43,17 +42,13 @@ public final class Solution {
         Scanner s = new Scanner(System.in);
         // check if there is one more line to process
         while (s.hasNext()) {
-            // read the line
             String line = s.nextLine();
-            // split the line using space
             String[] tokens = line.split(" ");
-            // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
             case "LOAD_QUESTIONS":
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
-                //System.out.println(tokens[1]);
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
 
                 break;
@@ -74,7 +69,6 @@ public final class Solution {
             }
         }
     }
-
     /**
      * Loads questions.
      *
@@ -124,10 +118,7 @@ public final class Solution {
         } catch (Exception e) {
             System.out.println("Error! Malformed question");
         }
-
-
     }
-
     /**
      * Starts a quiz.
      *
@@ -143,8 +134,6 @@ public final class Solution {
             System.out.println(quizes.get(i).question + "(" + quizes.get(i).maxMarks + ")");
             for (int j = 0 ; j < quizes.get(i).choices.length - 1; j++) {
                 System.out.print(quizes.get(i).choices[j] + "   ");
-                //System.out.print("  ");
-
             }
             System.out.print(quizes.get(i).choices[quizes.get(i).choices.length - 1]);
             System.out.println();
@@ -166,13 +155,8 @@ public final class Solution {
             }
             answers.add(tok[1]);
             answerCount--;
-
         }
-
-
-
     }
-
     /**
      * Displays the score report
      *
@@ -187,16 +171,11 @@ public final class Solution {
 
                 System.out.println(" Correct Answer! - Marks Awarded: " + quizes.get(i).maxMarks);
                 finalScore += Integer.parseInt(quizes.get(i).maxMarks);
-
             } else {
 
                 System.out.println(" Wrong Answer! - Penalty: " + quizes.get(i).penality);
                 finalScore += Integer.parseInt(quizes.get(i).penality);
-
             }
-
-
-
         }
         if (quizes.size() != 0) {
             System.out.println("Total Score: " + finalScore );
