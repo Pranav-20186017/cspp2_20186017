@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 import java.util.ArrayList;
 class Quiz{
     String question;
@@ -16,7 +15,9 @@ class Quiz{
         this.correct = correct;
         this.maxMarks = maxMarks;
         this.penality = penality;
-    }     
+        //System.out.println(question);
+    }   
+    
 }
 /**
  * Solution class for code-eval.
@@ -52,7 +53,9 @@ public final class Solution {
                 System.out.println("|----------------|");
                 System.out.println("| Load Questions |");
                 System.out.println("|----------------|");
+                //System.out.println(tokens[1]);
                 loadQuestions(s, q, Integer.parseInt(tokens[1]));
+
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -71,6 +74,7 @@ public final class Solution {
             }
         }
     }
+
     /**
      * Loads questions.
      *
@@ -118,8 +122,11 @@ public final class Solution {
             }
         } catch(Exception e) {
             System.out.println("Error! Malformed question");
-        }    
-}
+        }
+        
+
+    }
+
     /**
      * Starts a quiz.
      *
@@ -127,7 +134,7 @@ public final class Solution {
      * @param      quiz         The quiz object
      * @param      answerCount  The answer count
      */
-    public static void startQuiz(final Scanner s, final Quiz quiz, final int answerCount) {
+    public static void startQuiz(final Scanner s, final Quiz quiz, int answerCount) {
         // write your code here to display the quiz questions
         // read the user responses from the console
         // store the user respones in the quiz object
@@ -138,8 +145,26 @@ public final class Solution {
             }
             System.out.println();
             System.out.println();
+        }
+        while(answerCount > 0) {
+            //System.out.println(answerCount + " counttt");
+            String line = s.nextLine();
+            String[] tok = line.split(" ");
+            //System.out.println(line + " lineeeee");
+            if(tok[1].equals("a")) {
+                tok[1] = "1";
+            } else if (tok[1].equals("b") ){
+                tok[1] = "2";
+            } else if (tok[1].equals("c")) {
+                tok[1] = "3";
+            }else if (tok[1].equals("d")) {
+                tok[1] = "4";
+            } 
+            answers.add(tok[1]);
+            answerCount--;
+
+        }
     }
-}
     /**
      * Displays the score report
      *
@@ -167,5 +192,5 @@ public final class Solution {
     if(quizes.size() != 0){
         System.out.println("Total Score: "+finalScore );
     }
-    }
+}
 }
