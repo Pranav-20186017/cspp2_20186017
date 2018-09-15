@@ -97,7 +97,10 @@ public final class Solution {
                 System.out.println("Error! Malformed question");
                 return;
             }
-            System.out.println(err);
+            if (err > 0) {
+                System.out.println("Invalid penalty for question about sony");
+                return;
+            }
         }
         System.out.println(questionCount + " are added to the quiz");
     }
