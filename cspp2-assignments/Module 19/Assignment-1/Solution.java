@@ -175,8 +175,6 @@ public final class Solution {
         int finalScore = 0;
         for(int i=0;i<quizes.size();i++) {
             System.out.println(quizes.get(i).question);
-            //System.out.println(answers.get(i) + " - "+ quizes.get(i).correct);
-                //String[] an = quizes.get(i).choices[i].split(" ");
                 if(answers.get(i).equals(quizes.get(i).correct)){
                     
                     System.out.println(" Correct Answer! - Marks Awarded: "+quizes.get(i).maxMarks);
@@ -189,7 +187,7 @@ public final class Solution {
                     
                 }      
     }
-    if(quizes.size() != 0){
+    if(quizes.size() > 0){
         System.out.println("Total Score: "+finalScore );
     }
 }
