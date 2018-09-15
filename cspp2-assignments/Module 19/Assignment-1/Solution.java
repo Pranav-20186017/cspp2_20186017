@@ -129,7 +129,7 @@ public final class Solution {
         for (int i = 0; i < quizes.size(); i++) {
             System.out.println(quizes.get(i).question + "(" + quizes.get(i).maxMarks + ")");
             for (int j = 0 ; j < quizes.get(i).choices.length - 1; j++) {
-                System.out.print(quizes.get(i).choices[j] + "   ");
+                System.out.print(quizes.get(i).choices[j] + "\t");
                 //System.out.print("  ");
 
             }
@@ -153,13 +153,8 @@ public final class Solution {
             }
             answers.add(tok[1]);
             answerCount--;
-
         }
-
-
-
     }
-
     /**
      * Displays the score report
      *
@@ -180,11 +175,7 @@ public final class Solution {
             } else {
                 System.out.println(" Wrong Answer! - Penalty: " + quizes.get(i).penality);
                 finalScore += Integer.parseInt(quizes.get(i).penality);
-
             }
-
-
-
         }
         if (quizes.size() != 0) {
             System.out.println("Total Score: " + finalScore );
