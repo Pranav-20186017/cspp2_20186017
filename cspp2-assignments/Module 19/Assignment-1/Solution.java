@@ -109,6 +109,7 @@ public final class Solution {
             }
             if (tokens[0].equals("trick question ")) {
                 System.out.println("trick question  does not have enough answer choices");
+                return;
             }
 
         }
