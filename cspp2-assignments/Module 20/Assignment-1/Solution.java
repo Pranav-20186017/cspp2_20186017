@@ -1,4 +1,6 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.ArrayList;
 /**
  * Class for question.
  */
@@ -43,7 +45,8 @@ class Question {
      * @param      penalty1        The penalty 1
      */
     Question(final String question1, final String[] choices1,
-        final int correctAnswerIndex1, final int maxMarks1, final int penalty1) {
+        final int correctAnswerIndex1,
+        final int maxMarks1, final int penalty1) {
         this.questiontext = question1;
         this.choices = choices1;
         this.correctAnswerIndex = correctAnswerIndex1;
@@ -68,7 +71,7 @@ class Question {
      * @return     The correct answer.
      */
     public String getCorrectAnswer() {
-        return choices[correctAnswerIndex-1];
+        return choices[correctAnswerIndex - 1];
     }
     /**
      * Gets the question text.
@@ -125,7 +128,7 @@ class Question {
      */
     public String toString() {
         String s = "";
-        s += questiontext+'(' + maxMarks + ')' + '\n';
+        s += questiontext + '(' + maxMarks + ')' + '\n';
         for (String choice : choices) {
             s += choice + '\t';
         }
