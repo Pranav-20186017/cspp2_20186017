@@ -316,7 +316,9 @@ public final class Solution {
             if (Integer.parseInt(tokens[four]) > 0) {
                 throw new Exception("Invalid penalty for " + tokens[0]);
             }
-            quiz.addQuestion(new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4])));
+            quiz.addQuestion(new Question(tokens[0], tokens[1].split(","), 
+            Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
+            Integer.parseInt(tokens[4])));
             // System.out.println(i);
         }
         System.out.println(q+" are added to the quiz");
