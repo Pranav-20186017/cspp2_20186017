@@ -308,7 +308,7 @@ public final class Solution {
             }
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length) {
                 throw new Exception("Error! Correct answer choice number is"
-                    + " out of range for question text " + (i+1));
+                    + " out of range for question text " + (i + 1));
             }
             if (Integer.parseInt(tokens[three]) < 0) {
                 throw new Exception("Invalid max marks for " + tokens[0]);
