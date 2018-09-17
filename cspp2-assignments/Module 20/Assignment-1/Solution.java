@@ -286,6 +286,7 @@ public final class Solution {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
+        final int five = 5;
         if (q == 0) {
             throw new Exception("Quiz does not have questions");
         }
@@ -296,14 +297,16 @@ public final class Solution {
                     throw new Exception("Error! Malformed question");
                 }
             }
-            if (tokens.length < 5) {
+            if (tokens.length < five) {
                 throw new Exception("Error! Malformed question");
             }
             if (tokens[1].split(",").length < 2) {
-                throw new Exception(tokens[0] + " does not have enough answer choices");
+                throw new Exception(tokens[0]
+                + " does not have enough answer choices");
             }
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length) {
-                throw new Exception("Error! Correct answer choice number is out of range for question text "+(i+1));
+                throw new Exception("Error! Correct answer choice number is"
+                    + " out of range for question text "+(i+1));
             }
             if (Integer.parseInt(tokens[3]) < 0) {
                 throw new Exception("Invalid max marks for " + tokens[0]);
