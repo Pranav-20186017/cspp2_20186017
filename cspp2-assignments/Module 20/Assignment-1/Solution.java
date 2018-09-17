@@ -287,6 +287,8 @@ public final class Solution {
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
         final int five = 5;
+        final int three = 3;
+        final int four = 4;
         if (q == 0) {
             throw new Exception("Quiz does not have questions");
         }
@@ -306,12 +308,12 @@ public final class Solution {
             }
             if (Integer.parseInt(tokens[2]) > tokens[1].split(",").length) {
                 throw new Exception("Error! Correct answer choice number is"
-                    + " out of range for question text "+(i+1));
+                    + " out of range for question text " + (i+1));
             }
-            if (Integer.parseInt(tokens[3]) < 0) {
+            if (Integer.parseInt(tokens[three]) < 0) {
                 throw new Exception("Invalid max marks for " + tokens[0]);
             }
-            if (Integer.parseInt(tokens[4]) > 0) {
+            if (Integer.parseInt(tokens[four]) > 0) {
                 throw new Exception("Invalid penalty for " + tokens[0]);
             }
             quiz.addQuestion(new Question(tokens[0], tokens[1].split(","), Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]), Integer.parseInt(tokens[4])));
