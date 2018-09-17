@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.Arrays;
-import java.util.ArrayList;
 /**
  * Class for question.
  */
@@ -156,7 +155,8 @@ class Quiz {
      * Constructs the object.
      */
     Quiz() {
-        questions = new Question[10];
+        final int ten = 10;
+        questions = new Question[ten];
         size = 0;
     }
     /**
@@ -177,7 +177,11 @@ class Quiz {
     public Question getQuestion(final int index) {
         return questions[index];
     }
-
+    /**
+     * Gets the questions.
+     *
+     * @return     The questions.
+     */
     public Question[] getQuestions() {
         // System.out.println(Arrays.toString(Arrays.copyOf(questions, size)));
         return Arrays.copyOf(questions, size);
@@ -190,7 +194,6 @@ class Quiz {
     public String showReport() {
         String s = "";
         int marks = 0;
-
         for (Question question : getQuestions()) {
             s += question.getQuestionText() + '\n' + ' ';
             if (question.evaluateResponse(question.getResponse())) {
