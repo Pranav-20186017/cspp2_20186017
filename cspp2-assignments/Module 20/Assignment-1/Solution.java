@@ -248,12 +248,10 @@ public final class Solution {
                 System.out.println("|----------------|");
                 try {
                     loadQuestions(s, q, Integer.parseInt(tokens[1]));
-                }
-                catch (Exception e) {
+                } catch (Exception e) {
                     System.out.println(e.getMessage());
                     flag = false;
                 }
-
                 break;
                 case "START_QUIZ":
                 System.out.println("|------------|");
@@ -279,20 +277,24 @@ public final class Solution {
      *
      * @param      scan       The scan
      * @param      quiz       The quiz
-     * @param      q          The question count
+     * @param      q          The quarter
      *
+     * @throws     Exception  { exception_description }
      */
     public static void loadQuestions(final Scanner scan,
         final Quiz quiz, final int q) throws Exception {
         // write your code here to read the questions from the console
         // tokenize the question line and create the question object
         // add the question objects to the quiz class
-        if (q==0) throw new Exception("Quiz does not have questions");
+        if (q == 0) {
+            throw new Exception("Quiz does not have questions");
+        }
         for (int  i = 0; i < q; i++) {
             String[] tokens = scan.nextLine().split(":");
-            for (String token : tokens)
+            for (String token : tokens) {
                 if (token.equals(""))
                     throw new Exception("Error! Malformed question");
+            }
             if (tokens.length < 5)
                 throw new Exception("Error! Malformed question");
             if (tokens[1].split(",").length < 2)
