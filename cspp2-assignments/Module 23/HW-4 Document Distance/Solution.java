@@ -31,8 +31,8 @@ final class Solution {
             System.out.print(files[files.length-1].getName());
             System.out.println();
             for(int i = 0; i < files.length; i++) {
-                System.out.print(files[i].getName()+"\t");
-                for(int j =0; j < files.length;j++) {
+                System.out.print(files[i].getName() + "\t");
+                for(int j =0; j < files.length; j++) {
                     Distance map1 = new Distance(files[i]);
                     Distance map2 = new Distance(files[j]);
                     int similar = (int)Math.round(map1.angle(map2));
