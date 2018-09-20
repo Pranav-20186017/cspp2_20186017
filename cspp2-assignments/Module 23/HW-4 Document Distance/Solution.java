@@ -3,7 +3,7 @@ import java.io.File;
 /**
  * Class for solution.
  */
-public class Solution {
+final class Solution {
     /**
      * Constructs the object.
      */
@@ -15,15 +15,15 @@ public class Solution {
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         try {
-            Scanner scan = new Scanner(System.in);  
+            Scanner scan = new Scanner(System.in);
             String line = scan.nextLine();
             File dir = new File(line);
             File[] files = dir.listFiles();
             int maxVal = 0;
             String file1 = null;
-            String file2 = null; 
+            String file2 = null;
             System.out.print("      ");
             for(int i = 0; i < files.length- 1 ; i++) {
                 System.out.print(files[i].getName() + "\t");
