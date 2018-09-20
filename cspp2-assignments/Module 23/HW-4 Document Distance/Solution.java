@@ -25,7 +25,7 @@ final class Solution {
             String file1 = null;
             String file2 = null;
             System.out.print("      ");
-            for(int i = 0; i < files.length- 1 ; i++) {
+            for (int i = 0; i < files.length - 1; i++) {
                 System.out.print(files[i].getName() + "\t");
             }
             System.out.print(files[files.length-1].getName());
