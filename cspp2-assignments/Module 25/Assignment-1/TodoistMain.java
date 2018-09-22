@@ -19,61 +19,53 @@ class Todoist {
 		} catch (Exception e) {
 			resize();
 		}
+		
 	}
 	void resize() {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
     public String toString(){
     	
-		String str = "";
+		String display = "";
     	for (int i =0; i< size;i++) {
     	//System.out.println(tasks[i].important + " - " + tasks[i].urgent);
-    	String temp_imp = "Not Important";
-		String temp_urg = "Not Urgent";
-		if(tasks[i].important) temp_imp = "Important";
-		if(tasks[i].urgent) temp_urg = "Urgent";
-		str += tasks[i].title + ", " + tasks[i].assigned+", "+ tasks[i].time+", "+ temp_imp+", "+ temp_urg+", "+ tasks[i].status + "\n";
+    	String imp = "Not Important";
+		String urg = "Not Urgent";
+		if(tasks[i].important) imp = "Important";
+		if(tasks[i].urgent) urg = "Urgent";
+		display += tasks[i].title + ", " + tasks[i].assignedTo+", "+ tasks[i].timeToComplete+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
+		
     	}
-    	return str;
+    	return display;
     }
 
 }
 class Task {
 	String title;
-	String assigned;
-	int time;
+	String assignedTo;
+	int timeToComplete;
 	boolean important;
 	boolean urgent;
 	String status;
 
-	Task(String titl, String human, int tim, boolean im,
-	     boolean ur, String stat) throws Exception {
-		if (title.equals("") || title == null) {
-			throw new Exception("Title not provided");
-		} 
-		if (time < 0) {
-			throw new Exception("Invalid timeToComplete " + time);
-		}
-		if (!status.equals("todo") && !status.equals("done")) {
-			throw new Exception("Invalid status " + status);
-		}
-		this.title = titl;
-		this.assigned = human;
-		this.time = tim;
-		this.important = im;
-		this.urgent = ur;
-		this.status = stat;
+	Task(String title, String assignedTo, int timeToComplete, boolean important,
+	     boolean urgent, String status) throws Exception {
+		if (title.equals("") || title == null) throw new Exception("Title not provided");
+		if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + timeToComplete);
+		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
+		this.title = title;
+		this.assignedTo = assignedTo;
+		this.timeToComplete = timeToComplete;
+		this.important = important;
+		this.urgent = urgent;
+		this.status = status;
 	}
 	public String toString() {
 		String imp = "Not Important";
 		String urg = "Not Urgent";
-		if(important) {
-			imp = "Important";
-		}
-		if(urgent) {
-			urg = "Urgent"; 
-		} 
-		String display = title + ", " + assigned+", "+ time+", "+ imp+", "+ urg+", "+ status;
+		if(important) imp = "Important";
+		if(urgent) urg = "Urgent";
+		String display = title + ", " + assignedTo+", "+ timeToComplete+", "+ imp+", "+ urg+", "+ status;
 		return display;
 	}
 }
@@ -163,6 +155,7 @@ public class TodoistMain {
 		return new Task(
 		           title, assignedTo, timeToComplete, important, urgent, status);
 	}
+
 	/**
 	 * main method.
 	 *
