@@ -4,7 +4,6 @@ import java.util.Arrays;
 /**
   * write your code below this comment
   */
-
 class Todoist {
 	Task[] tasks;
 	int size;
@@ -22,15 +21,14 @@ class Todoist {
 		} catch (Exception e) {
 			resize();
 			addTask(task);
-		}
-		
+		}	
 	}
 	void resize() {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
     public Task getNextTask(String name) {
     	for(int i =0; i< size(); i++) {
-    		if(tasks[i].assignedTo.equals(name) && tasks[i].status.equals("todo")) {
+    		if(tasks[i].assign.equals(name) && tasks[i].status.equals("todo")) {
     			if(tasks[i].important && !tasks[i].urgent) {
     				return tasks[i];
     			}
@@ -41,16 +39,13 @@ class Todoist {
     public int totalTime4Completion() {
     	int total = 0;
     	for (int i = 0; i < size(); i++) {
-    		// if (tasks[i].status.equals("done")) {
-    		// 	total += 0;
-    		// }
     		if (tasks[i].status.equals("todo")) {
-    			total += tasks[i].timeToComplete;
+    			total += tasks[i].time;
     		}
     	}
     	return total;
     }
-    public String toString(){
+    public String toString() {
     	
 		String display = "";
     	for (int i =0; i< size;i++) {
@@ -58,7 +53,7 @@ class Todoist {
 		String urg = "Not Urgent";
 		if(tasks[i].important) imp = "Important";
 		if(tasks[i].urgent) urg = "Urgent";
-		display += tasks[i].title + ", " + tasks[i].assignedTo+", "+ tasks[i].timeToComplete+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
+		display += tasks[i].title + ", " + tasks[i].assign+", "+ tasks[i].time+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
 		
     	}
     	return display;
@@ -67,24 +62,24 @@ class Todoist {
 }
 class Task {
 	String title;
-	String assignedTo;
-	int timeToComplete;
+	String assign;
+	int time;
 	boolean important;
 	boolean urgent;
 	String status;
 
-	Task(String title, String assignedTo, int timeToComplete, boolean important,
+	Task(String title, String assign, int time, boolean important,
 	     boolean urgent, String status) throws Exception {
 		if (title.equals("") || title == null) {
 			throw new Exception("Title not provided");
 		}
-		if (timeToComplete < 0) {
-			throw new Exception("Invalid timeToComplete " + timeToComplete);
+		if (time < 0) {
+			throw new Exception("Invalid time " + time);
 		}
 		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
 		this.title = title;
-		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
+		this.assign = assign;
+		this.time = time;
 		this.important = important;
 		this.urgent = urgent;
 		this.status = status;
@@ -94,7 +89,7 @@ class Task {
 		String urg = "Not Urgent";
 		if(important) imp = "Important";
 		if(urgent) urg = "Urgent";
-		String display = title + ", " + assignedTo+", "+ timeToComplete+", "+ imp+", "+ urg+", "+ status;
+		String display = title + ", " + assign + ", " + time + ", " + imp + ", " + urg + ", " + status;
 		return display;
 	}
 }
@@ -176,13 +171,13 @@ public class TodoistMain {
 	 */
 	public static Task createTask(final String[] tokens) throws Exception {
 		String title = tokens[1];
-		String assignedTo = tokens[2];
-		int timeToComplete = Integer.parseInt(tokens[3]);
+		String assign = tokens[2];
+		int time = Integer.parseInt(tokens[3]);
 		boolean important = tokens[4].equals("y");
 		boolean urgent = tokens[5].equals("y");
 		String status = tokens[6];
 		return new Task(
-		           title, assignedTo, timeToComplete, important, urgent, status);
+		           title, assign, time, important, urgent, status);
 	}
 
 	/**
