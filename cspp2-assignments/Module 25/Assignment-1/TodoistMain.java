@@ -24,6 +24,9 @@ class Todoist {
 	void resize() {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
+    int size() {
+    	return size;
+    }
     public String toString(){
     	
 		String display = "";
@@ -37,6 +40,19 @@ class Todoist {
 		
     	}
     	return display;
+    }
+    public Task getNextTask(String name) {
+    	for(int i =0; i< size; i++) {
+    		if(tasks[i].assignedTo.equals(name) && tasks[i].status.equals("todo")) {
+    			if(tasks[i].important && !tasks[i].urgent) {
+    				return tasks[i];
+    			}
+    		}
+    	}
+    	return null;
+    }
+    public int totalTime4Completion() {
+   		return 0;
     }
 
 }
@@ -98,9 +114,9 @@ public class TodoistMain {
 			case "print-todoist":
 				System.out.println(todo);
 				break;
-			// case "get-next":
-			// 	System.out.println(todo.getNextTask(tokens[1]));
-			// 	break;
+			case "get-next":
+				System.out.println(todo.getNextTask(tokens[1]));
+				break;
 			// case "get-next-n":
 			// 	int n = Integer.parseInt(tokens[2]);
 			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
