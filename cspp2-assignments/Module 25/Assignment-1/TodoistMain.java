@@ -128,6 +128,9 @@ class Todoist {
         return display;
     }
 }
+/**
+ * Class for task.
+ */
 class Task {
     String title;
     String assign;
@@ -135,7 +138,16 @@ class Task {
     boolean important;
     boolean urgent;
     String status;
-
+    /**
+     * Constructs the object.
+     *
+     * @param      title      The title
+     * @param      assign     The assign
+     * @param      time       The time
+     * @param      important  The important
+     * @param      urgent     The urgent
+     * @param      status     The status
+     */
     Task(String title, String assign, int time, boolean important,
          boolean urgent, String status) throws Exception {
         if (title.equals("")) {
