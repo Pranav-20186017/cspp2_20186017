@@ -117,12 +117,12 @@ class Todoist {
         String urg = "Not Urgent";
         if (taskList[i].important) {
             imp = "Important";
-        } 
+        }
         if (taskList[i].urgent) {
          urg = "Urgent";
         }
         display += taskList[i].title + ", " + taskList[i].assign
-        + ", "+ taskList[i].time+", "+ imp + ", " + urg +", "
+        + ", " + taskList[i].time + ", " + imp + ", " + urg + ", "
         + taskList[i].status + "\n";
         }
         return display;
