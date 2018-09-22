@@ -166,6 +166,11 @@ class Task {
         this.urgent = urgent;
         this.status = status;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String imp = "Not Important";
         String urg = "Not Urgent";
@@ -187,7 +192,7 @@ public class TodoistMain {
    /**
     * Constructs the object.
     */
-    TodoistMain() {
+    private TodoistMain() {
         //unused
     }
 
