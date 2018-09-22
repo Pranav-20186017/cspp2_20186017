@@ -5,10 +5,10 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Todoist {
-	Task[] tasks;
+	Task[] taskList;
 	int size;
 	Todoist() {
-		tasks = new Task[10];
+		taskList = new Task[10];
 		size = 0;
 	}
 	public int size() {
@@ -16,7 +16,7 @@ class Todoist {
 	}
 	public void addTask(Task task) {
 		try{
-			tasks[size] = task;
+			taskList[size] = task;
 			size++;
 		} catch (Exception e) {
 			resize();
@@ -24,13 +24,13 @@ class Todoist {
 		}	
 	}
 	void resize() {
-        tasks = Arrays.copyOf(tasks, 2 * size);
+        taskList = Arrays.copyOf(taskList, 2 * size);
     }
     public Task getNextTask(String name) {
     	for(int i =0; i< size(); i++) {
-    		if(tasks[i].assign.equals(name) && tasks[i].status.equals("todo")) {
-    			if(tasks[i].important && !tasks[i].urgent) {
-    				return tasks[i];
+    		if(taskList[i].assign.equals(name) && taskList[i].status.equals("todo")) {
+    			if(taskList[i].important && !taskList[i].urgent) {
+    				return taskList[i];
     			}
     		}
     	}
@@ -39,20 +39,24 @@ class Todoist {
     public int totalTime4Completion() {
     	int total = 0;
     	for (int i = 0; i < size(); i++) {
-    		if (tasks[i].status.equals("todo")) {
-    			total += tasks[i].time;
+    		if (taskList[i].status.equals("todo")) {
+    			total += taskList[i].time;
     		}
     	}
     	return total;
     }
     public String toString() {
 		String display = "";
-    	for (int i =0; i< size;i++) {
+    	for (int i =0; i< size(); i++) {
     	String imp = "Not Important";
 		String urg = "Not Urgent";
-		if(tasks[i].important) imp = "Important";
-		if(tasks[i].urgent) urg = "Urgent";
-		display += tasks[i].title + ", " + tasks[i].assign+", "+ tasks[i].time+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
+		if (taskList[i].important == true) {
+			imp = "Important";
+		} 
+		if (taskList[i].urgent == true) {
+		 urg = "Urgent";
+		}
+		display += taskList[i].title + ", " + taskList[i].assign+", "+ taskList[i].time+", "+ imp+", "+ urg+", "+ taskList[i].status + "\n";
     	}
     	return display;
     }
@@ -124,8 +128,8 @@ public class TodoistMain {
 				break;
 			// case "get-next-n":
 			// 	int n = Integer.parseInt(tokens[2]);
-			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
-			// 	System.out.println(Arrays.deepToString(tasks));
+			// 	Task[] taskList = todo.getNextTask(tokens[1], n);
+			// 	System.out.println(Arrays.deepToString(taskList));
 			// 	break;
 			case "total-time":
 				System.out.println(todo.totalTime4Completion());
