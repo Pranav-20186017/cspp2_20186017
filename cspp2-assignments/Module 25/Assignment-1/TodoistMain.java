@@ -41,9 +41,7 @@ class Todoist {
     public int totalTime4Completion() {
     	int total = 0;
     	for (int i = 0; i < size; i++) {
-    		if(tasks[i].equals("todo")) {
     		total += tasks[i].timeToComplete;
-    		}
     	}
     	return total;
     }
