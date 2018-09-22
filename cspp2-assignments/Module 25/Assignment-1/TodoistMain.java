@@ -33,14 +33,14 @@ class Todoist {
      *
      * @param      task  The task
      */
-    public void addTask(Task task) {
-        try{
+    public void addTask(final Task task) {
+        try {
             taskList[size] = task;
             size++;
         } catch (Exception e) {
             resize();
             addTask(task);
-        }   
+        }
     }
     /**
      * resizes the array of task objects.
@@ -55,9 +55,10 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public Task getNextTask(String name) {
+    public Task getNextTask(final String name) {
         for(int i =0; i< getSize(); i++) {
-            if(taskList[i].assign.equals(name) && taskList[i].status.equals("todo")) {
+            if(taskList[i].assign.equals(name)
+            && taskList[i].status.equals("todo")) {
                 if(taskList[i].important && !taskList[i].urgent) {
                     return taskList[i];
                 }
