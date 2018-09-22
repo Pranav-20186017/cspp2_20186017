@@ -19,24 +19,23 @@ class Todoist {
 		} catch (Exception e) {
 			resize();
 		}
-		
 	}
 	void resize() {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
     public String toString(){
     	
-		String display = "";
+		String str = "";
     	for (int i =0; i< size;i++) {
     	//System.out.println(tasks[i].important + " - " + tasks[i].urgent);
     	String imp = "Not Important";
 		String urg = "Not Urgent";
 		if(tasks[i].important) imp = "Important";
 		if(tasks[i].urgent) urg = "Urgent";
-		display += tasks[i].title + ", " + tasks[i].assignedTo+", "+ tasks[i].timeToComplete+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
+		str += tasks[i].title + ", " + tasks[i].assignedTo+", "+ tasks[i].timeToComplete+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
 		
     	}
-    	return display;
+    	return str;
     }
 
 }
