@@ -167,24 +167,24 @@ class Task {
      * @param      status     The status
      * @throws     Exception  throws an exceptiuon.
      */
-    Task(final String title, final String assign, final int time,
-        final boolean important,
-        final boolean urgent, final String status) throws Exception {
-        if (title.equals("")) {
+    Task(final String name, final String assigned, final int tim,
+        final boolean imp,
+        final boolean ur, final String stat) throws Exception {
+        if (name.equals("")) {
             throw new Exception("Title not provided");
         }
-        if (time < 0) {
+        if (tim < 0) {
             throw new Exception("Invalid timeToComplete " + time);
         }
-        if (!status.equals("todo") && !status.equals("done")) {
+        if (!stat.equals("todo") && !status.equals("done")) {
             throw new Exception("Invalid status " + status);
         }
-        this.title = title;
-        this.assign = assign;
-        this.time = time;
-        this.important = important;
-        this.urgent = urgent;
-        this.status = status;
+        this.title = name;
+        this.assign = assigned;
+        this.time = tim;
+        this.important = imp;
+        this.urgent = ur;
+        this.status = stat;
     }
     /**
      * Returns a string representation of the object.
