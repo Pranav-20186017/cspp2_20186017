@@ -12,6 +12,9 @@ class Todoist {
 		tasks = new Task[10];
 		size = 0;
 	}
+	public int size() {
+		return size;
+	}
 	public void addTask(Task task) {
 		try{
 			tasks[size] = task;
@@ -26,7 +29,7 @@ class Todoist {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
     public Task getNextTask(String name) {
-    	for(int i =0; i< size; i++) {
+    	for(int i =0; i< size(); i++) {
     		if(tasks[i].assignedTo.equals(name) && tasks[i].status.equals("todo")) {
     			if(tasks[i].important && !tasks[i].urgent) {
     				return tasks[i];
@@ -35,11 +38,17 @@ class Todoist {
     	}
     	return null;
     }
+    public int totalTime4Completion() {
+    	int total = 0;
+    	for (int i = 0; i < size; i++) {
+    		total += tasks[i].timeToComplete;
+    	}
+    	return total;
+    }
     public String toString(){
     	
 		String display = "";
     	for (int i =0; i< size;i++) {
-    	//System.out.println(tasks[i].important + " - " + tasks[i].urgent);
     	String imp = "Not Important";
 		String urg = "Not Urgent";
 		if(tasks[i].important) imp = "Important";
@@ -111,9 +120,9 @@ public class TodoistMain {
 			// 	Task[] tasks = todo.getNextTask(tokens[1], n);
 			// 	System.out.println(Arrays.deepToString(tasks));
 			// 	break;
-			// case "total-time":
-			// 	System.out.println(todo.totalTime4Completion());
-			// 	break;
+			case "total-time":
+				System.out.println(todo.totalTime4Completion());
+				break;
 			default:
 				break;
 			}
