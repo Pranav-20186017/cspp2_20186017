@@ -112,13 +112,13 @@ class Todoist {
      */
     public String toString() {
         String display = "";
-        for (int i = 0; i< getSize(); i++) {
+        for (int i = 0; i < getSize(); i++) {
         String imp = "Not Important";
         String urg = "Not Urgent";
-        if (taskList[i].important == true) {
+        if (taskList[i].important) {
             imp = "Important";
         } 
-        if (taskList[i].urgent == true) {
+        if (taskList[i].urgent) {
          urg = "Urgent";
         }
         display += taskList[i].title + ", " + taskList[i].assign
