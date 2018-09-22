@@ -28,12 +28,11 @@ class Todoist {
 		String str = "";
     	for (int i =0; i< size;i++) {
     	//System.out.println(tasks[i].important + " - " + tasks[i].urgent);
-    	String imp = "Not Important";
-		String urg = "Not Urgent";
-		if(tasks[i].important) imp = "Important";
-		if(tasks[i].urgent) urg = "Urgent";
-		str += tasks[i].title + ", " + tasks[i].assignedTo+", "+ tasks[i].timeToComplete+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
-		
+    	String temp_imp = "Not Important";
+		String temp_urg = "Not Urgent";
+		if(tasks[i].important) temp_imp = "Important";
+		if(tasks[i].urgent) temp_urg = "Urgent";
+		str += tasks[i].title + ", " + tasks[i].assigned+", "+ tasks[i].time+", "+ temp_imp+", "+ temp_urg+", "+ tasks[i].status + "\n";
     	}
     	return str;
     }
@@ -41,30 +40,40 @@ class Todoist {
 }
 class Task {
 	String title;
-	String assignedTo;
-	int timeToComplete;
+	String assigned;
+	int time;
 	boolean important;
 	boolean urgent;
 	String status;
 
-	Task(String title, String assignedTo, int timeToComplete, boolean important,
-	     boolean urgent, String status) throws Exception {
-		if (title.equals("") || title == null) throw new Exception("Title not provided");
-		if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + timeToComplete);
-		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
-		this.title = title;
-		this.assignedTo = assignedTo;
-		this.timeToComplete = timeToComplete;
-		this.important = important;
-		this.urgent = urgent;
-		this.status = status;
+	Task(String titl, String human, int tim, boolean im,
+	     boolean ur, String stat) throws Exception {
+		if (title.equals("") || title == null) {
+			throw new Exception("Title not provided");
+		} 
+		if (time < 0) {
+			throw new Exception("Invalid timeToComplete " + time);
+		}
+		if (!status.equals("todo") && !status.equals("done")) {
+			throw new Exception("Invalid status " + status);
+		}
+		this.title = titl;
+		this.assigned = human;
+		this.time = tim;
+		this.important = im;
+		this.urgent = ur;
+		this.status = stat;
 	}
 	public String toString() {
 		String imp = "Not Important";
 		String urg = "Not Urgent";
-		if(important) imp = "Important";
-		if(urgent) urg = "Urgent";
-		String display = title + ", " + assignedTo+", "+ timeToComplete+", "+ imp+", "+ urg+", "+ status;
+		if(important) {
+			imp = "Important";
+		}
+		if(urgent) {
+			urg = "Urgent"; 
+		} 
+		String display = title + ", " + assigned+", "+ time+", "+ imp+", "+ urg+", "+ status;
 		return display;
 	}
 }
