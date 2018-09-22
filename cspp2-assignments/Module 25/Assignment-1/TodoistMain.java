@@ -83,9 +83,9 @@ class Todoist {
                 if (taskList[i].important && !taskList[i].urgent) {
                     taskCount[itr] = taskList[i];
                     itr++;
-                    if (itr == count){
-                      break;  
-                    } 
+                    if (itr == count) {
+                      break;
+                    }
                 }
             }
         }
@@ -105,6 +105,11 @@ class Todoist {
         }
         return total;
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         String display = "";
         for (int i = 0; i< getSize(); i++) {
@@ -116,7 +121,9 @@ class Todoist {
         if (taskList[i].urgent == true) {
          urg = "Urgent";
         }
-        display += taskList[i].title + ", " + taskList[i].assign+", "+ taskList[i].time+", "+ imp+", "+ urg+", "+ taskList[i].status + "\n";
+        display += taskList[i].title + ", " + taskList[i].assign
+        + ", "+ taskList[i].time+", "+ imp + ", " + urg +", "
+        + taskList[i].status + "\n";
         }
         return display;
     }
