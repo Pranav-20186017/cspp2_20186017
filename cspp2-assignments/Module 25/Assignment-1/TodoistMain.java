@@ -74,7 +74,7 @@ class Task {
 			throw new Exception("Title not provided");
 		}
 		if (time < 0) {
-			throw new Exception("Invalid time " + time);
+			throw new Exception("Invalid timeToComplete " + time);
 		}
 		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
 		this.title = title;
