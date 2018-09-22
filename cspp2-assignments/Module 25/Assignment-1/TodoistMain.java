@@ -167,8 +167,9 @@ class Task {
      * @param      status     The status
      * @throws     Exception  throws an exceptiuon.
      */
-    Task(String title, String assign, int time, boolean important,
-         boolean urgent, String status) throws Exception {
+    Task(final String title, final String assign, final int time,
+        final boolean important,
+        final boolean urgent, final String status) throws Exception {
         if (title.equals("")) {
             throw new Exception("Title not provided");
         }
