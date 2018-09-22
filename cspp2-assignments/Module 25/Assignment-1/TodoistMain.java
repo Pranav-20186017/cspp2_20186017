@@ -169,13 +169,14 @@ class Task {
     public String toString() {
         String imp = "Not Important";
         String urg = "Not Urgent";
-        if (important == true) {
+        if (important) {
             imp = "Important";
         }
-        if(urgent == true) {
+        if (urgent) {
             urg = "Urgent";
         }
-        String display = title + ", " + assign + ", " + time + ", " + imp + ", " + urg + ", " + status;
+        String display = title + ", " + assign + ", " + time
+        + ", " + imp + ", " + urg + ", " + status;
         return display;
     }
 }
@@ -183,6 +184,12 @@ class Task {
  * Class for todoist main.
  */
 public class TodoistMain {
+   /**
+    * Constructs the object.
+    */
+    TodoistMain() {
+        //unused
+    }
 
     /**
      * Starts a test.
