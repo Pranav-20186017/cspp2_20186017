@@ -1,0 +1,282 @@
+########## Testcase 0: Passed ##########
+Expected Output: 
+task1, akshay, 30, Important, Urgent, todo
+
+Your Output: 
+task1, akshay, 30, Important, Urgent, todo
+
+----------------------------------------
+########## Testcase 1: Passed ##########
+Expected Output: 
+task2, manoj, 10, Not Important, Not Urgent, done
+
+Your Output: 
+task2, manoj, 10, Not Important, Not Urgent, done
+
+----------------------------------------
+########## Testcase 2: Passed ##########
+Expected Output: 
+taska, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+taska, tarun, 120, Important, Not Urgent, todo
+
+----------------------------------------
+########## Testcase 3: Passed ##########
+Expected Output: 
+Invalid status dud
+
+Your Output: 
+Invalid status dud
+
+----------------------------------------
+########## Testcase 4: Passed ##########
+Expected Output: 
+Invalid timeToComplete -1
+
+Your Output: 
+Invalid timeToComplete -1
+
+----------------------------------------
+########## Testcase 5: Passed ##########
+Expected Output: 
+Title not provided
+
+Your Output: 
+Title not provided
+
+----------------------------------------
+########## Testcase 6: Passed ##########
+Expected Output: 
+task1, akshay, 30, Important, Urgent, todo
+task2, manoj, 10, Not Important, Not Urgent, done
+taska, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+task1, akshay, 30, Important, Urgent, todo
+task2, manoj, 10, Not Important, Not Urgent, done
+taska, tarun, 120, Important, Not Urgent, todo
+
+----------------------------------------
+########## Testcase 7: Passed ##########
+Expected Output: 
+task-1, akshay, 30, Important, Urgent, todo
+task-2, manoj, 10, Not Important, Not Urgent, done
+task-a, tarun, 120, Important, Not Urgent, todo
+task-b, akshay, 30, Important, Urgent, todo
+task-c, manoj, 10, Not Important, Not Urgent, done
+task-p, tarun, 120, Important, Not Urgent, todo
+task-q, akshay, 30, Important, Urgent, todo
+task-r, manoj, 10, Not Important, Not Urgent, done
+task-s, tarun, 120, Important, Not Urgent, todo
+task-9, akshay, 30, Important, Urgent, todo
+task-8, manoj, 10, Not Important, Not Urgent, done
+task-7, tarun, 120, Important, Not Urgent, todo
+task-6, akshay, 30, Important, Urgent, todo
+task-7, manoj, 10, Not Important, Not Urgent, done
+task-4, tarun, 120, Important, Not Urgent, todo
+task-3, akshay, 30, Important, Urgent, todo
+task-t, manoj, 10, Not Important, Not Urgent, done
+task-e, tarun, 120, Important, Not Urgent, todo
+task-h, akshay, 30, Important, Urgent, todo
+task-x, manoj, 10, Not Important, Not Urgent, done
+task-z, tarun, 120, Important, Not Urgent, todo
+
+Your Output: 
+task-1, akshay, 30, Important, Urgent, todo
+task-2, manoj, 10, Not Important, Not Urgent, done
+task-a, tarun, 120, Important, Not Urgent, todo
+task-b, akshay, 30, Important, Urgent, todo
+task-c, manoj, 10, Not Important, Not Urgent, done
+task-p, tarun, 120, Important, Not Urgent, todo
+task-q, akshay, 30, Important, Urgent, todo
+task-r, manoj, 10, Not Important, Not Urgent, done
+task-s, tarun, 120, Important, Not Urgent, todo
+task-9, akshay, 30, Important, Urgent, todo
+task-8, manoj, 10, Not Important, Not Urgent, done
+task-7, tarun, 120, Important, Not Urgent, todo
+task-6, akshay, 30, Important, Urgent, todo
+task-7, manoj, 10, Not Important, Not Urgent, done
+task-4, tarun, 120, Important, Not Urgent, todo
+task-3, akshay, 30, Important, Urgent, todo
+task-t, manoj, 10, Not Important, Not Urgent, done
+task-e, tarun, 120, Important, Not Urgent, todo
+task-h, akshay, 30, Important, Urgent, todo
+task-x, manoj, 10, Not Important, Not Urgent, done
+task-z, tarun, 120, Important, Not Urgent, todo
+
+----------------------------------------
+########## Testcase 8: Passed ##########
+Expected Output: 
+task-b, akshay, 30, Important, Not Urgent, todo
+null
+task-h, tarun, 27, Important, Not Urgent, todo
+
+Your Output: 
+task-b, akshay, 30, Important, Not Urgent, todo
+null
+task-h, tarun, 27, Important, Not Urgent, todo
+
+----------------------------------------
+########## Testcase 9: Passed ##########
+Expected Output: 
+task-j1, john, 30, Important, Not Urgent, todo
+task-ta, tom, 120, Important, Not Urgent, todo
+
+Your Output: 
+task-j1, john, 30, Important, Not Urgent, todo
+task-ta, tom, 120, Important, Not Urgent, todo
+
+----------------------------------------
+########## Testcase 10: Failed ##########
+Expected Output: 
+[task-j1, john, 30, Important, Not Urgent, todo, task-j6, john, 130, Important, Not Urgent, todo, task-j2, john, 10, Important, Not Urgent, todo]
+[task-tp, tom, 120, Important, Not Urgent, todo, task-th, tom, 27, Important, Not Urgent, todo, null]
+
+Your Output: 
+
+
+----------------------------------------
+########## Testcase 11: Failed ##########
+Expected Output: 
+337
+
+Your Output: 
+487
+
+----------------------------------------
+########## Testcase 12: Failed ##########
+Expected Output: 
+0
+
+Your Output: 
+487
+
+----------------------------------------
+########## Testcase 13: Passed ##########
+Expected Output: 
+487
+
+Your Output: 
+487
+
+----------------------------------------
+Result: 11/14 testcases passed.
+Starting audit...
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:4: First sentence should end with a period. [JavadocStyle]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:9:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:9:13: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:9:16: Variable 'tasks' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:10:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:10:13: Variable 'size' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:11:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:12:34: '10' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:15:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:18:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:18:29: Parameter task should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:19:20: 'try' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:19:20: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:26: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:28:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:31:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:31:29: Parameter name should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:32:12: 'for' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:32:20: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:32:24: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:33: Line is longer than 80 characters (found 88). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:33:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:34:27: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:41:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:48:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:48:29: '{' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:49: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:51:21: '=' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:51:25: '<' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:51:32: ';' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:54: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:54:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:55: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:55:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56: Line is longer than 80 characters (found 150). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:71: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:72: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:76: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:101: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:102: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:106: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:111: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:112: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:116: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:121: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:122: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:56:126: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:57: Line has trailing spaces. [RegexpSingleline]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:63: Missing a Javadoc comment. [JavadocType]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:64:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:64:16: Variable 'title' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:65:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:65:16: Variable 'assignedTo' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:66:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:66:13: Variable 'timeToComplete' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:67:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:67:17: Variable 'important' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:68:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:68:17: Variable 'urgent' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:69:9: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:69:16: Variable 'status' must be private and have accessor methods. [VisibilityModifier]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71: Line is longer than 80 characters (found 84). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:14: Parameter title should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:21: 'title' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:28: Parameter assignedTo should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:35: 'assignedTo' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:47: Parameter timeToComplete should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:51: 'timeToComplete' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:67: Parameter important should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:71:75: 'important' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:72:14: Parameter urgent should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:72:22: 'urgent' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:72:30: Parameter status should be final. [FinalParameters]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:72:37: 'status' hides a field. [HiddenField]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:73: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:73: Line is longer than 80 characters (found 97). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:74: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:74: Line is longer than 80 characters (found 104). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:75: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:75: Line is longer than 80 characters (found 118). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:83:9: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:86: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:86:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:87: 'if' construct must use '{}'s. [NeedBraces]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:87:19: 'if' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88: Line is longer than 80 characters (found 113). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:59: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:60: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:64: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:80: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:81: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:85: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:90: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:91: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:95: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:100: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:101: '+' is not followed by whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:88:105: '+' is not preceded with whitespace. [WhitespaceAround]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:95:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:138: Line is longer than 80 characters (found 83). [LineLength]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:171:62: '3' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:172:44: '4' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:173:41: '5' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:174:40: '6' is a magic number. [MagicNumber]
+[ERROR] D:\MSIT\cspp2_20186017\cspp2-assignments\Module 25\Assignment-1\TodoistMain.java:176: Line is longer than 80 characters (found 89). [LineLength]
+Audit done.
+Checkstyle ends with 107 errors.
+
+
+[master 4f15e69] "check_style_score -> 11 of 14 passed. style score: 0/1 "
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 cspp2-assignments/Module 25/Assignment-1/test.txt
+
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
