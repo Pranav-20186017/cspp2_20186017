@@ -17,7 +17,8 @@ class Todoist {
 	}
 	public void addTask(Task task) {
 		try{
-			tasks[size++] = task;
+			tasks[size] = task;
+			size++;
 		} catch (Exception e) {
 			resize();
 			addTask(task);
