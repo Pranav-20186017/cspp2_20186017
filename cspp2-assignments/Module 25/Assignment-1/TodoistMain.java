@@ -147,6 +147,7 @@ class Task {
      * @param      important  The important
      * @param      urgent     The urgent
      * @param      status     The status
+     * @throws     Exception  throws an exceptiuon.
      */
     Task(String title, String assign, int time, boolean important,
          boolean urgent, String status) throws Exception {
@@ -188,7 +189,7 @@ class Task {
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+final class TodoistMain {
    /**
     * Constructs the object.
     */
