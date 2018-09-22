@@ -56,10 +56,10 @@ class Todoist {
      * @return     The next task.
      */
     public Task getNextTask(final String name) {
-        for(int i =0; i< getSize(); i++) {
-            if(taskList[i].assign.equals(name)
+        for (int i = 0; i < getSize(); i++) {
+            if (taskList[i].assign.equals(name)
             && taskList[i].status.equals("todo")) {
-                if(taskList[i].important && !taskList[i].urgent) {
+                if (taskList[i].important && !taskList[i].urgent) {
                     return taskList[i];
                 }
             }
@@ -74,19 +74,22 @@ class Todoist {
      *
      * @return     The next task.
      */
-    public Task[] getNextTask(String pname, int count) {
-        Task[] getTasks = new Task[count];
-        int index = 0;
+    public Task[] getNextTask(final String pname, final int count) {
+        Task[] taskCount = new Task[count];
+        int itr = 0;
         for (int i = 0; i < size; i++) {
-            if (taskList[i].assign.equals(pname) && taskList[i].status.equals("todo")) {
+            if (taskList[i].assign.equals(pname)
+            && taskList[i].status.equals("todo")) {
                 if (taskList[i].important && !taskList[i].urgent) {
-                    getTasks[index] = taskList[i];
-                    index++;
-                    if (index == count) break;
+                    taskCount[itr] = taskList[i];
+                    itr++;
+                    if (itr == count){
+                      break;  
+                    } 
                 }
             }
         }
-        return getTasks;
+        return taskCount;
     }
     /**
      * calculates total time for completion of tasks.
