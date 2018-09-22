@@ -18,14 +18,22 @@ class Todoist {
 			size++;
 		} catch (Exception e) {
 			resize();
+			addTask(task);
 		}
 		
 	}
 	void resize() {
         tasks = Arrays.copyOf(tasks, 2 * size);
     }
-    int size() {
-    	return size;
+    public Task getNextTask(String name) {
+    	for(int i =0; i< size; i++) {
+    		if(tasks[i].assignedTo.equals(name) && tasks[i].status.equals("todo")) {
+    			if(tasks[i].important && !tasks[i].urgent) {
+    				return tasks[i];
+    			}
+    		}
+    	}
+    	return null;
     }
     public String toString(){
     	
@@ -41,19 +49,6 @@ class Todoist {
     	}
     	return display;
     }
-    public Task getNextTask(String name) {
-    	for(int i =0; i< size; i++) {
-    		if(tasks[i].assignedTo.equals(name) && tasks[i].status.equals("todo")) {
-    			if(tasks[i].important && !tasks[i].urgent) {
-    				return tasks[i];
-    			}
-    		}
-    	}
-    	return null;
-    }
-    public int totalTime4Completion() {
-   		return 0;
-    }
 
 }
 class Task {
@@ -66,15 +61,9 @@ class Task {
 
 	Task(String title, String assignedTo, int timeToComplete, boolean important,
 	     boolean urgent, String status) throws Exception {
-		if (title.equals("") || title == null) {
-			throw new Exception("Title not provided");
-		}
-		if (timeToComplete < 0) {
-			throw new Exception("Invalid timeToComplete " + timeToComplete);
-		}
-		if (!status.equals("todo") && !status.equals("done")) {
-			throw new Exception("Invalid status " + status);
-		}
+		if (title.equals("") || title == null) throw new Exception("Title not provided");
+		if (timeToComplete < 0) throw new Exception("Invalid timeToComplete " + timeToComplete);
+		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
 		this.title = title;
 		this.assignedTo = assignedTo;
 		this.timeToComplete = timeToComplete;
