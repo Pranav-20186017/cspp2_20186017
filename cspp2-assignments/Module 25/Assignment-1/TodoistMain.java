@@ -132,11 +132,29 @@ class Todoist {
  * Class for task.
  */
 class Task {
+    /**
+     * title of the job
+     */
     String title;
+    /**
+     * name of the person for the task.
+     */
     String assign;
+    /**
+     * time required for completion.
+     */
     int time;
+    /**
+     * important yes/no.
+     */
     boolean important;
+    /**
+     * urgent yes/no.
+     */
     boolean urgent;
+    /**
+     * status of the task.
+     */
     String status;
     /**
      * Constructs the object.
