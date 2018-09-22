@@ -46,7 +46,6 @@ class Todoist {
     	return total;
     }
     public String toString() {
-    	
 		String display = "";
     	for (int i =0; i< size;i++) {
     	String imp = "Not Important";
@@ -54,11 +53,9 @@ class Todoist {
 		if(tasks[i].important) imp = "Important";
 		if(tasks[i].urgent) urg = "Urgent";
 		display += tasks[i].title + ", " + tasks[i].assign+", "+ tasks[i].time+", "+ imp+", "+ urg+", "+ tasks[i].status + "\n";
-		
     	}
     	return display;
     }
-
 }
 class Task {
 	String title;
@@ -70,13 +67,15 @@ class Task {
 
 	Task(String title, String assign, int time, boolean important,
 	     boolean urgent, String status) throws Exception {
-		if (title.equals("") || title == null) {
+		if (title.equals("")) {
 			throw new Exception("Title not provided");
 		}
 		if (time < 0) {
 			throw new Exception("Invalid timeToComplete " + time);
 		}
-		if (!status.equals("todo") && !status.equals("done")) throw new Exception("Invalid status " + status);
+		if (!status.equals("todo") && !status.equals("done")) {
+			throw new Exception("Invalid status " + status);
+		}
 		this.title = title;
 		this.assign = assign;
 		this.time = time;
@@ -87,8 +86,12 @@ class Task {
 	public String toString() {
 		String imp = "Not Important";
 		String urg = "Not Urgent";
-		if(important) imp = "Important";
-		if(urgent) urg = "Urgent";
+		if (important == true) {
+			imp = "Important";
+		}
+		if(urgent == true) {
+			urg = "Urgent";
+		}
 		String display = title + ", " + assign + ", " + time + ", " + imp + ", " + urg + ", " + status;
 		return display;
 	}
