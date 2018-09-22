@@ -4,13 +4,20 @@ import java.util.Arrays;
  * Class for todoist.
  */
 class Todoist {
-    Task[] taskList;
-    int size;
+    /**
+     * array of task objects.
+     */
+    private Task[] taskList;
+    /**
+     * size of the array.
+     */
+    private int size;
     /**
      * Constructs the object.
      */
     Todoist() {
-        taskList = new Task[10];
+        final int ten = 10;
+        taskList = new Task[ten];
         size = 0;
     }
     /**
